@@ -34,32 +34,20 @@ end
 
 group :development, :test do
   gem "minitest-rails"
-  gem "launchy"
-  gem "faker"
-end
-
-group :test do
   gem "minitest-rails-capybara"
   gem "minitest-focus"
   gem "turn"
+  gem "launchy"
+  gem "faker"
+  # pry inline debugger
+  gem 'pry-rails'
+  gem 'pry-debugger'
 end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-group :development, :test do
-  # Minitest for rails
-  gem "minitest-rails"
-  gem "minitest-rails-capybara"
-  # Improved test output visuals
-  gem 'turn'
-  # pry inline debugger
-  gem 'pry-rails'
-  gem 'pry-debugger'
-end
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
