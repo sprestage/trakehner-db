@@ -32,6 +32,18 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  # Minitest for rails
+  gem "minitest-rails"
+  gem "minitest-rails-capybara"
+  # Improved test output visuals
+  gem 'turn'
+  # pry inline debugger
+  gem 'pry-rails'
+  gem 'pry-debugger'
+end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
