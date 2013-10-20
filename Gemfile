@@ -33,12 +33,15 @@ group :production do
 end
 
 group :development, :test do
+  gem "launchy"
+  gem "faker"
+end
+
+group :test do
   gem "minitest-rails"
   gem "minitest-rails-capybara"
   gem "minitest-focus"
   gem "turn"
-  gem "launchy"
-  gem "faker"
   # pry inline debugger
   gem 'pry-rails'
   gem 'pry-debugger'
