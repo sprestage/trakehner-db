@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# Specify ruby version for Heroku deploy
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -28,6 +30,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Make Minitest generally available for Heroku deploy
+gem "minitest-rails"
+
+
 group :production do
   gem "rails_12factor"
 end
@@ -38,7 +44,6 @@ group :development, :test do
 end
 
 group :test do
-  gem "minitest-rails"
   gem "minitest-rails-capybara"
   gem "minitest-focus"
   gem "turn"
