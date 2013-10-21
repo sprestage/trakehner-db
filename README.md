@@ -1,4 +1,3 @@
-
 The Unofficial Trakehner Database
 =======
 Code Fellows Ruby on Rails bootcamp, Silver Class Project
@@ -26,12 +25,20 @@ This site is my solution to those problems.
 Technical Details
 =======
 
-Uses Rails 4.0.0 and Ruby 2.0.0.
+Uses Rails 4.0.0 and Ruby 2.0.0p247.
 
 
-Initial plans
+Plan for the next couple of days (10/21/13)
 =======
+> ## 1. Write up the various use cases
+> ## 2. Add use cases into sprint.ly
+> ## 3. Implement users
+> ## 4. Implement authentication
+> ## 5. Implement horses
 
+
+To Do List
+=======
 > ##home page:
 >>      * login for Trakehner owners to add/modify horse pedigree
 >>      * search for Trakehner horse by name, registry number
@@ -50,9 +57,24 @@ Initial plans
 >>      * must have authorization to alter data (authorization)
 
 
-Plan for the next couple of days (10/15/13)
+To Do List (completed items)
 =======
-> ## 1. Write up the various use cases.
-> ## 2. Name the project and start a github repository and transfer the ideas that are being collected into a read me.
-> ## 3. Add use cases into sprint.ly
-> ## 4. Figure out the various planning and  implementation decisions: db (postgres?), testing (minitest?), sprint.ly?, etc.
+> * Implement Twitter Bootstrap
+> * Implement minitest
+> * Create a landing page (must get away from default Rails page!)
+> * Set up and get auto-deploy from Travis to Heroku working
+> * Get deployment to Heroku working directly (before implementing Travis auto-deploy)
+> * Set up and get Travis testing working
+> * Implement postgres for test, dev, and prod
+> * Set up Nathaniel as collaborator on Github, Heroku, and Travis
+> * Point Travis to Github repo
+> * Link the trakehner-db app on Heroku to the Github repo
+> * Initial commit of trakehner-db to Github
+> * Create initial rails app for trakehner-db
+> * Create the trakehner-db repo on github
+> * Set up Heroku to point to custom domain, www.unofficialtrakehnerdatabase.com
+> * Set up new Heroku app, trakehner-db.herokuapp.com
+> * Use AWS for CNAME and DNS
+> * Purchase domain, www.unofficialtrakehnerdatabase.com
+
+
