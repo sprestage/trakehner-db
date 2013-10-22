@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/sprestage/trakehner-db.png?branch=master)](https://travis-ci.org/sprestage/trakehner-db)
 The Unofficial Trakehner Database
 =======
 Code Fellows Ruby on Rails bootcamp, Silver Class Project
@@ -28,7 +29,14 @@ Technical Details
 Uses Rails 4.0.0 and Ruby 2.0.0p247.
 
 
-Plan for the next couple of days (10/21/13)
+Deployment
+=======
+This project has been deployed to Heroku and can be found here: http://sprestage-trakehner-db.herokuapp.com.
+Heroku also points to the custom domain http://www.unofficialtrakehnerdatabase.com which is now live!
+
+
+
+Plan for the next couple of days (10/22/13)
 =======
 > ## 1. Write up the various use cases
 > ## 2. Add use cases into sprint.ly
