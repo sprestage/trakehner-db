@@ -35,14 +35,20 @@ This project has been deployed to Heroku and can be found here: http://sprestage
 Heroku also points to the custom domain http://www.unofficialtrakehnerdatabase.com which is now live!
 
 
+Open Questions
+=======
+* Authentication with Devise, OmniAuth, or both.  Best guess is both.  Possibly starting with Devise and then
+adding OmniAuth later.  Not sure yet.  -sprestage Wed, 10/23
+
 
 Plan for the next couple of days (10/22/13)
 =======
-> ## 1. Write up the various use cases
-> ## 2. Add use cases into sprint.ly
-> ## 3. Implement users
-> ## 4. Implement authentication
-> ## 5. Implement horses
+> 
+    [ ] Write up the various use cases
+    [ ] Add use cases into sprint.ly
+    [ ] Implement users <- implement this while implementing Devise
+    [ ] Implement Devise authentication
+    [ ] Implement horses
 
 
 To Do List
@@ -67,22 +73,22 @@ To Do List
 
 To Do List (completed items)
 =======
-> * Implement Twitter Bootstrap
-> * Implement minitest
-> * Create a landing page (must get away from default Rails page!)
-> * Set up and get auto-deploy from Travis to Heroku working
-> * Get deployment to Heroku working directly (before implementing Travis auto-deploy)
-> * Set up and get Travis testing working
-> * Implement postgres for test, dev, and prod
-> * Set up Nathaniel as collaborator on Github, Heroku, and Travis
-> * Point Travis to Github repo
-> * Link the trakehner-db app on Heroku to the Github repo
-> * Initial commit of trakehner-db to Github
-> * Create initial rails app for trakehner-db
-> * Create the trakehner-db repo on github
-> * Set up Heroku to point to custom domain, www.unofficialtrakehnerdatabase.com
-> * Set up new Heroku app, trakehner-db.herokuapp.com
-> * Use AWS for CNAME and DNS
-> * Purchase domain, www.unofficialtrakehnerdatabase.com
-
+> 
+    [x] Implement Twitter Bootstrap
+    [x] Implement minitest
+    [x] Create a landing page (must get away from default Rails page!)
+    [x] Set up and get auto-deploy from Travis to Heroku working
+    [x] Get deployment to Heroku working directly (before implementing Travis auto-deploy)
+    [x] Set up and get Travis testing working
+    [x] Implement postgres for test, dev, and prod
+    [x] Set up Nathaniel as collaborator on Github, Heroku, and Travis
+    [x] Point Travis to Github repo
+    [x] Link the trakehner-db app on Heroku to the Github repo
+    [x] Initial commit of trakehner-db to Github
+    [x] Create initial rails app for trakehner-db
+    [x] Create the trakehner-db repo on github
+    [x] Set up Heroku to point to custom domain, www.unofficialtrakehnerdatabase.com
+    [x] Set up new Heroku app, trakehner-db.herokuapp.com
+    [x] Use AWS for CNAME and DNS
+    [x] Purchase domain, www.unofficialtrakehnerdatabase.com
 
