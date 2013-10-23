@@ -39,17 +39,23 @@ group :production do
 end
 
 group :development, :test do
-  gem "launchy"
-  gem "faker"
+# More minitest
+  gem 'minitest', '> 4.0'
+  gem 'minitest-focus'
+  gem 'minitest-colorize'
+# Capybara
+  gem 'minitest-rails-capybara'
+  gem 'launchy'
+# pry inline debugger
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-debugger'
+# use for generating /test/fixture/foo.yml data
+  gem 'faker'
 end
 
 group :test do
-  gem "minitest-rails-capybara"
-  gem "minitest-focus"
   gem "turn"
-  # pry inline debugger
-  gem 'pry-rails'
-  gem 'pry-debugger'
 end
 
 group :doc do

@@ -16,3 +16,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore the temp files I occasionally create (and have open in vi) for my own use. -sprestage
+/*temp*
+/.*temp*
