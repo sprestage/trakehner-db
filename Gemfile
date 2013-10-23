@@ -38,6 +38,10 @@ group :production do
   gem "rails_12factor"
 end
 
+group :development do
+  gem 'pry-doc'
+end
+
 group :development, :test do
 # More minitest
   gem 'minitest', '> 4.0'
@@ -48,7 +52,6 @@ group :development, :test do
   gem 'launchy'
 # pry inline debugger
   gem 'pry-rails'
-  gem 'pry-doc'
   gem 'pry-debugger'
 # Faker for generating /test/fixture/foo.yml data
   gem 'faker'
