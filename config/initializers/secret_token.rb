@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-TrakehnerDb::Application.config.secret_key_base = 'f782465ef84df5007d17f8d96b02bc241a1947e3866ac53c3456fad40ff5e437860b5fcf7194df9f76b08a99a9f92922eff7c8fe18bbf6b23127cf0a504dd9e3'
+TrakehnerDb::Application.config.secret_key_base = ENV['RAILS_SECRET']

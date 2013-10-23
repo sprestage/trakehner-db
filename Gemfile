@@ -50,8 +50,10 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'
-# use for generating /test/fixture/foo.yml data
+# Faker for generating /test/fixture/foo.yml data
   gem 'faker'
+# Figaro for removing secret keys from github
+  gem 'figaro'
 end
 
 group :test do

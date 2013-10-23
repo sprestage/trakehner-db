@@ -20,3 +20,6 @@
 # Ignore the temp files I occasionally create (and have open in vi) for my own use. -sprestage
 /*temp*
 /.*temp*
+
+# Ignore the secret keys stored (thanks to Figaro) in the environment variables.
+/config/application.yml
