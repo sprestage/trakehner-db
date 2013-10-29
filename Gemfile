@@ -38,10 +38,6 @@ group :production do
   gem "rails_12factor"
 end
 
-group :development do
-  gem 'pry-doc'
-end
-
 group :development, :test do
 # More minitest
   gem 'minitest', '> 4.0'
@@ -53,6 +49,7 @@ group :development, :test do
 # pry inline debugger
   gem 'pry-rails'
   gem 'pry-debugger'
+  gem 'pry-doc'
 # Faker for generating /test/fixture/foo.yml data
   gem 'faker'
 # Figaro for removing secret keys from github
