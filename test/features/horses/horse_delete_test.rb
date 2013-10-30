@@ -5,7 +5,7 @@ feature "deleting a horse" do
     # Given a horse
     visit horses_path
     # When I submit the form
-    page.find("tr:last").click_on "Destroy"
+    page.find(:xpath, '//*[@id="page-content-wrapper"]/div/div/div/div/div/table/tbody/tr[4]').click_on "Destroy"
     # Then I should receive a warning
     page.has_content?('Are you sure')
     # And the horse is no longer present
