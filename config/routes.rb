@@ -1,5 +1,7 @@
 TrakehnerDb::Application.routes.draw do
 
+  resources :horses
+
   get "home/index"
   root :to => 'home#index'
 

@@ -7,7 +7,7 @@
     <meta name="author" content="">
 
     <!-- Retaining this section from before twitter bootstrap implementation. -sprestage -->
-    <title>TrakehnerDb</title>
+    <title>Unofficial Trakehner Database</title>
 
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -27,78 +27,42 @@
     <div id="wrapper">
 
       <!-- Sidebar -->
-      <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-          <li class="sidebar-brand"><a href="#">Start Bootstrap</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Shortcuts</a></li>
-          <li><a href="#">Overview</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
+      <%= render 'layouts/sidebar' %>
 
       <!-- Page content -->
       <div id="page-content-wrapper">
-        <div class="content-header">
+
+        <!-- <div class="content-header">
           <h1>
             <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
             Simple Sidebar
           </h1>
-        </div>
+        </div> --><!-- /.content-header -->
+
         <!-- Keep all page content within the page-content inset div! -->
         <div class="page-content inset">
-          <div class="row">
-            <div class="col-md-12">
-              <p class="lead">This simple sidebar template has a hint of JavaScript to make the template responsive. It also includes Font Awesome icon fonts.</p>
-            </div>
-            <div class="col-md-6">
-              <p class="well">The template still uses the default Bootstrap rows and columns.</p>
-            </div>
-            <div class="col-md-6">
-              <p class="well">But the full-width layout means that you wont be using containers.</p>
-            </div>
-            <div class="col-md-4">
-              <p class="well">Three Column Example</p>
-            </div>
-            <div class="col-md-4">
-              <p class="well">Three Column Example</p>
-            </div>
-            <div class="col-md-4">
-              <p class="well">You get the idea! Do whatever you want in the page content area!</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
+          <div class="section-colored text-center">
+            <div class="container">
+              <div class="row">
+                <div class"col-lg-12">
+                  <%= yield %>
+                  <hr>
+                </div><!-- /.col -->
+              </div><!-- /.row  -->
+            </div><!-- /.container -->
+          </div><!-- /.section-colored -->
+
+<!-- Uncomment this when/if we are ready to use it for the page layout. -sprestage 10/29/13 -->
+<!--  render 'layouts/page_content_twitter_default' -->
+
+        </div><!-- /.page-content -->
+      </div><!-- /.id -->
 
     </div>
 
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <% flash.each do |key, value| %>
-            <div class="<%= flash_class(key) %>">
-              <%= value %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
+<!-- render 'layouts/unknown' -->
 
-
-    <div class="section-colored text-center">
-      <div class="container">
-        <div class="row">
-          <div class"col-lg-12">
-            <%= yield %>
-            <hr>
-          </div>
-        </div>
-      </div><!-- /.row  -->
-    </div><!-- /.container -->
-  </div><!-- /.section-colored -->
 
     <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
