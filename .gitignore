@@ -23,3 +23,6 @@
 
 # Ignore the secret keys stored (thanks to Figaro) in the environment variables.
 /config/application.yml
+
+.DS_Store
+*/.DS_Store
