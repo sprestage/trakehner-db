@@ -12,7 +12,7 @@
 
   <tbody>
     <% @horses.each do |horse| %>
-      <tr>
+      <tr id="<%= horse.id %>">
         <td><%= horse.name %></td>
         <td><%= link_to 'Show', horse %></td>
         <td><%= link_to 'Edit', edit_horse_path(horse) %></td>
