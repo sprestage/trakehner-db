@@ -1,5 +1,5 @@
 class HorsesController < ApplicationController
-  before_action :set_horse, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :set_horse, only: [:show, :edit, :update, :destroy]
 
   # GET /horses
   # GET /horses.json
