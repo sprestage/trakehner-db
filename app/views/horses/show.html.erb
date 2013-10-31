@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @horse.name %>
-</p>
+
+
+    <img src="https://s3-us-west-2.amazonaws.com/unofficialtrakehnerdb/horses/gerinRiding2.jpg" alt="Dorin at canter at show" width="504" height="360">
+
+    <%= render 'layouts/pedigree' %>
+
 
 <%= link_to 'Edit', edit_horse_path(@horse) %> |
 <%= link_to 'Back', horses_path %>

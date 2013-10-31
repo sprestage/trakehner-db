@@ -10,6 +10,7 @@ class HorsesController < ApplicationController
   # GET /horses/1
   # GET /horses/1.json
   def show
+    @names = FamilyNameTree.new(@horse)
   end
 
   # GET /horses/new

@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 1.2'
 # Make Minitest generally available for Heroku deploy
 gem "minitest-rails"
 
+gem 'protected_attributes'
 
 group :production do
   gem "rails_12factor"

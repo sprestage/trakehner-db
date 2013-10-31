@@ -1,0 +1,14 @@
+<div id="root_horse"><h1><b> <%= @names.child %> </b></h1></div> <br />
+
+<div id="parents" >
+  <h4><b>Sire:</b> <%= @names.sire %> - <b>Dam:</b> <%= @names.dam %></h4>
+</div>
+<br />
+
+<div id="grandparents" > <h5>
+  <b>Grand-Sire:</b> <%= @names.sires_sire %> -
+  <b>Grand-Dam:</b> <%= @names.sires_dam %> -
+  <b>Grand-Sire:</b> <%= @names.dams_sire %> -
+  <b>Grand-Dam:</b> <%= @names.dams_dam %>
+</h5></div>
+
