@@ -41,14 +41,14 @@ Open Questions
 adding OmniAuth later.  Not sure yet.  -sprestage Wed, 10/23
 
 
-Plan for the next couple of days (10/22/13)
+Plan for the next couple of days (10/30/13)
 =======
-> 
+>
     [ ] Write up the various use cases
     [ ] Add use cases into sprint.ly
     [ ] Implement users <- implement this while implementing Devise
     [ ] Implement Devise authentication
-    [ ] Implement horses
+    [ ] Implement OmniAuth
 
 
 To Do List
@@ -73,7 +73,9 @@ To Do List
 
 To Do List (completed items)
 =======
-> 
+>
+    [x] Implement horses
+    [x] Implement AWS S3 hosting of horse images
     [x] Implement Twitter Bootstrap
     [x] Implement minitest
     [x] Create a landing page (must get away from default Rails page!)

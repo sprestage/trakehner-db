@@ -4,10 +4,10 @@ ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
 gem 'pg'
+gem 'devise'
+gem 'omniauth'
+gem 'protected_attributes'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -31,12 +31,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Make Minitest generally available for Heroku deploy
-gem "minitest-rails"
+gem 'minitest-rails'
 
 gem 'protected_attributes'
 
 group :production do
-  gem "rails_12factor"
+  gem 'rails_12factor'
 end
 
 group :development, :test do
@@ -58,7 +58,7 @@ group :development, :test do
 end
 
 group :test do
-  gem "turn"
+  gem 'turn'
 end
 
 group :doc do
@@ -67,7 +67,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'
