@@ -7,7 +7,6 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'devise'
 gem 'omniauth'
-gem 'protected_attributes'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -32,8 +31,6 @@ gem 'jbuilder', '~> 1.2'
 
 # Make Minitest generally available for Heroku deploy
 gem 'minitest-rails'
-
-gem 'protected_attributes'
 
 group :production do
   gem 'rails_12factor'

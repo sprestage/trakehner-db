@@ -1,7 +1,5 @@
 class Horse < ActiveRecord::Base
 
-  attr_accessible :name, :image
-
   has_many :offspring, class_name: "Horse", foreign_key: :sire_id,
                                             foreign_key: :dam_id
 
