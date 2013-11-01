@@ -59,6 +59,7 @@ end
 
 group :test do
   gem 'turn'
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :doc do
