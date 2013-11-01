@@ -1,5 +1,25 @@
-<h1>The Unofficial Trakehner Database</h1>
-<p>Welcome to the Unofficial Trakehner Database.  For now, we're just this very basic page.  But soon we'll be awesome!  Just wait and see!</p>
+<div class="container">
+  <div class="row">
+    <div class"col-lg-12">
+      <div id="user_header">
+        <div class="nav">
+          <% if current_user %>
+            Logged in as <%= current_user.email %>
+            <%= link_to "Sign Out", signout_path %>
+          <% end %>
+
+          <% if !current_user %>
+            <%= link_to "Sign In", new_user_session_path %> or
+            <%= link_to "Sign Up", new_user_registration_path %>
+          <% end %>
+
+        </div>
+      </div>
+    </div><!-- /.col -->
+  </div><!-- /.row  -->
+</div><!-- /.container -->
+
+<h1>The Unofficial Trakehner Database</h1></p>
 
 <%= link_to 'Horses', horses_path %>
 
