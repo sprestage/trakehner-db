@@ -9,9 +9,19 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def sign_in
+    visit new_user_session_path
+    fill_in 'Email', with: users(:user_one).email
+    fill_in 'Password', with: "password"
+    click_on 'Sign in'
+    page.must_have_content "Signed in successfully"
+    page.wont_have_content "Log In"
+    page.wont_have_content "Invalid email or password"
+  end
 end
 
 class ActionDispatch::IntegrationTest
   include Rails.application.routes.url_helpers
   include Capybara::DSL
+  include Capybara::Assertions
 end
