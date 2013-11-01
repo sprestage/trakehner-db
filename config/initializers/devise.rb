@@ -4,11 +4,12 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  config.secret_key = if Rails.env.development? || Rails.env.test?
-    ('x' * 30) # meets minimum requirement of 30 chars long
-  else
-    ENV['DEVISE_SECRET']
-  end
+  # config.secret_key = if Rails.env.development? || Rails.env.test?
+  #   ('x' * 30) # meets minimum requirement of 30 chars long
+  # else
+  #   ENV['DEVISE_SECRET']
+  # end
+config.secret_key = 'c8231b61e9283e68a04038562334ee59abb7a1e50969e20d83079afad53d764df7d502509ae01c745cf02387c5b9462ec78606ab742cf56432d916ff758f6667'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -34,6 +35,7 @@ Devise.setup do |config|
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [ :email ]
+  config.authentication_keys = [ :login ]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -183,7 +185,7 @@ Devise.setup do |config|
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
-  # config.reset_password_keys = [ :email ]
+  config.reset_password_keys = [ :login ]
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
