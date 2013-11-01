@@ -1,64 +1,136 @@
-horse01:
-  name: First horse
-  sire: horse02
-  dam: horse03
+jori:
+  name: Joriah
+  sire: ichi
+  dam: gerin
   picture:
 
-horse02:
-  name: Second horse
-  sire: sire1_gen2
-  dam:  dam1_gen2
+kira:
+  name: Jakira
+  sire: ichi
+  dam: dorin
   picture:
 
-horse03:
-  name: Third horse
-  sire: sire1_gen3
-  dam:  dam1_gen3
+dorin:
+  name: Jaedorin
+  sire: herzzauber
+  dam: gerin
   picture:
 
-horse04:
-  name: Fourth horse
-  sire: horse02
-  dam: horse03
+herrzauber:
+  name: E.H. Herrzauber
+  sire: marduc
+  dam: herzminze
+
+marduc:
+  name: Marduc
+  sire: halali
+  dam: maeira2
+
+halali:
+  name: Halali
+
+madeira2:
+  name: Madeira II
+
+herzminze:
+  name: Herzminze
+  sire: radom
+  dam: herzroschen
+
+radom:
+  name: Radom
+
+herzroschen:
+  name: Herzroschen
+
+gerin:
+  name: Jaegerin
+  sire: nemo
+  dam: jamilah
   picture:
 
-horse_gen1:
-  name: horse_gen1
-  sire: sire1_gen2
-  dam: dam1_gen2
+ichi:
+  name: Ichiban
+  sire: polarpunkt
+  dam: indiana3
   picture:
 
-sire1_gen2:
-  name: sire1_gen2_name
-  sire: sire1_gen3
-  dam: dam1_gen3
+nemo:
+  name: Nemo
+  sire: ginster
+  dam: norsie
   picture:
 
-dam1_gen2:
-  name: dam1_gen2_name
-  sire: sire2_gen3
-  dam: dam2_gen3
-
-sire1_gen3:
-  name: sire1_gen3_name
-  sire: sire1_gen4
-  dam: dam1_gen4
+polarpunkt:
+  name: Polarpunkt
+  sire: arogno
+  dam: polarreise3
   picture:
 
-dam1_gen3:
-  name: dam1_gen3_name
-  sire: sire2_gen4
-  dam: dam2_gen4
+indiana3:
+  name: Indiana III
+  sire: consul
+  dam: inderin
   picture:
 
-sire2_gen3:
-  name: sire2_gen3_name
-  sire: sire3_gen4
-  dam: dam3_gen4
+jamilah:
+  name: Jamilah
+  sire: abdullah
+  dam: thundersflame
   picture:
 
-dam2_gen3:
-  name: dam2_gen3_name
-  sire: sire4_gen4
-  dam: dam4_gen4
-  picture:
+arogno:
+  name: Arogno
+
+polarreise3:
+  name: Polarreise III
+
+consul:
+  name: Consul
+
+inderin:
+  name: Inderin
+
+ginster:
+  name: Ginster
+  sire: pregel
+  dam: guda
+
+pregel:
+  name: Pregel
+
+guda:
+  name: Guda
+
+norsie:
+  name: Norsie
+  sire: siegel
+  dam: nome
+
+siegel:
+  name: Siegel
+
+nome:
+  name: Nome
+
+abdullah:
+  name: Abduallh *Pg*
+  sire: donauwind
+  dam: abize
+
+donauwind:
+  name: Donauwind *E*
+
+abiza:
+  name: Abiza *E*
+
+thundersflame:
+  name: Thunders Flame xx
+  sire: pennahton
+  dam: anioma
+
+pennahton:
+  name: Pennahton xx
+
+anioma:
+  name: Anioma xx
