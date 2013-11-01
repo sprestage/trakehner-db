@@ -3,7 +3,9 @@ require "test_helper"
 feature "updating a horse" do
   scenario "editor can successfully update horses" do
     # Given an existing horse
+    sign_in
     visit horse_path(horses(:horse02))
+    page.text.must_include 'Edit'
     click_on 'Edit'
     fill_in 'Name', with: "Second Horse"
     # When I click edit and submit changed data

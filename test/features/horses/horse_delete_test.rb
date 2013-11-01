@@ -3,6 +3,7 @@ require "test_helper"
 feature "deleting a horse" do
   scenario "successfully delete horses" do
     # Given a horse
+    sign_in
     visit horses_path
     # When I submit the form
     page.find(:xpath, '//*[@id="page-content-wrapper"]/div/div/div/div/div/table/tbody/tr[4]').click_on "Destroy"

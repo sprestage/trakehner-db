@@ -23,10 +23,7 @@ ActiveRecord::Schema.define(version: 20131031212930) do
     t.integer  "dam_id"
     t.integer  "sire_id"
     t.string   "picture"
-    t.string   "ancestry"
   end
-
-  add_index "horses", ["ancestry"], name: "index_horses_on_ancestry", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

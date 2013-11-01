@@ -3,6 +3,7 @@ require "test_helper"
 feature "Create horse" do
   scenario "successfully create horses" do
     # Given a completed new horse form
+    sign_in
     visit new_horse_path
     fill_in "Name", with: horses(:horse04).name
     # When the form is submitted
