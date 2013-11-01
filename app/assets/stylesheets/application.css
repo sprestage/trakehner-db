@@ -12,3 +12,25 @@
  *= require_tree .
  */
 
+
+.male {
+  background-color: #CCCCCC;
+  color: #000000;
+  font-family: Arial;
+  font-family: 14pt;
+  text-align: center;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: 1px solid #000000;
+}
+
+.female {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial;
+  font-family: 14pt;
+  text-align: center;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: 1px solid #000000;
+}

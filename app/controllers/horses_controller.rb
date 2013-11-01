@@ -4,7 +4,8 @@ class HorsesController < ApplicationController
   # GET /horses
   # GET /horses.json
   def index
-    @horses = Horse.all
+    # @horses = Horse.all
+    @horses = Horse.search(params[:search])
   end
 
   # GET /horses/1
