@@ -5,12 +5,12 @@ feature "Create horse" do
     # Given a completed new horse form
     sign_in
     visit new_horse_path
-    fill_in "Name", with: "Jakira"
+    fill_in "Name", with: "Jupiter"
     # When the form is submitted
     click_on "Create Horse"
     # Then a new horse should be created and displayed
     page.text.must_include "Horse was successfully created"
-    page.text.must_include "Jakira"
+    page.text.must_include "Jupiter"
   end
 
   scenario "fail to create horse due to failed validation, name presence" do

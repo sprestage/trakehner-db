@@ -134,3 +134,69 @@ pennahton:
 
 anioma:
   name: Anioma xx
+
+horse01:
+  name: First horse
+  sire: horse02
+  dam: horse03
+  picture:
+
+horse02:
+  name: Second horse
+  sire: sire1_gen2
+  dam:  dam1_gen2
+  picture:
+
+horse03:
+  name: Third horse
+  sire: sire1_gen3
+  dam:  dam1_gen3
+  picture:
+
+horse04:
+  name: Fourth horse
+  sire: horse02
+  dam: horse03
+  picture:
+
+horse_gen1:
+  name: horse_gen1
+  sire: sire1_gen2
+  dam: dam1_gen2
+  picture:
+
+sire1_gen2:
+  name: sire1_gen2_name
+  sire: sire1_gen3
+  dam: dam1_gen3
+  picture:
+
+dam1_gen2:
+  name: dam1_gen2_name
+  sire: sire2_gen3
+  dam: dam2_gen3
+
+sire1_gen3:
+  name: sire1_gen3_name
+  sire: sire1_gen4
+  dam: dam1_gen4
+  picture:
+
+dam1_gen3:
+  name: dam1_gen3_name
+  sire: sire2_gen4
+  dam: dam2_gen4
+  picture:
+
+sire2_gen3:
+  name: sire2_gen3_name
+  sire: sire3_gen4
+  dam: dam3_gen4
+  picture:
+
+dam2_gen3:
+  name: dam2_gen3_name
+  sire: sire4_gen4
+  dam: dam4_gen4
+  picture:
+
