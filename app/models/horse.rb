@@ -11,7 +11,7 @@ class Horse < ActiveRecord::Base
 
   def self.search(search)
     if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+      Horse.all.where(['name LIKE ?', "%#{search}%"])
     else
       Horse.all
     end

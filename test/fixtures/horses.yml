@@ -1,19 +1,19 @@
-jori:
+joriah:
   name: Joriah
-  sire: ichi
-  dam: gerin
+  sire: ichiban
+  dam: jaegerin
   picture:
 
-kira:
+jakira:
   name: Jakira
-  sire: ichi
-  dam: dorin
+  sire: ichiban
+  dam: jaedorin
   picture:
 
-dorin:
+jaedorin:
   name: Jaedorin
   sire: herrzauber
-  dam: gerin
+  dam: jaegerin
   picture:
 
 herrzauber:
@@ -43,13 +43,13 @@ radom:
 herzroschen:
   name: Herzroschen
 
-gerin:
+jaegerin:
   name: Jaegerin
   sire: nemo
   dam: jamilah
   picture:
 
-ichi:
+ichiban:
   name: Ichiban
   sire: polarpunkt
   dam: indiana3
