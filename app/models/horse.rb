@@ -11,6 +11,8 @@ class Horse < ActiveRecord::Base
   validates :name, presence: true
   validates :name, uniqueness: true
 
+  acts_as_nested_set
+
   def self.search(search)
     if search
       find(:all, :conditions => ['name LIKE ?', "%#{search}%"])

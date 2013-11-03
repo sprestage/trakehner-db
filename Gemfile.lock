@@ -29,6 +29,8 @@ GEM
     ansi (1.4.3)
     arel (4.0.0)
     atomic (1.1.14)
+    awesome_nested_set (2.1.6)
+      activerecord (>= 3.0.0)
     bcrypt-ruby (3.1.2)
     builder (3.1.4)
     capybara (2.1.0)
@@ -196,6 +198,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_nested_set
   bcrypt-ruby
   coffee-rails (~> 4.0.0)
   devise

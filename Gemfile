@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'minitest-rails'
 
 gem 'protected_attributes'
+gem 'awesome_nested_set'
 
 group :production do
   gem 'rails_12factor'
