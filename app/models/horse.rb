@@ -13,7 +13,7 @@ class Horse < ActiveRecord::Base
     if search
       find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
     else
-      find(:all)
+      Horse.all
     end
   end
 
