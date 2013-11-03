@@ -17,4 +17,14 @@ class Horse < ActiveRecord::Base
     end
   end
 
+  alias_method :default_sire, :sire
+  def sire
+    return self.default_sire || Horse.new(name: 'Unknown')
+  end
+
+  alias_method :default_dam, :dam
+  def dam
+    return self.default_dam || Horse.new(name: 'Unknown')
+  end
+
 end

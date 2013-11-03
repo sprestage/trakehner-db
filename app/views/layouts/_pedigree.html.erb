@@ -14,7 +14,7 @@
               <%= render 'layouts/trakehner_logo' %>
             </td>
             <td vertical-align="center" width='60%' align="center">
-              <h1><br><%= @names.child %> </h1>
+              <h1><br><%= @horse.name %> </h1>
             </td>
             <td width='20%' align="center">
               <%= render 'layouts/trakehner_logo' %>
@@ -35,27 +35,27 @@
      <tr><td>
      <table style="border: 1px solid #000000; border-collapse: collapse;" border="1" cellpadding="0" cellspacing="0" width="100%">
      <tr>
-  <td rowspan='4' width='25%' class='male'><%= @names.sire %></td>
-  <td rowspan='2' width='25%' class='male'><%= @names.sires_sire %></td>
-  <td rowspan='1' width='25%' class='male'>Arogno</td>
+  <td rowspan='4' width='25%' class='male'><%= @horse.sire.name %></td>
+  <td rowspan='2' width='25%' class='male'><%= @horse.sire.sire.name %></td>
+  <td rowspan='1' width='25%' class='male'><%= @horse.sire.sire.sire.name %></td>
      </tr><tr>
-  <td rowspan='1' width='25%' class='female'>Polarreise II</td>
+  <td rowspan='1' width='25%' class='female'><%= @horse.sire.sire.dam.name %></td>
      </tr><tr>
-  <td rowspan='2' width='25%' class='female'><%= @names.sires_dam %></td>
-  <td rowspan='1' width='25%' class='male'>Consul</td>
+  <td rowspan='2' width='25%' class='female'><%= @horse.sire.dam.name %></td>
+  <td rowspan='1' width='25%' class='male'><%= @horse.sire.dam.sire.name %></td>
      </tr><tr>
-  <td rowspan='1' width='25%' class='female'>Inderin</td>
+  <td rowspan='1' width='25%' class='female'><%= @horse.sire.dam.dam.name %></td>
      </tr><tr>
-  <td rowspan='4' width='25%' class='female'><%= @names.dam %></td>
-  <td rowspan='2' width='25%' class='male'><%= @names.dams_sire %></td>
-  <td rowspan='1' width='25%' class='male'>Ginster</td>
+  <td rowspan='4' width='25%' class='female'><%= @horse.dam.name %></td>
+  <td rowspan='2' width='25%' class='male'><%= @horse.dam.sire.name %></td>
+  <td rowspan='1' width='25%' class='male'><%= @horse.dam.sire.sire.name %></td>
      </tr><tr>
-  <td rowspan='1' width='25%' class='female'>Norsie</td>
+  <td rowspan='1' width='25%' class='female'><%= @horse.dam.sire.dam.name %></td>
      </tr><tr>
-  <td rowspan='2' width='25%' class='female'><%= @names.dams_dam %></td>
-  <td rowspan='1' width='25%' class='male'>Abdullah *Pg*</td>
+  <td rowspan='2' width='25%' class='female'><%= @horse.dam.dam.name %></td>
+  <td rowspan='1' width='25%' class='male'><%= @horse.dam.dam.sire.name %></td>
      </tr><tr>
-  <td rowspan='1' width='25%' class='female'>Thunders Flame xx</td>
+  <td rowspan='1' width='25%' class='female'><%= @horse.dam.dam.dam.name %></td>
      </tr>
      </table>
      </td></tr>
