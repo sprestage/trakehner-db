@@ -27,5 +27,17 @@ feature "Show a single horse" do
     page.wont_have_content horses(:marduc).name
   end
 
-end
+  # Regression test: for a brief moment, the links in a horse's pedigree
+  # to the horses listed there would lead back to the horse who's pedigree
+  # it was (aka the horse being displayed), rather than to the page of the
+  # horse named in the link
+  scenario "Horses in pedigree have correct link in their href" do
+    sign_in
+    visit horse_path(horses(:polarpunkt))
 
+    click_on horses(:arogno).name
+
+    page.wont_have_content horses(:polarpunkt).name
+  end
+
+end
