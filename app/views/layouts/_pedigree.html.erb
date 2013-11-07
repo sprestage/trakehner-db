@@ -36,47 +36,47 @@
     <table style="border: 1px solid #000000; border-collapse: collapse;" border="1" cellpadding="0" cellspacing="0" width="100%">
     <tr>
       <td rowspan='4' width='25%' class='male'>
-        <%= link_to @horse.sire.name, @horse.sire %></td>
+        <%= link_for_horse(@horse.sire) %></td>
       <td rowspan='2' width='25%' class='male'>
-        <%= link_to @horse.sire.sire.name, @horse.sire.sire %></td>
+        <%= link_for_horse(@horse.sire.sire) %></td>
       <td rowspan='1' width='25%' class='male'>
-        <%= link_to @horse.sire.sire.sire.name, @horse.sire.sire.sire %></td>
+        <%= link_for_horse(@horse.sire.sire.sire) %></td>
     </tr>
     <tr>
       <td rowspan='1' width='25%' class='female'>
-        <%= link_to @horse.sire.sire.dam.name, @horse.sire.sire.dam %></td>
+        <%= link_for_horse(@horse.sire.sire.dam) %></td>
     </tr>
     <tr>
       <td rowspan='2' width='25%' class='female'>
-        <%= link_to @horse.sire.dam.name, @horse.sire.dam %></td>
+        <%= link_for_horse(@horse.sire.dam) %></td>
       <td rowspan='1' width='25%' class='male'>
-        <%= link_to @horse.sire.dam.sire.name, @horse.sire.dam.sire %></td>
+        <%= link_for_horse(@horse.sire.dam.sire) %></td>
     </tr>
     <tr>
       <td rowspan='1' width='25%' class='female'>
-        <%= link_to @horse.sire.dam.dam.name, @horse.sire.dam.dam %></td>
+        <%= link_for_horse(@horse.sire.dam.dam) %></td>
     </tr>
     <tr>
       <td rowspan='4' width='25%' class='female'>
-        <%= link_to @horse.dam.name, @horse.dam %></td>
+        <%= link_for_horse(@horse.dam) %></td>
       <td rowspan='2' width='25%' class='male'>
-        <%= link_to @horse.dam.sire.name, @horse.dam.sire %></td>
+        <%= link_for_horse(@horse.dam.sire) %></td>
       <td rowspan='1' width='25%' class='male'>
-        <%= link_to @horse.dam.sire.sire.name, @horse.dam.sire.sire %></td>
+        <%= link_for_horse(@horse.dam.sire.sire) %></td>
     </tr>
     <tr>
       <td rowspan='1' width='25%' class='female'>
-        <%= link_to @horse.dam.sire.dam.name, @horse.dam.sire.dam %></td>
+        <%= link_for_horse(@horse.dam.sire.dam) %></td>
     </tr>
     <tr>
       <td rowspan='2' width='25%' class='female'>
-        <%= link_to @horse.dam.dam.name, @horse.dam.dam %></td>
+        <%= link_for_horse(@horse.dam.dam) %></td>
       <td rowspan='1' width='25%' class='male'>
-        <%= link_to @horse.dam.dam.sire.name, @horse.dam.dam.sire %></td>
+        <%= link_for_horse(@horse.dam.dam.sire) %></td>
     </tr>
     <tr>
       <td rowspan='1' width='25%' class='female'>
-        <%= link_to @horse.dam.dam.dam.name, @horse.dam.dam.dam %></td>
+        <%= link_for_horse(@horse.dam.dam.dam) %></td>
     </tr>
     </table>
     </td></tr>

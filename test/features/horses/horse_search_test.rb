@@ -20,7 +20,7 @@ feature "Search for horses using the search bar" do
 
     page.text.must_include horses(:jakira).name
     page.text.must_include horses(:abdullah).name
-    page.text.must_include horses(:jamilah).name
+    page.text.must_include horses(:arogno).name
     page.text.must_include horses(:herrzauber).name
   end
 
