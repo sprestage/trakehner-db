@@ -9,6 +9,8 @@ class Horse < ActiveRecord::Base
   validates :name, presence: true
   validates :name, uniqueness: true
 
+  mount_uploader :image, ImageUploader
+
   def self.search(search)
     if search
       Horse.all.where(['name LIKE ?', "%#{search}%"])

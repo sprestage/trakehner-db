@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 1.2'
 # Make Minitest generally available for Heroku deploy
 gem 'minitest-rails'
 
+gem "carrierwave"
+gem "rmagick"
+
 group :production do
   gem 'rails_12factor'
 end
