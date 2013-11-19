@@ -34,6 +34,10 @@ gem 'minitest-rails'
 
 gem "carrierwave"
 gem "rmagick"
+gem "fog"
+# unf helps fog properly encode AWS strings that contain non-standard
+# characters, per https://github.com/fog/fog/pull/2320
+gem "unf"
 
 group :production do
   gem 'rails_12factor'
