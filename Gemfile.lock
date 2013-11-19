@@ -129,6 +129,7 @@ GEM
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
+    newrelic_rpm (3.6.9.171)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     omniauth (1.1.4)
@@ -252,6 +253,7 @@ DEPENDENCIES
   minitest-focus
   minitest-rails
   minitest-rails-capybara
+  newrelic_rpm
   omniauth
   pg
   pry-debugger
