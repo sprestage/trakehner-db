@@ -32,11 +32,24 @@ gem 'jbuilder', '~> 1.2'
 # Make Minitest generally available for Heroku deploy
 gem 'minitest-rails'
 
+# File uploading
 gem "carrierwave"
+# File uploading, Amazon S3 - not currently using this gem.  We should
+#  further consider if we want to implement direct to S3 uploading or not.
 gem "carrierwave_direct"
+
+# Background processing tasks
 gem "sidekiq"
+
+# Image manipulation (resizing)
 gem "rmagick"
+
+# Cloud and Amazon S3 access
 gem "fog"
+
+# Sending mail
+gem 'mail'
+gem 'postmark'
 
 # unf helps fog properly encode AWS strings that contain non-standard
 # characters, per https://github.com/fog/fog/pull/2320
