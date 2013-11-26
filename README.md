@@ -26,7 +26,7 @@ This site is my solution to those problems.
 Technical Details
 =======
 
-Uses Rails 4.0.0 and Ruby 2.0.0p247.
+Uses Rails 4.0.1 and Ruby 2.0.0p353.
 
 
 Deployment
