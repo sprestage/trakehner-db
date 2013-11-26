@@ -254,7 +254,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mail
-  minitest (> 4.0)
+  minitest
   minitest-colorize
   minitest-focus
   minitest-rails

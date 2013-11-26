@@ -62,7 +62,7 @@ end
 
 group :development, :test do
 # More minitest
-  gem 'minitest', '> 4.0'
+  gem 'minitest'
   gem 'minitest-focus'
   gem 'minitest-colorize'
 # Capybara
