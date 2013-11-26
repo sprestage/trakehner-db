@@ -2,7 +2,7 @@
 
 The Unofficial Trakehner Database
 =======
-Code Fellows Ruby on Rails bootcamp, Silver Class Project
+Code Fellows Ruby on Rails Bootcamp Class Project
 
 Collaborators:  Susan Prestage, Nathaniel Barnes
 
