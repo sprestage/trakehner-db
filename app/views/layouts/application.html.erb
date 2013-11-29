@@ -6,7 +6,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Retaining this section from before twitter bootstrap implementation. -sprestage -->
     <title>Unofficial Trakehner Database</title>
 
     <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -16,11 +15,6 @@
   </head>
 
   <body>
-    <!-- NOTE: I don't know if we'll really need this.  I believe it to be both the source of the gap at the top of our page and also the source of the redundant error and success messages. -->
-    <!-- For Devise implementation -->
-<!--     <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
- -->
     <div id="wrapper">
 
       <!-- Sidebar -->
@@ -29,49 +23,34 @@
       <!-- Page content -->
       <div id="page-content-wrapper">
 
-        <!-- <div class="content-header">
-          <h1>
-            <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
-            Simple Sidebar
-          </h1>
-        </div> --><!-- /.content-header -->
-
-        <!-- Keep all page content within the page-content inset div! -->
-
         <%= render 'layouts/header' %>
 
+        <!-- Keep all page content within the page-content inset div! -->
         <div class="page-content inset">
 
-          <div class="section-colored text-center">
-            <div class="container">
-              <div class="row">
-                <div class"col-lg-12">
-                  <%= yield %>
-                  <hr>
-                </div><!-- /.col -->
-              </div><!-- /.row  -->
-            </div><!-- /.container -->
-          </div><!-- /.section-colored -->
+          <div class="container">
+            <div class="row">
+              <div class"col-lg-12">
+                <%= yield %>
+                <hr>
+              </div><!-- /.col -->
+            </div><!-- /.row  -->
+          </div><!-- /.container -->
 
-<!-- Uncomment this when/if we are ready to use it for the page layout. -sprestage 10/29/13 -->
-<!--  render 'layouts/page_content_twitter_default' -->
+          <!-- render 'layouts/unknown' -->
 
-        </div><!-- /.page-content -->
-      </div><!-- /.id -->
+          <%= render 'layouts/footer' %>
 
-    </div>
+          <!-- Put this into a custom JavaScript file to make things more organized -->
+          <script>
+          $("#menu-toggle").click(function(e) {
+              e.preventDefault();
+              $("#wrapper").toggleClass("active");
+          });
+          </script>
 
-<!-- render 'layouts/unknown' -->
-
-    <%= render 'layouts/footer' %>
-
-
-
-    <!-- Put this into a custom JavaScript file to make things more organized -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("active");
-    });
-    </script>
+        </div> <!-- /.page content inset -->
+      </div> <!-- /.page content wrapper -->
+    </div> <!-- /.wrapper -->
   </body>
+</html>
