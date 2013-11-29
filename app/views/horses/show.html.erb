@@ -5,8 +5,25 @@
 <% dod = "" %>
 <% color = "gray" %>
 <% gender = "S" %>
+<% mature_height = 16.3 %>
+<% mare_family = "" %>
 <% performance_records_link = "" %>
+
 <% breeder = "Jean Brinkman" %>
+<% breeder_first_name = "Jean" %>
+<% breeder_last_name = "Brinkman" %>
+<% breeder_farm = "Valhalla Farm" %>
+<% breeder_city_state = "Welborn, FL" %>
+
+<% owner_first_name = "Jean" %>
+<% owner_last_name = "Brinkman" %>
+<% owner_farm = "Valhalla Farm" %>
+<% owner_street_address = "14872 47th Rd" %>
+<% owner_city_state_zip = "Welborn, FL  32094" %>
+<% owner_phone = "366-963-4619" %>
+<% owner_website = "Valhallatrakehner.com" %>
+<% owner_email = "Valhalla@alltel.net" %>
+
 
 <div class="section-colored text-center">
   <div class="trakehnerHorseName">
@@ -54,22 +71,69 @@
     <table cellpadding="2" width="100%">
       <tbody>
         <tr>
-          <td align='right' width='10%'><%= "D.O.B." %></td>
+          <td align='right' width='10%'><%= "Foaled:" %></td>
           <td class="thick" align='left'><%= dob %></td>
-        </tr>
-        <tr>
-          <td align='right' width='10%'><%= "Color" %></td>
-          <td class="thick" align='left'><%= color %></td>
-        </tr>
-        <tr>
-          <td align='right' width='10%'><%= "Gender" %></td>
-          <td class="thick" align='left'><%= gender %></td>
-        </tr>
-        <tr>
-          <td valign='top' align='right' width='10%'><%= "Breeder" %></td>
-          <td class="thick" align='left'>
-            <%= breeder %>
+          <td valign='top' align='right'><%= "Owner:" %></td>
+          <td class="thick" width='25%' align='left'>
+            <% if owner_last_name != "" %>
+              <%= owner_first_name %>
+              <%= owner_last_name %>
+            <% end %>
+            <% if owner_last_name != "" && owner_farm != "" %>
+              <%= ", " %>
+            <% end %>
+            <% if owner_farm != "" %>
+              <%= owner_farm %>
+            <% end %>
           </td>
+        </tr>
+        <tr>
+          <td align='right' width='10%'><%= "Color:" %></td>
+          <td class="thick" align='left'><%= color %></td>
+          <td valign='top' align='right'><%= "Address:" %></td>
+          <td class="thick" width='25%' align='left'>
+            <%= owner_street_address %>
+          </td>
+        </tr>
+        <tr>
+          <td valign='top' align='right' width='10%'><%= "Gender:" %></td>
+          <td valign='top' class="thick" align='left'><%= gender %></td>
+          <td></td>
+          <td class="thick" width='25%' align='left'>
+            <%= owner_city_state_zip %>
+          </td>
+        </tr>
+        <tr>
+          <td valign='top' align='right' width='10%'><%= "Height:" %></td>
+          <td class="thick" align='left'>
+            <%= mature_height %>
+            <%= " hands" %>
+          </td>
+          <td align='right'><%= "Phone:" %></td>
+          <td class="thick" width='25%' align='left'><%= owner_phone %></td>
+        </tr>
+        <tr>
+          <td valign='top' align='right' width='10%'><%= "Mare family:" %></td>
+          <td class="thick" align='left'><%= mare_family %></td>
+          <td align='right'><%= "Website:" %></td>
+          <td class="thick" width='25%' align='left'><%= owner_website %></td>
+        </tr>
+        <tr>
+          <td valign='top' align='right' width='10%'><%= "Breeder:" %></td>
+          <td class="thick" align='left'>
+            <% if breeder_last_name != "" %>
+              <%= breeder_first_name %>
+              <%= breeder_last_name %>
+            <% end %>
+            <% if breeder_last_name != "" && breeder_farm != "" %>
+              <%= ", " %>
+            <% end %>
+            <% if breeder_farm != "" %>
+              <%= breeder_farm %>
+            <% end %>
+          </td>
+          <td align='right'><%= "Email:" %></td>
+          <td class="thick" width='25%' align='left'><%= owner_email %></td>
         </tr>
       </tbody>
     </table>
