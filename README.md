@@ -1,7 +1,8 @@
-[![Build Status](https://travis-ci.org/sprestage/trakehner-db.png?branch=master)](https://travis-ci.org/sprestage/trakehner-db)
+[![Build Status](https://travis-ci.org/sprestage/trakehner-db.png?branch=master)](https://travis-ci.org/sprestage/trakehner-db)[![Code Climate](https://codeclimate.com/github/sprestage/trakehner-db.png)](https://codeclimate.com/github/sprestage/trakehner-db)[![Dependency Status](https://gemnasium.com/sprestage/trakehner-db.png)](https://gemnasium.com/sprestage/trakehner-db)
+
 The Unofficial Trakehner Database
 =======
-Code Fellows Ruby on Rails bootcamp, Silver Class Project
+Code Fellows Ruby on Rails Bootcamp Class Project
 
 Collaborators:  Susan Prestage, Nathaniel Barnes
 
@@ -26,7 +27,7 @@ This site is my solution to those problems.
 Technical Details
 =======
 
-Uses Rails 4.0.0 and Ruby 2.0.0p247.
+Uses Rails 4.0.1 and Ruby 2.0.0p353.
 
 
 Deployment

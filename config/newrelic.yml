@@ -3,9 +3,9 @@
 # Ruby, Java, .NET, PHP, and Python applications with deep visibility and low overhead.
 # For more information, visit www.newrelic.com.
 #
-# Generated November 18, 2013
+# Generated November 19, 2013
 #
-# This configuration file is custom generated for Susan Prestage
+# This configuration file is custom generated for app18597881@heroku.com
 
 
 # Here are the settings that are common to all environments
@@ -18,7 +18,7 @@ common: &default_settings
   license_key = if Rails.env.development? || Rails.env.test?
       ('x' * 30) # meets minimum requirement of 30 chars long
     else
-      ENV['NEW_RELIC_KEY']
+      ENV['NEW_RELIC_LICENSE_KEY']
     end
 
   # Agent Enabled (Ruby/Rails Only)

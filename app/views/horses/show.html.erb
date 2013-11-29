@@ -1,12 +1,89 @@
-<p id="notice"><%= notice %></p>
+<% name = "Stiletto" %>
+<% ata_award = "*Ps*" %>
+<% registry_num = "OSB-A-S339" %>
+<% dob = "May 2, 1995" %>
+<% dod = "" %>
+<% color = "gray" %>
+<% gender = "S" %>
+<% performance_records_link = "" %>
+<% breeder = "Jean Brinkman" %>
 
-<% if @horse.image_url %>
-  <%= image_tag @horse.image_url(:pedigree).to_s %>
-<% else %>
-  <%= render 'layouts/no_picture_for_horse_image' %>
-<% end %>
+<div class="section-colored text-center">
+  <div class="trakehnerHorseName">
+    <tr><td>
+      <table width='100%'>
+        <tr>
+          <td width='35%' align="center">
+            <%= render 'layouts/trakehner_logo' %>
+          </td>
+          <td vertical-align="top" width='30%' align="center">
+            <br>
+            <% if ata_award %>
+              <h3 id="name_award"><%= @horse.name.upcase %> <%= ata_award %></h3>
+            <% else %>
+              <h3 id="name"><%= name.upcase %></h3>
+            <% end %>
+            <b>
+              <p><%= registry_num %></p>
+            </b>
+            <br>
+          </td>
+          <td width='35%' align="center">
+            <%= render 'layouts/trakehner_logo' %>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+  </div>
 
+  <p id="notice"><%= notice %></p>
+
+  <% if @horse.image_url %>
+    <%= image_tag @horse.image_url(:pedigree).to_s %>
+  <% else %>
+    <%= render 'layouts/no_picture_for_horse_image' %>
+  <% end %>
+</div>
+
+<style>
+  td.thick {font-weight:bold;}
+</style>
+
+<div class="section-colored text-center">
+  <div class="trakehnerHorseData">
+    <table cellpadding="2" width="100%">
+      <tbody>
+        <tr>
+          <td align='right' width='10%'><%= "D.O.B." %></td>
+          <td class="thick" align='left'><%= dob %></td>
+        </tr>
+        <tr>
+          <td align='right' width='10%'><%= "Color" %></td>
+          <td class="thick" align='left'><%= color %></td>
+        </tr>
+        <tr>
+          <td align='right' width='10%'><%= "Gender" %></td>
+          <td class="thick" align='left'><%= gender %></td>
+        </tr>
+        <tr>
+          <td valign='top' align='right' width='10%'><%= "Breeder" %></td>
+          <td class="thick" align='left'>
+            <%= breeder %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<p><%= performance_records_link %></p>
+
+<br>
 <%= render 'layouts/pedigree' %>
+<br>
 
-<%= link_to 'Edit', edit_horse_path(@horse) %> |
-<%= link_to 'Back', horses_path %>
+<div class="section-colored text-center">
+  <%= link_to 'Edit', edit_horse_path(@horse) %> |
+  <%= link_to 'Back', horses_path %>
+</div>
+
