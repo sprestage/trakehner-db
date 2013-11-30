@@ -32,6 +32,12 @@ class Horse < ActiveRecord::Base
 
   def self.create_from_json(record)
 
+    if record["name"].empty? || record["name"] == nil
+      puts "Empty name in horse record, dumping data"
+      puts record
+      return
+    end
+
     horse = Horse.find_by name: record["name"]
     unless horse
       horse = Horse.new
@@ -43,22 +49,28 @@ class Horse < ActiveRecord::Base
     horse.color = record["color"]
     horse.birth_year = record["birth_year"]
 
-    sire = Horse.find_by name: record["sire"]
-    if sire
-      horse.sire = sire
-    else
-      sire = Horse.new(name: record["sire"])
-      sire.save!
-      horse.sire = sire
+    sire_name = record["sire"]
+    unless sire_name.empty? || sire_name == nil || sire_name == "---"
+      sire = Horse.find_by name: record["sire"]
+      if sire
+        horse.sire = sire
+      else
+        sire = Horse.new(name: record["sire"])
+        sire.save!
+        horse.sire = sire
+      end
     end
 
-    dam = Horse.find_by name: record["dam"]
-    if dam
-      horse.dam = dam
-    else
-      dam = Horse.new(name: record["dam"])
-      dam.save!
-      horse.dam = dam
+    dam_name = record["dam"]
+    unless dam_name.empty? || dam_name == nil || dam_name == "---"
+      dam = Horse.find_by name: record["dam"]
+      if dam
+        horse.dam = dam
+      else
+        dam = Horse.new(name: record["dam"])
+        dam.save!
+        horse.dam = dam
+      end
     end
 
     horse.breeder = record["breeder"]

@@ -5,7 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-records = JSON.parse(File.read('test/features/import/import_test_data/import_test_data.json'))
-records.each do |record|
-  Horse.create_from_json(record)
+
+
+('a'..'z').each do |initial|
+  puts "Importing horses with initial #{ initial }"
+  filename = "db/horses_from_ATA_site/horses_initial_#{ initial }.json"
+  records = JSON.parse(File.read(filename))
+  records.each do |record|
+    Horse.create_from_json(record)
+  end
 end
