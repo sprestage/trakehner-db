@@ -1,5 +1,5 @@
 class Horse < ActiveRecord::Base
-  default_scope { order('name DESC') }
+  default_scope { order('name ADC') }
 
   has_many :offspring, class_name: "Horse", foreign_key: :sire_id,
                                             foreign_key: :dam_id
