@@ -11,7 +11,7 @@ feature "Update Horse" do
     # When I click edit and submit changed data
     click_on 'Update Horse'
     # Then I should see the updated horse
-    page.text.must_include "Second Horse"
+    page.text.must_include "Second Horse".upcase
     # And a success message
     page.text.must_include 'Horse was successfully updated'
   end
