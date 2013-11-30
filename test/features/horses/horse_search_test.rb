@@ -26,7 +26,7 @@ feature "Search for horses using the search bar" do
 
   scenario "Search for some horses" do
     visit root_path
-    fill_in "search", with: "Ja"
+    fill_in "search", with: "J"
     click_on "Search"
 
     page.text.must_include horses(:jaegerin).name
