@@ -8,30 +8,39 @@ feature "Import horse" do
     records = JSON.parse(File.read('test/features/import/import_test_data/import_test_data.json'))
     records.each do |record|
 
-      horse = Horse.new
-      ### TODO: We should check DB for horse already existing instead
-      ###        of just adding the horse like we are doing now.
-      # @horses = Horse.search(params[:search])
-      # @horses.each do |h|
-      #   if h.name == name
-      #     puts "#{h.name} already exists in the DB.  Should skip adding to DB again."
-      #   else
-      #     # Nothing to do here, except jump out of horses.each, if I can
-      #     #  figure out how to do that.
-      #   end
-      # end
+      horse = Horse.find_by name: record["name"]
+
+      unless horse
+        horse = Horse.new
+      end
+
       horse.name = record["name"]
       horse.registration_number = record["registration_number"]
       horse.sex = record["sex"]
       horse.color = record["color"]
       horse.birth_year = record["birth_year"]
-      ### TODO: Here is another place where I should search the DB for names
-      ###         and create and new horse object if the name isn't already
-      ###         in the DB got both sire and dam.
-      # horse.sire = record["sire"]
-      # horse.dam = record["dam"]
+
+      sire = Horse.find_by name: record["sire"]
+      if sire
+        horse.sire = sire
+      else
+        sire = Horse.new(name: record["sire"])
+        sire.save!
+        horse.sire = sire
+      end
+
+      dam = Horse.find_by name: record["dam"]
+      if dam
+        horse.dam = dam
+      else
+        dam = Horse.new(name: record["dam"])
+        dam.save!
+        horse.dam = dam
+      end
+
       horse.breeder = record["breeder"]
       horse.performance_records_available = record["performance_records_available"]
+
       if horse.save
         # Do nothing if the save is successful.
       else
