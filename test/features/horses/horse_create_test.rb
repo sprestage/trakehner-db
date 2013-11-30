@@ -10,7 +10,7 @@ feature "Create horse" do
     click_on "Create Horse"
     # Then a new horse should be created and displayed
     page.text.must_include "Horse was successfully created"
-    page.text.must_include "Jupiter"
+    page.text.must_include "Jupiter".upcase
   end
 
   scenario "fail to create horse due to failed validation, name presence" do
