@@ -1,37 +1,39 @@
-<div class="container">
-  <div class="row">
-    <div class"col-lg-12">
-      <div id="user_header">
-        <div class="nav">
-          <% if current_user %>
-            Logged in as <%= current_user.email %>
-            <%= link_to "Sign Out", signout_path %>
-          <% end %>
+<div class="section-colored text-center">
+  <div class="container">
+    <div class="row">
+      <div class"col-lg-12">
+        <div id="user_header">
+          <div class="nav">
+            <% if current_user %>
+              Logged in as <%= current_user.email %>
+              <%= link_to "Sign Out", signout_path %>
+            <% end %>
 
-          <% if !current_user %>
-            <%= link_to "Sign In", new_user_session_path %> or
-            <%= link_to "Sign Up", new_user_registration_path %>
-          <% end %>
+            <% if !current_user %>
+              <%= link_to "Sign In", new_user_session_path %> or
+              <%= link_to "Sign Up", new_user_registration_path %>
+            <% end %>
 
+          </div>
         </div>
-      </div>
-    </div><!-- /.col -->
-  </div><!-- /.row  -->
-</div><!-- /.container -->
+      </div><!-- /.col -->
+    </div><!-- /.row  -->
+  </div><!-- /.container -->
 
-<h1>The Unofficial Trakehner Database</h1></p>
+  <h1>The Unofficial Trakehner Database</h1></p>
 
-<%= link_to 'Horses', horses_path %>
+  <%= link_to 'Horses', horses_path %>
 
-<br><br><br><br>
+  <br><br><br><br>
 
-<style>
-figcaption {font-size:10px;}
-</style>
+  <style>
+  figcaption {font-size:10px;}
+  </style>
 
-<p>Dorin being ridden by Emma Dye.</p>
+  <p>Dorin being ridden by Emma Dye.</p>
 
-<figure>
-  <img src="https://s3-us-west-2.amazonaws.com/unofficialtrakehnerdb/horses/showDorinCanter.jpg" alt="Dorin at canter at show" width="504" height="360">
-  <figcaption {font-size:10px;}>Fig1. - Photo by Carolynn Bunch Photography.</figcaption>
-</figure>
+  <figure>
+    <img src="https://s3-us-west-2.amazonaws.com/unofficialtrakehnerdb/horses/showDorinCanter.jpg" alt="Dorin at canter at show" width="504" height="360">
+    <figcaption {font-size:10px;}>Fig1. - Photo by Carolynn Bunch Photography.</figcaption>
+  </figure>
+</div>
