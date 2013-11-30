@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131118205338) do
+ActiveRecord::Schema.define(version: 20131129224050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(version: 20131118205338) do
     t.integer  "sire_id"
     t.string   "picture"
     t.string   "image"
+    t.string   "registration_number"
+    t.string   "sex"
+    t.string   "color"
+    t.integer  "birth_year"
+    t.string   "breeder"
+    t.boolean  "performance_records_available"
   end
 
   create_table "users", force: true do |t|

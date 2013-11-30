@@ -10,7 +10,7 @@ TrakehnerDb::Application.load_tasks
 MiniTest::Rails::Testing.default_tasks << 'features'
 
 task :load_scraped_json do
-  records = JSON.parse(File.read('app/assets/data.json/horses_initial_a.json'))
+  records = JSON.parse(File.read('app/assets/data/json/horses_initial_a.json'))
   records.each do |record|
     Horse.create!(record)
   end
