@@ -10,17 +10,20 @@ jakira:
   sire: ichiban
   dam: jaedorin
   picture:
+  breeder: tabarah
 
 jaedorin:
   name: Jädorin
   sire: herrzauber
   dam: jaegerin
   picture:
+  breeder: tabarah
 
 herrzauber:
   name: E.H. Herrzauber
   sire: marduc
   dam: herzminze
+  breeder: meadowview
 
 marduc:
   name: Marduc
@@ -49,18 +52,21 @@ jaegerin:
   sire: nemo
   dam: jamilah
   picture:
+  breeder: tabarah
 
 ichiban:
   name: Ichi-Ban
   sire: polarpunkt
   dam: indiana3
   picture:
+  breeder: blessed_fields
 
 nemo:
   name: Nemo
   sire: ginster
   dam: norsie
   picture:
+  breeder: meadowview
 
 polarpunkt:
   name: Polarpunkt

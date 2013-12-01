@@ -1,3 +1,23 @@
 tabarah:
   name: Tabarah Ranch Trakehners - Susan Prestage
-  address: Snoqualmie Valley - WA - USA
+  address: Snoqualmie Valley - WA - US
+
+blessed_fields:
+  name: Blessed Fields - Anna Miles
+  address: Marysville - WA - US
+
+meadowview:
+  name: Meadowview
+  address: 23052 TWP Rd 521 - Sherwood Park - AB T8B 1G6 - CA
+
+breeder01:
+  name: First Breeder
+  address: First Breeder's Address
+
+breeder02:
+  name: Second Breeder
+  address: Second Breeder's Address
+
+breeder03:
+  name: Third Breeder
+  address: Third Breeder's Address

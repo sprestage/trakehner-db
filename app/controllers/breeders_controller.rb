@@ -4,6 +4,8 @@ class BreedersController < ApplicationController
   # GET /breeders
   # GET /breeders.json
   def index
+    ### TODO: How do I incorporate search_address when that is the buttone clicked?  Maybe some
+    ###         Ajaxify magic?
     @breeders = Breeder.search_name(params[:search_name])
     if @breeders.class == Array
       @breeders = Kaminari.paginate_array(@breeders).page(params[:page])
