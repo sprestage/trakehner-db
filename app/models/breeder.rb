@@ -6,17 +6,17 @@ class Breeder < ActiveRecord::Base
   validates :name, presence: true
   validates :name, uniqueness: true
 
-  def self.search_name(search)
-    if search
-      Breeder.all.where(['name ILIKE ?', "%#{search}%"])
+  def self.search_name(search_name)
+    if search_name
+      Breeder.all.where(['name ILIKE ?', "%#{search_name}%"])
     else
       Breeder.all
     end
   end
 
-  def self.search_address(search)
-    if search
-      Breeder.all.where(['address ILIKE ?', "%#{search}%"])
+  def self.search_address(search_address)
+    if search_address
+      Breeder.all.where(['address ILIKE ?', "%#{search_address}%"])
     else
       Breeder.all
     end

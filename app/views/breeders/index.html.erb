@@ -2,6 +2,8 @@
 <h1>Listing Trakehner Breeders</h1>
 
 <br><br>
+<%= render 'layouts/breeder_search' %>
+<br><br>
 
 <table>
   <thead>
@@ -16,6 +18,7 @@
     <% @breeders.each do |breeder| %>
       <tr id="<%= breeder.id %>">
         <td><%= breeder.name %></td>
+        <td><%= breeder.address %></td>
         <td><%= link_to 'Show', breeder %></td>
         <td><%= link_to 'Edit', edit_breeder_path(breeder) %></td>
         <td><%= link_to 'Destroy', breeder, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -4,7 +4,12 @@ class BreedersController < ApplicationController
   # GET /breeders
   # GET /breeders.json
   def index
-    @breeders = Breeder.all
+    @breeders = Breeder.search_name(params[:search_name])
+    if @breeders.class == Array
+      @breeders = Kaminari.paginate_array(@breeders).page(params[:page])
+    else
+      @breeders = @breeders.page(params[:page]) # if @breeders is AR::Relation object
+    end
   end
 
   # GET /breeders/1
@@ -54,7 +59,6 @@ class BreedersController < ApplicationController
   # DELETE /breeders/1
   # DELETE /breeders/1.json
   def destroy
-    binding.pry
     @breeder.destroy
     respond_to do |format|
       format.html { redirect_to breeders_url }
