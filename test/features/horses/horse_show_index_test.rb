@@ -10,6 +10,7 @@ feature "Show horse index" do
     page.text.must_include "Abiza"
   end
 
+### TODO: This test needs real improvement in order to test the ajaxification of the pagination.
   scenario "successfully see pagination of horses in the index" do
     # Given existing horses
     # When I visit the horses path
