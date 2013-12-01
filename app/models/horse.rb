@@ -15,7 +15,8 @@ class Horse < ActiveRecord::Base
 
   def self.search(search)
     if search
-      Horse.all.where(['name LIKE ?', "%#{search}%"])
+      # ILIKE == case-insensitive LIKE for PostgreSQL
+      Horse.all.where(['name ILIKE ?', "%#{search}%"])
     else
       Horse.all
     end
@@ -74,16 +75,9 @@ class Horse < ActiveRecord::Base
       end
     end
 
-    ### TODO: Tell breeder model there is a new breeder name/address.  Then breeder
-    ###       model will take the name/address, check to see if the name already
-    ###       exists, or to add a new breeder if the the name doesn't exist.
-    ### TODO: Once the above is done, change the below (horse.breeder) to be set
-    ###       to the breeder instance, not just a string.
-    ### Okay, I think the below does both of the above.  BUT, create doesn't seem
-    ###  to be working.  *sigh*  Time for some pair programming.
-    horse.breeder = Breeder.create_if_unique("A Name", "")
-    # horse.breeder = Breeder.create_if_unique(record["breeder"], "")
-    # horse.breeder = record["breeder"]
+    unless record["breeder"].empty? || record["breeder"] == nil || record["breeder"] == "---"
+      horse.breeder = Breeder.fetch(record["breeder"])
+    end
 
     horse.performance_records_available = record["performance_records_available"]
 

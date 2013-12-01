@@ -17,8 +17,7 @@
         <td><%= horse.name %></td>
         <td><%= link_to 'Show', horse %></td>
         <td><%= link_to 'Edit', edit_horse_path(horse) %></td>
-        <td><%= link_to 'Destroy', breeder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Destroy', horse  , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete Horse', horse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

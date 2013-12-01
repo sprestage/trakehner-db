@@ -22,19 +22,13 @@ class Breeder < ActiveRecord::Base
     end
   end
 
-  def self.create_if_unique(name, address)
-    breeder = Breeder.find_by name
+  def self.fetch(name)
+    breeder = Breeder.find_by name: name
     unless breeder
-      breeder = Breeder.new
+      breeder = Breeder.new name: name
+      breeder.save!
     end
-
-    breeder.name = name
-    breeder.address = address
-
-    if breeder.save
-      # Do nothing if the save is successful.
-    else
-      puts "Save breeder to database failed!!!"
-    end
+    return breeder
   end
+
 end

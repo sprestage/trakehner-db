@@ -14,7 +14,6 @@
 
   <tbody>
     <% @breeders.each do |breeder| %>
-      <tr>
       <tr id="<%= breeder.id %>">
         <td><%= breeder.name %></td>
         <td><%= link_to 'Show', breeder %></td>
