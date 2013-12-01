@@ -4,8 +4,12 @@ class HorsesController < ApplicationController
   # GET /horses
   # GET /horses.json
   def index
-    # @horses = Horse.all
     @horses = Horse.search(params[:search])
+    if @horses.class == Array
+      @horses = Kaminari.paginate_array(@horses).page(params[:page])
+    else
+      @horses = @horses.page(params[:page]) # if @horses is AR::Relation object
+    end
   end
 
   # GET /horses/1

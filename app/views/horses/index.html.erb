@@ -25,6 +25,7 @@
 
 <br>
 
-<%= link_to 'New Horse', new_horse_path %>
+<%= link_to 'New Horse', new_horse_path %><br />
+<%= paginate @horses, :remote => true %>
 <br><br><br><br>
 <%= link_to 'Home', root_path %>
