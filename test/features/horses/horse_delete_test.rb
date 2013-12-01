@@ -5,15 +5,15 @@ feature "deleting a horse" do
     # Given a horse
     sign_in
     visit horses_path
-    page.text.must_include "Nemo"
+    page.text.must_include "A Buck An Hour"
     # When I submit the form
-    page.find(:xpath, '//*[@id="973029318"]').click_on "Destroy"
+    page.find(:xpath, '//*[@id="1072768618"]').click_on "Destroy"
     # Then I should receive a warning
     page.has_content?('Are you sure')
     # And the horse is no longer present
-    page.text.must_include horses(:horse01).name
-    page.text.must_include horses(:horse02).name
-    page.wont_have_content "Nemo"
+    page.text.must_include "A Capella"
+    page.text.must_include "A Bit Of Mozart"
+    page.wont_have_content "A Buck An Hour"
   end
 
 end
