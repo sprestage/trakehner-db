@@ -13,7 +13,7 @@
             <li><a href="/users/sign_in">Log In</a></li>
           <% end %>
           <% if current_user %>
-            <li><a href="/users/sign_out">Log Out</a></li>
+            <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
           <% end %>
         </ul>
       </div>
