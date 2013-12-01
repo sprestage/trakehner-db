@@ -1,5 +1,7 @@
 TrakehnerDb::Application.routes.draw do
 
+  resources :breeders
+
   devise_for :users
 
   devise_scope :user do

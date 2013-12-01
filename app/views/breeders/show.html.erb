@@ -1,0 +1,27 @@
+<title><%= @breeder.name %></title>
+
+<p id="notice"><%= notice %></p>
+
+<style>
+  td.thick {font-weight:bold;}
+</style>
+
+<div class="section-colored text-center">
+  <div class="trakehnerBreederData">
+    <table cellpadding="2" width="100%">
+      <tbody>
+        <tr>
+          <td valign='top' align='right' width='10%'><%= "Name:" %></td>
+          <td class="thick" align='left'><%= @breeder.name %></td>
+        </tr>
+        <tr>
+          <td valign='top' align='right' width='10%'><%= "Address:" %></td>
+          <td class="thick" align='left'><%= @breeder.address %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_breeder_path(@breeder) %> |
+<%= link_to 'Back', breeders_path %>

@@ -6,6 +6,7 @@ class Horse < ActiveRecord::Base
 
   belongs_to :sire, class_name: "Horse", foreign_key: :sire_id
   belongs_to :dam, class_name: "Horse", foreign_key: :dam_id
+  belongs_to :breeder
 
   validates :name, presence: true
   validates :name, uniqueness: true
@@ -73,13 +74,23 @@ class Horse < ActiveRecord::Base
       end
     end
 
-    horse.breeder = record["breeder"]
+    ### TODO: Tell breeder model there is a new breeder name/address.  Then breeder
+    ###       model will take the name/address, check to see if the name already
+    ###       exists, or to add a new breeder if the the name doesn't exist.
+    ### TODO: Once the above is done, change the below (horse.breeder) to be set
+    ###       to the breeder instance, not just a string.
+    ### Okay, I think the below does both of the above.  BUT, create doesn't seem
+    ###  to be working.  *sigh*  Time for some pair programming.
+    horse.breeder = Breeder.create_if_unique("A Name", "")
+    # horse.breeder = Breeder.create_if_unique(record["breeder"], "")
+    # horse.breeder = record["breeder"]
+
     horse.performance_records_available = record["performance_records_available"]
 
     if horse.save
       # Do nothing if the save is successful.
     else
-      puts "Save to database failed!!!"
+      puts "Save horse to database failed!!!"
     end
 
   end

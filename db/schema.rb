@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131129224050) do
+ActiveRecord::Schema.define(version: 20131201005505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "breeders", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "horses", force: true do |t|
     t.string   "name"
@@ -30,6 +37,7 @@ ActiveRecord::Schema.define(version: 20131129224050) do
     t.integer  "birth_year"
     t.string   "breeder"
     t.boolean  "performance_records_available"
+    t.integer  "breeder_id"
   end
 
   create_table "users", force: true do |t|
