@@ -13,6 +13,9 @@
 /db/trakehner_*
 /trakehner_*
 
+# Ignore the Solr search engine's temp file
+solr/data
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp

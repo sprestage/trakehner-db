@@ -8,7 +8,8 @@ class Breeder < ActiveRecord::Base
 
   def self.search_name(search_name)
     if search_name
-      Breeder.all.where(['name ILIKE ?', "%#{search_name}%"])
+      # ILIKE == case-insensitive LIKE for PostgreSQL
+      Breeder.all.where(['name ILIKE ?', "%#{ search_name }%"])
     else
       Breeder.all
     end
@@ -16,7 +17,7 @@ class Breeder < ActiveRecord::Base
 
   def self.search_address(search_address)
     if search_address
-      Breeder.all.where(['address ILIKE ?', "%#{search_address}%"])
+      Breeder.all.where(['address ILIKE ?', "%#{ search_address }%"])
     else
       Breeder.all
     end
