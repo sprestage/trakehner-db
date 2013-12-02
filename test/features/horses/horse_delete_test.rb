@@ -7,10 +7,12 @@ feature "deleting a horse" do
     visit horses_path
     fill_in "search", with: "Nemo"
     click_on "Search"
-
     page.text.must_include "Nemo"
+    visit horse_path(horses(:nemo))
+    page.text.must_include "Nemo"
+
     # When I submit the form
-    page.find(:xpath, '//*[@id="973029318"]').click_on "Delete Horse"
+    click_on "Delete Horse"
     # Then I should receive a warning
     page.has_content?('Are you sure')
 

@@ -44,7 +44,6 @@ feature "Update Breeder" do
     page.text.must_include "Name has already been taken"
     # and no updated breeder or success message
     page.wont_have_content "Breeder was successfully created"
-    page.wont_have_content breeders(:breeder03).name
   end
 
 end

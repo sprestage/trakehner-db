@@ -18,10 +18,9 @@ feature "Search for horses using the search bar" do
     fill_in "search", with: ""
     click_on "Search"
 
-    page.text.must_include horses(:jakira).name
+    page.text.must_include horses(:abiza).name
     page.text.must_include horses(:abdullah).name
     page.text.must_include horses(:arogno).name
-    page.text.must_include horses(:herrzauber).name
   end
 
   scenario "Search for some horses" do
@@ -32,7 +31,7 @@ feature "Search for horses using the search bar" do
     page.text.must_include horses(:jaegerin).name
     page.text.must_include horses(:jamilah).name
     page.wont_have_content horses(:nemo).name
-    page.wont_have_content horses(:thundersflame).name
+    page.wont_have_content horses(:siegel).name
   end
 
 end

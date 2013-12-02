@@ -17,7 +17,7 @@ feature "Show horse index" do
     # Then I should see pagination links and only see the first 25 horses alphabetically
     page.text.must_include "Next"
     page.text.must_include "Last"
-    page.wont_have_content horses(:polarpunkt).name
+    page.wont_have_content horses(:zzz).name
   end
 
 end
