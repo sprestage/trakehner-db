@@ -112,3 +112,10 @@ To Do List (completed items)
     [x] Use AWS for CNAME and DNS
     [x] Purchase domain, www.unofficialtrakehnerdatabase.com
 
+Presentation Bragging Points
+=======
+Live site (unofficialtrakehnerdatabase.com).
+Travis and Heroku continuous deployment.
+Sorting by horse and breeder names.
+AWS storage of all site images.
+Image upload by user (stores on AWS).
