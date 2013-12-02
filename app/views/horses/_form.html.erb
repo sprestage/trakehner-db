@@ -14,8 +14,42 @@
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :registration_number %><br>
+    <%= f.text_field :registration_number %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :birth_year %><br>
+    <%= f.text_field :birth_year %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :sex %><br>
+    <%= f.text_field :sex %>
+  </div>
+  <br>
+<!-- TODO: Eventually, implement a toggle list of breeders to be selected
+            for a given horse.  If they need to add a new breeder, fine,
+            they have to go to the new breeder page first, before they
+            create the horse. -->
+  <div class="field">
+    <%= f.label :image %><br>
     <%= f.file_field :image %>
   </div>
+  <br>
+  <br>
 
   <div class="actions">
     <%= f.submit %>

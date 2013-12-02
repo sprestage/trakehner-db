@@ -1,6 +1,16 @@
-<h1>Editing horse</h1>
+<title><%= @horse.name %></title>
+
+<div class="section-colored text-center">
+  <div id="horse_edit_header">
+    <h1>Editing horse</h1>
+  </div>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @horse %> |
-<%= link_to 'Back', horses_path %>
+<div class="section-colored text-center">
+  <div id="horse_edit_footer">
+    <%= link_to 'Show', @horse %> |
+    <%= link_to 'Back', horses_path %>
+  </div>
+</div>

@@ -122,8 +122,10 @@ nome:
 
 abdullah:
   name: Abdullah *Pg*E*
+  birth_year: 1970
   sire: donauwind
   dam: abiza
+  color: Gray
 
 donauwind:
   name: Donauwind *E*

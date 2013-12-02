@@ -1,5 +1,11 @@
 <title><%= @breeder.name %></title>
 
+<div class="section-colored text-center">
+  <div id="show_breeder_header">
+    <h1>The Unofficial Trakehner Database</h1></p><br><br>
+  </div>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <style>
@@ -11,17 +17,19 @@
     <table cellpadding="2" width="100%">
       <tbody>
         <tr>
-          <td valign='top' align='right' width='10%'><%= "Name:" %></td>
-          <td class="thick" align='left'><%= @breeder.name %></td>
+          <td class="thick"><%= @breeder.name %></td>
         </tr>
         <tr>
-          <td valign='top' align='right' width='10%'><%= "Address:" %></td>
-          <td class="thick" align='left'><%= @breeder.address %></td>
+          <td class="thick"><%= @breeder.address %></td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 
-<%= link_to 'Edit', edit_breeder_path(@breeder) %> |
-<%= link_to 'Back', breeders_path %>
+<div class="section-colored text-center">
+  <div class="trakehnerBreederFooter">
+    <%= link_to 'Edit', edit_breeder_path(@breeder) %> |
+    <%= link_to 'Back', breeders_path %>
+  </div>
+</div>
