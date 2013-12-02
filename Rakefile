@@ -8,10 +8,3 @@ TrakehnerDb::Application.load_tasks
 # This tells minitest to test the things from the test/features directory.  Without this,
 #   the tests in the test/features directory will not be run.  -sprestage
 MiniTest::Rails::Testing.default_tasks << 'features'
-
-task :load_scraped_json do
-  records = JSON.parse(File.read('app/assets/data/json/horses_initial_a.json'))
-  records.each do |record|
-    Horse.create!(record)
-  end
-end
