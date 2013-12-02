@@ -13,8 +13,13 @@ class Horse < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
-  searchable do
-    text :name
+  def self.search(search)
+    if search
+      # ILIKE == case-insensitive LIKE for PostgreSQL
+      Horse.all.where(['name ILIKE ?', "%#{search}%"])
+    else
+      Horse.all
+    end
   end
 
   alias_method :default_sire, :sire

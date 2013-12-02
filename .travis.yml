@@ -8,8 +8,6 @@ before_script:
 script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
-- RAILS_ENV=development rake sunspot:solr:start
-- RAILS_ENV=development rake sunspot:reindex
 - bundle exec rake
 bundler_args: --binstubs=./bundler_stubs
 deploy:
@@ -22,5 +20,3 @@ deploy:
   run:
    - "rake db:migrate"
    - "rake db:fixtures:load"
-   - "RAILS_ENV=production rake sunspot:solr:start"
-   - "RAILS_ENV=production rake sunspot:reindex"

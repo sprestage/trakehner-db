@@ -8,9 +8,6 @@ gem 'pg'
 gem 'devise'
 gem 'omniauth'
 
-gem 'sunspot_rails'
-gem 'sunspot_solr'
-
 # kaminari for pagination
 gem 'kaminari'
 
