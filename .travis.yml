@@ -7,8 +7,8 @@ before_script:
 - psql -c 'create database trakehner_test;' -U postgres
 script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
-- rake sunspot:solr:start
-- rake sunspot:reindex
+- RAILS_ENV=test rake sunspot:solr:start
+- RAILS_ENV=test rake sunspot:reindex
 - bundle exec rake db:test:prepare
 - bundle exec rake
 bundler_args: --binstubs=./bundler_stubs
