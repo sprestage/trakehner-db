@@ -15,6 +15,10 @@
 
 # Ignore the Solr search engine's temp file
 solr/data
+solr/test
+solr/development
+log/sunspot
+
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
