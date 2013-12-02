@@ -95,13 +95,21 @@
         </tr>
         <tr>
           <td valign='top' align='right' width='10%'><%= "Breeder:" %></td>
-          <td class="thick" align='left'><%= @horse.breeder.name %></td>
+          <td class="thick" align='left'>
+            <% if @horse.breeder %>
+              <%= @horse.breeder.name %>
+            <% end %>
+          </td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <td></td>
-          <td class="thick" align='left'><%= @horse.breeder.address %></td>
+          <td class="thick" align='left'>
+            <% if @horse.breeder %>
+              <%= @horse.breeder.address %>
+            <% end %>
+          </td>
           <td></td>
           <td></td>
         </tr>
