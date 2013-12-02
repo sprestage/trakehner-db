@@ -35,6 +35,23 @@ Deployment
 This project has been deployed to Heroku and can be found here: http://sprestage-trakehner-db.herokuapp.com.
 Heroku also points to the custom domain http://www.unofficialtrakehnerdatabase.com which is now live!
 
+Environment
+=======
+Solr and Sunspot are required to be installed and running on your system
+to run this application.  You can do this with the following commands.
+You may be able to skip the first step (not sure about this), since the
+/config/sunspot.yml file is already checked into this repo.
+<pre>
+    > rails g sunspot_rails:install
+    > rake sunspot:solr:start        <- this starts in the dev environment only
+    > rake sunspot:reindex
+</pre>
+To run in the test environment, run the following:
+<pre>
+    > RAILS_ENV=test rake sunspot:solr:start
+    > RAILS_ENV=test rake sunspot:reindex
+    > RAILS_ENV=test rake sunspot:solr:stop
+</pre>
 
 Open Questions
 =======
