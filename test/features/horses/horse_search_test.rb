@@ -30,7 +30,7 @@ feature "Search for horses using the search bar" do
 
     page.text.must_include horses(:jaegerin).name
     page.text.must_include horses(:jamilah).name
-    page.wont_have_content horses(:nemo).name
+    page.wont_have_content horses(:marduc).name
     page.wont_have_content horses(:siegel).name
   end
 
