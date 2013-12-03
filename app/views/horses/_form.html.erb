@@ -40,10 +40,13 @@
     <%= f.text_field :sex %>
   </div>
   <br>
-<!-- TODO: Eventually, implement a toggle list of breeders to be selected
-            for a given horse.  If they need to add a new breeder, fine,
-            they have to go to the new breeder page first, before they
-            create the horse. -->
+
+  <div class="field">
+    <%= f.label :breeder %><br>
+    <%= f.select :breeder_id, :name %>
+  </div>
+  <br>
+
   <div class="field">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
