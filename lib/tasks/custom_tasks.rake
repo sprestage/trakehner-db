@@ -1,7 +1,4 @@
 
-require "#{Rails.root}/app/models/horse"
-require "#{Rails.root}/app/uploaders/image_uploader"
-
 task :load_scraped_json do
   records = JSON.parse(File.read('app/assets/data/json/horses_initial_a.json'))
   records.each do |record|

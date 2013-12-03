@@ -1,4 +1,3 @@
-
 class Horse < ActiveRecord::Base
   default_scope { order('name ASC') }
 
