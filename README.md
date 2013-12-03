@@ -117,5 +117,16 @@ Presentation Bragging Points
 Live site (unofficialtrakehnerdatabase.com).
 Travis and Heroku continuous deployment.
 Sorting by horse and breeder names.
+Search by horse and breeder substring.
 AWS storage of all site images.
 Image upload by user (stores on AWS).
+Five roles:
+    visitors to the site -  can look and search horses and breeders;
+                            cannot see new, edit, delete anywhere
+                            ? can see Sign Up? Or should sign up only
+                            be by email to me and Nathaniel...this is
+                            the way the ATA does it.
+    owners - can see edit horse (will eventually include editing horse owner info)
+    breeders - can see edit breeder
+    ata - can see edit horse and edit breeder
+    admin - me and Nathaniel
