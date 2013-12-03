@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= f.label :breeder %><br>
-    <%= f.select :breeder_id, :name %>
+    <%= select("horse", "breeder_id", Breeder.all.collect {|b| [ b.name, b.id ] }, {include_blank: '-- Select Breeder If Present --'}) %>
   </div>
   <br>
 
