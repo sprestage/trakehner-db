@@ -18,5 +18,5 @@ deploy:
   on:
     repo: sprestage/trakehner-db
   run:
-   - "rake db:migrate"
-   - "rake load_scraped_json"
+   - "rake db:setup"
+   - "rake db:seed"
