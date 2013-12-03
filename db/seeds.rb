@@ -7,11 +7,18 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-('a'..'z').each do |initial|
-  puts "Importing horses with initial #{ initial }"
-  filename = "db/horses_from_ATA_site/horses_initial_#{ initial }.json"
-  records = JSON.parse(File.read(filename))
-  records.each do |record|
-    Horse.create_from_json(record)
-  end
+# ('a'..'z').each do |initial|
+#   puts "Importing horses with initial #{ initial }"
+#   filename = "app/assets/data/json/horses_from_ATA_site/horses_initial_#{ initial }.json"
+#   records = JSON.parse(File.read(filename))
+#   records.each do |record|
+#     Horse.create_from_json(record)
+#   end
+# end
+
+puts "Importing stallion images"
+filename = "app/assets/data/json/ata_2013_approved_stallions.json"
+records = JSON.parse(File.read(filename))
+records.each do |r|
+  Horse.import_image_from_remote(r)
 end

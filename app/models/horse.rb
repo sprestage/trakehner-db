@@ -89,4 +89,19 @@ class Horse < ActiveRecord::Base
 
   end
 
+  def self.import_image_from_remote(record)
+    horse = Horse.find_by name: record["name"]
+    unless horse
+      horse = Horse.new
+      horse.name = record["name"]
+    end
+    horse.remote_image_url = record["image"]
+
+    if horse.save
+      # Do nothing if the save is successful.
+    else
+      puts "Save horse to database failed!!!"
+    end
+  end
+
 end
