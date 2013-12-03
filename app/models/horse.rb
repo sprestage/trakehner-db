@@ -84,7 +84,7 @@ class Horse < ActiveRecord::Base
     if horse.save
       # Do nothing if the save is successful.
     else
-      puts "Save horse to database failed!!!"
+      puts "Horse name #{ horse.name } save-to-database failed"
     end
 
   end
@@ -100,7 +100,7 @@ class Horse < ActiveRecord::Base
     if horse.save
       # Do nothing if the save is successful.
     else
-      puts "Save horse to database failed!!!"
+      puts "Horse name #{ horse.name } save-to-database failed"
     end
   end
 
