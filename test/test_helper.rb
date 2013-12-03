@@ -16,7 +16,8 @@ class ActiveSupport::TestCase
     fill_in 'Email', with: users(:user_one).email
     fill_in 'Password', with: "password"
     click_on 'Sign in'
-    page.must_have_content "Signed in successfully"
+    page.must_have_content "Logged in as"
+    page.must_have_content "Sign Out"
     page.wont_have_content "Log In"
     page.wont_have_content "Invalid email or password"
   end

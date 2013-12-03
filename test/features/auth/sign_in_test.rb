@@ -10,7 +10,8 @@ feature "As a visitor, I want to sign into my existing account." do
     click_on 'Sign in'
     # Then I should receive a successful login message
     # save_and_open_page
-    page.must_have_content "Signed in successfully"
+    page.must_have_content "Logged in as"
+    page.must_have_content "Sign Out"
     page.wont_have_content "Log In"
     page.wont_have_content "Invalid email or password"
   end

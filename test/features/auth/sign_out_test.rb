@@ -9,12 +9,14 @@ feature "As a visitor, I want to sign out when I'm done." do
     fill_in 'Password', with: '12341234'
     fill_in 'Password confirmation', with: '12341234'
     click_on 'Sign up'
-    page.must_have_content "Welcome! You have signed up successfully"
+    page.must_have_content "Logged in as"
+    page.must_have_content "Sign Out"
     page.wont_have_content "prohibited this user from being saved"
+    page.wont_have_content "Sign In"
     # When I click log out.
     click_on 'Sign Out'
     # Then I should see the logged out message
-    page.text.must_include "Signed out successfully"
+    page.text.must_include "Sign In"
     page.wont_have_content "Sign Out"
   end
 
@@ -24,12 +26,14 @@ feature "As a visitor, I want to sign out when I'm done." do
     fill_in 'Email', with: users(:user_one).email
     fill_in 'Password', with: 'password'
     click_on 'Sign in'
-    page.text.must_include "Signed in successfully"
+    page.must_have_content "Logged in as"
+    page.must_have_content "Sign Out"
     page.wont_have_content "Invalid email or password"
+    page.wont_have_content "Sign In"
     # When I click log out.
     click_on 'Sign Out'
     # Then I should see the logged out message
-    page.text.must_include "Signed out successfully"
+    page.text.must_include "Sign In"
     page.wont_have_content "Sign Out"
   end
 
