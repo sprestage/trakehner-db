@@ -4,7 +4,7 @@ class HorsesController < ApplicationController
   # GET /horses
   # GET /horses.json
   def index
-    @horses = Horse.search(params[:search])
+    @horses = Horse.search(params[:search], params[:has_image])
     if @horses.class == Array
       @horses = Kaminari.paginate_array(@horses).page(params[:page])
     else
