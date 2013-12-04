@@ -21,7 +21,6 @@
     <tr>
       <th class="text-center">Name</th>
       <th class="text-center">Address</th>
-      <th></th>
     </tr>
   </thead>
 
@@ -30,7 +29,6 @@
       <tr id="<%= breeder.id %>">
         <td><%= link_to breeder.name, breeder %></td>
         <td><%= breeder.address %></td>
-        <td><%= link_to 'Delete Breeder', breeder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
