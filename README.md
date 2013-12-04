@@ -35,19 +35,11 @@ Deployment
 This project has been deployed to Heroku and can be found here: http://sprestage-trakehner-db.herokuapp.com.
 Heroku also points to the custom domain http://www.unofficialtrakehnerdatabase.com which is now live!
 
-Open Questions
-=======
-* Authentication with Devise, OmniAuth, or both.  Best guess is both.  Possibly starting with Devise and then
-adding OmniAuth later.  Not sure yet.  -sprestage Wed, 10/23
-
-
 Plan for the next couple of days (10/30/13)
 =======
 >
     [ ] Write up the various use cases
     [ ] Add use cases into sprint.ly
-    [ ] Implement users <- implement this while implementing Devise
-    [ ] Implement Devise authentication
     [ ] Implement OmniAuth
 
 
@@ -55,19 +47,16 @@ To Do List
 =======
 > ##home page:
 >>      * login for Trakehner owners to add/modify horse pedigree
->>      * search for Trakehner horse by name, registry number
+>>      * search for Trakehner horse by registry number
 
 > ##show page (these might need to be broken into separate pages):
->>      * show individual horse pedigree
 >>      * show all current stallions
 >>      * show all children given either parent name or registry number
 
 > ##stretch goal, probably out of scope
->>      * scrape all existing pedigree data from ATA website
 >>      * scrape existing pedigree data from Trakehner Verband website (mostly in German)
 
 > ##authentication and authorization
->>      * must have valid login (authentication)
 >>      * must have authorization to alter data (authorization)
 
 
@@ -103,6 +92,7 @@ Search by horse and breeder substring.
 AWS storage of all site images.
 Image upload by user (stores on AWS).
 Five roles:
+>
     visitors to the site -  can look and search horses and breeders;
                             cannot see new h/b, edit h/b, delete h/b,
                             cannot see sign up anywhere.
