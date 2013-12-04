@@ -28,7 +28,15 @@
   </div>
 </div>
 
-<br><br>
+<br />
+<br />
+
+<% if @breeder.horses.any? %>
+  <%= render 'layouts/index_table', {:horses => @breeder.horses} %>
+<% end %>
+
+<br />
+<br />
 
 <div class="section-colored text-center">
   <div class="trakehnerBreederFooter">
