@@ -35,15 +35,15 @@ feature "Search for breeders on the index page" do
     page.text.must_include breeders(:blessed_fields).name
   end
 
-  scenario "Search for empty address string (should match all breeders)" do
-    visit breeders_path
-    fill_in "search_address", with: ""
-    click_on "Search Breeder By Address"
+  # scenario "Search for empty address string (should match all breeders)" do
+  #   visit breeders_path
+  #   fill_in "search_address", with: ""
+  #   click_on "Search Breeder By Address"
 
-    page.text.must_include breeders(:tabarah).address
-    page.text.must_include breeders(:meadowview).address
-    page.text.must_include breeders(:blessed_fields).address
-  end
+  #   page.text.must_include breeders(:tabarah).address
+  #   page.text.must_include breeders(:meadowview).address
+  #   page.text.must_include breeders(:blessed_fields).address
+  # end
 
   scenario "Search for some breeders by name" do
     visit breeders_path
