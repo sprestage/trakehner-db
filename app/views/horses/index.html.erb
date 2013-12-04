@@ -15,6 +15,7 @@
 <table>
   <thead>
     <tr>
+      <th class="text-center">Thumbnail</th>
       <th class="text-center">Trakehner Name</th>
       <th>Sex</th>
       <th>YOB</th>
@@ -30,6 +31,11 @@
   <tbody>
     <% @horses.each do |horse| %>
       <tr id="<%= horse.id %>">
+        <% if horse.image_url %>
+          <td><%= image_tag horse.image_url(:thumbnail).to_s %></td>
+        <% else %>
+          <td></td>
+        <% end %>
         <td><%= link_to horse.name, horse %></td>
         <td><%= horse.sex %></td>
         <td><%= horse.birth_year %></td>

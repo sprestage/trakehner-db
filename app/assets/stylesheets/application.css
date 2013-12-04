@@ -14,7 +14,6 @@
  *= require_tree .
  */
 
-
 .male {
   background-color: #CCCCCC;
   color: #000000;
@@ -39,4 +38,11 @@
 
 .pedigree_name {
   font-size: 350%;
+}
+
+.has_image_checkbox {
+  margin-left: 42%;
+  margin-right: 1%;
+  font-size: 150%;
+  color: gray;
 }

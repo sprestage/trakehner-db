@@ -18,4 +18,3 @@ deploy:
   on:
     repo: sprestage/trakehner-db
   run:
-   - "rake db:setup"
