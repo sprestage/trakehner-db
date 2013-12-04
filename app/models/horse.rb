@@ -49,12 +49,8 @@ class Horse < ActiveRecord::Base
       return
     end
 
-    horse = Horse.find_by name: record["name"]
-    unless horse
-      horse = Horse.new
-    end
+    horse = Horse.fetch(record["name"])
 
-    horse.name = record["name"]
     horse.registration_number = record["registration_number"]
     horse.sex = record["sex"]
     horse.color = record["color"]
@@ -63,9 +59,8 @@ class Horse < ActiveRecord::Base
     horse.sire = get_parent(record["sire"])
     horse.dam = get_parent(record["dam"])
 
-    unless record["breeder"].empty? || record["breeder"] == nil || record["breeder"] == "---"
-      horse.breeder = Breeder.fetch(record["breeder"])
-    end
+    horse.breeder = Breeder.fetch(record["breeder"])
+
 
     horse.performance_records_available = record["performance_records_available"]
 
@@ -102,6 +97,18 @@ class Horse < ActiveRecord::Base
     else
       puts "Horse name #{ horse.name } save-to-database failed"
     end
+  end
+
+  def self.fetch(name)
+    unless name.empty? || name == nil || name == "---"
+      horse = Horse.find_by name: name
+      unless horse
+        horse = Horse.new
+        horse.name = name
+        horse.save!
+      end
+    end
+    return horse
   end
 
 end

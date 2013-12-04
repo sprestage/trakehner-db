@@ -24,10 +24,12 @@ class Breeder < ActiveRecord::Base
   end
 
   def self.fetch(name)
-    breeder = Breeder.find_by name: name
-    unless breeder
-      breeder = Breeder.new name: name
-      breeder.save!
+    unless name.empty? || name == nil || name == "---"
+      breeder = Breeder.find_by name: name
+      unless breeder
+        breeder = Breeder.new name: name
+        breeder.save!
+      end
     end
     return breeder
   end
