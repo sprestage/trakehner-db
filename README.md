@@ -14,12 +14,17 @@ To implement a website for the Trakehner horse enthusiast, with emphasis for the
 
 Motivation
 =======
-Performing the research on the bloodlines of various Trakehners can be very tedious.  Almost none of the historical Trakehners
-have pages, so most of the horses in a given pedigree have no links to further information, just a name.  As a horse breeder,
-I want to easily look up pertinent data (pedigree, performance records, photos, inspection results, etc) for every ancestor and
-every decendant of any given Trakehner horse.  I want this accessible on the web.  I want it fast and easy.  I want it available
-for everyone to read.  I want only the owner of a horse to be able to change/enter data.  It should not be possible for a user
-to delete a horse entirely, this should probably be an admin task to correct for gross mistakes or duplications.
+Performing research on the bloodlines of various Trakehners can be
+very tedious.  Almost none of the historical Trakehners have pages,
+so most of the horses in a given pedigree have no links to further
+information, just a name.  As a horse breeder, I want to easily look
+up pertinent data (pedigree, performance records, photos, inspection
+results, etc) for every ancestor and every decendant of any given
+Trakehner horse.  I want this accessible on the web.  I want it fast
+and easy.  I want it available for everyone to read.  I want only the
+owner of a horse to be able to change/enter data.  It should not be
+possible for a user to delete a horse entirely, this should probably
+be an admin task to correct for gross mistakes or duplications.
 
 This site is my solution to those problems.
 
