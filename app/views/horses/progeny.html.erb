@@ -3,7 +3,6 @@
 <br>
 <p class="pedigree_progeny_link"><%= link_to 'Show pedigree', horse_path(@horse) %></p>
 
-
 <% if @progeny.any? %>
   <%= render 'layouts/index_table', {:horses => @progeny} %>
 <% else %>
