@@ -128,4 +128,5 @@ Presentation Bragging Points
     [x] link to horses from breeder's page
     [x] about, with pro links
     [x] contact page
+    [x] policies so only admin can create, edit, destroy
     
