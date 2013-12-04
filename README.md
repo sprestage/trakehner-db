@@ -85,6 +85,7 @@ To Do List (completed items)
 
 Presentation Bragging Points
 =======
+>
 Live site (unofficialtrakehnerdatabase.com).
 Travis and Heroku continuous deployment.
 Sorting by horse and breeder names.
@@ -92,7 +93,6 @@ Search by horse and breeder substring.
 AWS storage of all site images.
 Image upload by user (stores on AWS).
 Five roles:
->
     visitors to the site -  can look and search horses and breeders;
                             cannot see new h/b, edit h/b, delete h/b,
                             cannot see sign up anywhere.
