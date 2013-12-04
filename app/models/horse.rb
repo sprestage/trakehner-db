@@ -37,6 +37,10 @@ class Horse < ActiveRecord::Base
     return self.default_dam || Horse.new(name: 'Unknown')
   end
 
+  def get_progeny
+    Horse.where("sire_id = ? OR dam_id = ?", "#{ id }", "#{ id }")
+  end
+
   def self.create_from_json(record)
 
     if record["name"].empty? || record["name"] == nil

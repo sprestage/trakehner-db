@@ -17,6 +17,12 @@ class HorsesController < ApplicationController
   def show
   end
 
+  # GET /horses/1/progeny
+  def progeny
+    @horse = Horse.find(params[:id])
+    @progeny = @horse.get_progeny
+  end
+
   # GET /horses/new
   def new
     @horse = Horse.new
