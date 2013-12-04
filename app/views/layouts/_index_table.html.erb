@@ -24,7 +24,17 @@
             <td></td>
           <% end %>
           <td><%= link_to horse.name, horse %></td>
-          <td><%= horse.sex %></td>
+          <td>
+            <% if horse.sex == "S" %>
+              <%= "Stallion" %>
+            <% elsif horse.sex == "M" %>
+              <%= "Mare" %>
+            <% elsif horse.sex == "G" %>
+              <%= "Gelding" %>
+            <% else %>
+              <%= horse.sex %>
+            <% end %>
+          </td>
           <td><%= horse.birth_year %></td>
           <td><%= link_to horse.sire.name, horse.sire %></td>
           <td><%= link_to horse.dam.name, horse.dam %></td>
