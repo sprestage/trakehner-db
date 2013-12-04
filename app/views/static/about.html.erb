@@ -41,13 +41,3 @@
     <%= image_tag( "susan.jpg", size: "162x242", alt: "Susan" ) %>
   </div>
 </div>
-
-<div class="section-colored text-center">
-  <div id="about_footer">
-    <% if !current_user %>
-      <%= link_to "Sign Up", new_user_registration_path %>
-    <% end %>
-  </div>
-</div>
-
-
