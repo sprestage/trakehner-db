@@ -4,21 +4,6 @@
 <% mature_height = "" %>
 <% mare_family = "" %>
 
-<% breeder_first_name = "Jean" %>
-<% breeder_last_name = "Brinkman" %>
-<% breeder_farm = "Valhalla Farm" %>
-<% breeder_city_state = "Welborn, FL" %>
-
-<% owner_first_name = "Jean" %>
-<% owner_last_name = "Brinkman" %>
-<% owner_farm = "Valhalla Farm" %>
-<% owner_street_address = "14872 47th Rd" %>
-<% owner_city_state_zip = "Welborn, FL  32094" %>
-<% owner_phone = "366-963-4619" %>
-<% owner_website = "Valhallatrakehner.com" %>
-<% owner_email = "Valhalla@alltel.net" %>
-
-
 <div class="section-colored text-center">
   <div class="trakehnerHorseName">
     <tr><td>
@@ -97,7 +82,7 @@
           <td valign='top' align='right' width='10%'><%= "Breeder:" %></td>
           <td class="thick" align='left'>
             <% if @horse.breeder %>
-              <%= @horse.breeder.name %>
+              <%= link_to "#{ @horse.breeder.name }", @horse.breeder %>
             <% end %>
           </td>
           <td></td>
