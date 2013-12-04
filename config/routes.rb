@@ -8,7 +8,12 @@ TrakehnerDb::Application.routes.draw do
     get "signout", :to => "devise/sessions#destroy"
   end
 
-  resources :horses
+
+  resources :horses do
+    member do
+      get 'progeny'
+    end
+  end
 
   # get "home/index"
   root :to => 'home#index'

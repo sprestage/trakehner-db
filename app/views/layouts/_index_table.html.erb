@@ -1,0 +1,36 @@
+<div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="text-center"></th>
+        <th class="text-center">Trakehner Name</th>
+        <th>Sex</th>
+        <th>YOB</th>
+        <th class="text-center">Sire</th>
+        <th class="text-center">Dam</th>
+        <th>Color</th>
+        <!-- TODO: When we finally get Height implemented, drop the display
+        of damsire to make room in the horse index display. -->
+      </tr>
+    </thead>
+
+    <tbody>
+      <% horses.each do |horse| %>
+        <tr id="<%= horse.id %>">
+          <% if horse.image_url %>
+            <td><%= image_tag horse.image_url(:thumbnail).to_s %></td>
+          <% else %>
+            <td></td>
+          <% end %>
+          <td><%= link_to horse.name, horse %></td>
+          <td><%= horse.sex %></td>
+          <td><%= horse.birth_year %></td>
+          <td><%= link_to horse.sire.name, horse.sire %></td>
+          <td><%= link_to horse.dam.name, horse.dam %></td>
+          <td><%= horse.color %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

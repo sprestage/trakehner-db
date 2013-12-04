@@ -1,0 +1,14 @@
+<%= render 'layouts/show_horse_header' %>
+
+<br>
+<p class="pedigree_progeny_link"><%= link_to 'Show pedigree', horse_path(@horse) %></p>
+
+
+
+<%= render 'layouts/index_table', {:horses => @progeny} %>
+
+<br>
+<br />
+<%= render 'layouts/show_horse_footer' %>
+
+</div>
