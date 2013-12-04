@@ -3,7 +3,7 @@ require "test_helper"
 feature "Update Horse" do
   scenario "successfully update horse" do
     # Given an existing horse
-    sign_in
+    sign_in_admin
     visit horse_path(horses(:horse02))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -18,7 +18,7 @@ feature "Update Horse" do
 
   scenario "fail to update horse, validation errror, name presence" do
     # Given an existing horse
-    sign_in
+    sign_in_admin
     visit horse_path(horses(:horse02))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -35,7 +35,7 @@ feature "Update Horse" do
 
   scenario "fail to update horse, failed validation, name uniqueness" do
     # Given an existing horse
-    sign_in
+    sign_in_admin
     visit horse_path(horses(:horse02))
     page.text.must_include 'Edit'
     click_on 'Edit'

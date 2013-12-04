@@ -1,5 +1,5 @@
 class HorsesController < ApplicationController
-  before_action :authenticate_user!, :set_horse, only: [:show, :edit, :update, :destroy]
+  before_action :set_horse, only: [:show, :edit, :update, :destroy]
 
   # GET /horses
   # GET /horses.json
@@ -30,6 +30,7 @@ class HorsesController < ApplicationController
   # POST /horses.json
   def create
     @horse = Horse.new(horse_params)
+    authorize @horse
 
     respond_to do |format|
       if @horse.save
@@ -59,6 +60,7 @@ class HorsesController < ApplicationController
   # DELETE /horses/1
   # DELETE /horses/1.json
   def destroy
+    authorize @horse
     @horse.destroy
     respond_to do |format|
       format.html { redirect_to horses_url }

@@ -122,11 +122,19 @@ AWS storage of all site images.
 Image upload by user (stores on AWS).
 Five roles:
     visitors to the site -  can look and search horses and breeders;
-                            cannot see new, edit, delete anywhere
-                            ? can see Sign Up? Or should sign up only
-                            be by email to me and Nathaniel...this is
-                            the way the ATA does it.
-    owners - can see edit horse (will eventually include editing horse owner info)
-    breeders - can see edit breeder
-    ata - can see edit horse and edit breeder
+                            cannot see new h/b, edit h/b, delete h/b,
+                            cannot see sign up anywhere.
+                            sign up new users is only by email to me and
+                            Nathaniel...this is the way the ATA does it.
+    owners -    can see edit horses they own only (will eventually include
+                  editing horse
+                owner info)
+                cannot see new h/b, edit breeder, delete h/b
+    breeders -  can edit self
+                cannot see new h/b, edit horse, edit breeders other than
+                self cannot see delete horse/breeder, sign up
+    ata -   can see edit horse and edit breeder
+            cannot see new or delete h/b (we should reconsider this when
+            the time comes)
     admin - me and Nathaniel
+            can see all the things

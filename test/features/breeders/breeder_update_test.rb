@@ -3,7 +3,7 @@ require "test_helper"
 feature "Update Breeder" do
   scenario "successfully update breeder" do
     # Given an existing breeder
-    sign_in
+    sign_in_admin
     visit breeder_path(breeders(:breeder01))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -18,7 +18,7 @@ feature "Update Breeder" do
 
   scenario "fail to update breeder, validation errror, name presence" do
     # Given an existing breeder
-    sign_in
+    sign_in_admin
     visit breeder_path(breeders(:breeder02))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -33,7 +33,7 @@ feature "Update Breeder" do
 
   scenario "fail to update breeder, failed validation, name uniqueness" do
     # Given an existing breeder
-    sign_in
+    sign_in_admin
     visit breeder_path(breeders(:breeder02))
     page.text.must_include 'Edit'
     click_on 'Edit'

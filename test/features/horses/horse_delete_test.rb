@@ -3,13 +3,17 @@ require "test_helper"
 feature "deleting a horse" do
   scenario "successfully delete horses" do
     # Given a horse
-    sign_in
+    sign_in_admin
     visit horses_path
-    fill_in "search", with: "Nemo"
+    fill_in "search", with: "k"
     click_on "Search"
-    page.text.must_include "Nemo"
-    visit horse_path(horses(:nemo))
-    page.text.must_include "Nemo"
+    page.text.must_include horses(:jakira).name
+    page.text.must_include horses(:polarpunkt).name
+
+    visit horse_path(horses(:polarpunkt))
+    page.text.must_include "Polarpunkt"
+    click_on "Edit"
+    page.text.must_include "Editing horse"
 
     # When I submit the form
     click_on "Delete Horse"
@@ -17,11 +21,12 @@ feature "deleting a horse" do
     page.has_content?('Are you sure')
 
     visit horses_path
-    fill_in "search", with: "Nemo"
+    fill_in "search", with: "k"
     click_on "Search"
 
     # And the horse is no longer present
-    page.wont_have_content "Nemo"
+    page.text.must_include horses(:jakira).name
+    page.wont_have_content horses(:polarpunkt).name
   end
 
 end

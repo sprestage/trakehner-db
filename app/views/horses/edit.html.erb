@@ -9,6 +9,14 @@
 <%= render 'form' %>
 
 <div class="section-colored text-center">
+  <div class="horse_edit_delete_breeder">
+    <% if policy(Horse).destroy? %>
+      <%= link_to 'Delete Horse', @horse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </div>
+</div>
+
+<div class="section-colored text-center">
   <div id="horse_edit_footer">
     <%= link_to 'Show', @horse %> |
     <%= link_to 'Back', horses_path %>

@@ -3,7 +3,7 @@ require "test_helper"
 feature "Create horse" do
   scenario "successfully create horses" do
     # Given a completed new horse form
-    sign_in
+    sign_in_admin
     visit new_horse_path
     fill_in "Name", with: "Jupiter"
     # When the form is submitted
@@ -15,7 +15,7 @@ feature "Create horse" do
 
   scenario "fail to create horse due to failed validation, name presence" do
     # Given a completed new horse form
-    sign_in
+    sign_in_admin
     visit new_horse_path
     # When the form is submitted
     click_on "Create Horse"
@@ -26,7 +26,7 @@ feature "Create horse" do
 
   scenario "fail to create horse, failed validation, name uniqueness" do
     # Given a completed new horse form
-    sign_in
+    sign_in_admin
     visit new_horse_path
     fill_in "Name", with: horses(:horse04).name
     # When the form is submitted

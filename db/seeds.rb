@@ -22,3 +22,5 @@ records = JSON.parse(File.read(filename))
 records.each do |r|
   Horse.import_image_from_remote(r)
 end
+
+user = User.create! :email => 'admin@unofficialtrakehnerdatabase.com', :password => 'BseeingU2', :password_confirmation => 'BseeingU2', :role => Role.find_by_name('admin')

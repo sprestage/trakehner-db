@@ -19,13 +19,10 @@
   additional data or recommendations, we eagerly solicit your views and
   contributions.</p><br>
 
-  <p>We were inspired to create this site shortly after the last ATA inspection
-  we attended in 2011.  We were looking to improve a slight weakness in the
-  croup in our mare line and found that we had a hard time researching the
-  stallions and bloodlines to our satisfaction.  Being web developers in
-  addition to Trakehner horse breeders, this website was a natural result
-  of this struggle.  We hope using this site gives you as much pleasure as
-  it does us.  Thank you for visiting.<p><br><br>
+  <p>We were inspired to create this site shortly after an ATA inspection
+  we attended here in Washington state in 2011.  We were looking to improve a slight weakness in the croup in our mare line and found that we had a hard
+  time researching the stallions and bloodlines to our satisfaction.  Being
+  web developers in addition to Trakehner horse breeders, this website was a natural result of this struggle.  We hope using this site gives you as much pleasure as it does us.  Thank you for visiting.<p><br><br>
 </div>
 
 <div class="section-colored text-center">
@@ -42,5 +39,12 @@
   </div>
 </div>
 
+<div class="section-colored text-center">
+  <div id="about_footer">
+    <% if !current_user %>
+      <%= link_to "Sign Up", new_user_registration_path %>
+    <% end %>
+  </div>
+</div>
 
 

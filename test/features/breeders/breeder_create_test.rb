@@ -3,7 +3,7 @@ require "test_helper"
 feature "Create breeder" do
   scenario "successfully create breeders" do
     # Given a completed new breeder form
-    sign_in
+    sign_in_admin
     visit new_breeder_path
     fill_in "Name", with: "Hopeful Farm"
     # When the form is submitted
@@ -15,7 +15,7 @@ feature "Create breeder" do
 
   scenario "fail to create breeder due to failed validation, name presence" do
     # Given a completed new breeder form
-    sign_in
+    sign_in_admin
     visit new_breeder_path
     # When the form is submitted
     click_on "Create Breeder"
@@ -26,7 +26,7 @@ feature "Create breeder" do
 
   scenario "fail to create breeder, failed validation, name uniqueness" do
     # Given a completed new breeder form
-    sign_in
+    sign_in_admin
     visit new_breeder_path
     fill_in "Name", with: breeders(:tabarah).name
     # When the form is submitted

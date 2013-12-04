@@ -29,7 +29,9 @@
 
 <div class="section-colored text-center">
   <div class="trakehnerBreederFooter">
-    <%= link_to 'Edit', edit_breeder_path(@breeder) %> |
+    <% if policy(Breeder).update? %>
+      <%= link_to 'Edit', edit_breeder_path(@breeder), id: "edit_breeder_link" %> |
+    <% end %>
     <%= link_to 'Back', breeders_path %>
   </div>
 </div>

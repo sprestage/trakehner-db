@@ -4,4 +4,19 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def admin?
+    role == 'admin'
+  end
+
+  def ata?
+    role == 'ata'
+  end
+
+  def breeder?
+    role == 'breeder'
+  end
+
+  def owner?
+    role == 'owner'
+  end
 end

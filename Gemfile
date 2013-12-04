@@ -8,7 +8,10 @@ gem 'pg'
 gem 'devise'
 gem 'omniauth'
 
-# kaminari for pagination
+# Use Pundit for authorization (policies and roles)
+gem 'pundit'
+
+# Use Kaminari for pagination
 gem 'kaminari'
 
 # Use SCSS for stylesheets

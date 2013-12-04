@@ -15,11 +15,12 @@
   </div>
 </div>
 
-<table>
+<style>th{background-color:black; color:white}</style>
+<table border="1">
   <thead>
     <tr>
-      <th>Name</th>
-      <th></th>
+      <th class="text-center">Name</th>
+      <th class="text-center">Address</th>
       <th></th>
     </tr>
   </thead>
@@ -27,10 +28,8 @@
   <tbody>
     <% @breeders.each do |breeder| %>
       <tr id="<%= breeder.id %>">
-        <td><%= breeder.name %></td>
+        <td><%= link_to breeder.name, breeder %></td>
         <td><%= breeder.address %></td>
-        <td><%= link_to 'Show', breeder %></td>
-        <td><%= link_to 'Edit', edit_breeder_path(breeder) %></td>
         <td><%= link_to 'Delete Breeder', breeder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -40,8 +39,12 @@
 <br>
 
 <div class="section-colored text-center">
-  <div class="indexFooter">
-    <%= link_to 'New Breeder', new_breeder_path %>
+  <div class="breeder_index_new_breeder">
+    <% if policy(Breeder).create? %>
+      <%= link_to 'New Breeder', new_breeder_path %>
+    <% end %>
+  </div>
+  <div class="breeder_index_footer">
     <%= paginate @breeders %>
     <br><br>
     <%= link_to 'Home', root_path %>

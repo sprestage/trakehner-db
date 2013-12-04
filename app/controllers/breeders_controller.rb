@@ -32,6 +32,7 @@ class BreedersController < ApplicationController
   # POST /breeders.json
   def create
     @breeder = Breeder.new(breeder_params)
+    authorize @breeder
 
     respond_to do |format|
       if @breeder.save
@@ -61,6 +62,7 @@ class BreedersController < ApplicationController
   # DELETE /breeders/1
   # DELETE /breeders/1.json
   def destroy
+    authorize @breeder
     @breeder.destroy
     respond_to do |format|
       format.html { redirect_to breeders_url }

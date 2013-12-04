@@ -1,11 +1,35 @@
 user_one:
  email: user_one@example.com
  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+ role: breeder
 
 user_two:
  email: user_two@example.com
  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+ role: breeder
 
 user_three:
  email: user_three@example.com
  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+ role: breeder
+
+admin:
+ email: admin@example.com
+ encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+ role: admin
+
+ata:
+ email: ata@example.com
+ encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+ role: ata
+
+breeder:
+ email: breeder@example.com
+ encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+ role: breeder
+
+owner:
+ email: owner@example.com
+ encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+ role: owner
+
