@@ -60,29 +60,8 @@ class Horse < ActiveRecord::Base
     horse.color = record["color"]
     horse.birth_year = record["birth_year"]
 
-    sire_name = record["sire"]
-    unless sire_name.empty? || sire_name == nil || sire_name == "---"
-      sire = Horse.find_by name: record["sire"]
-      if sire
-        horse.sire = sire
-      else
-        sire = Horse.new(name: record["sire"])
-        sire.save!
-        horse.sire = sire
-      end
-    end
-
-    dam_name = record["dam"]
-    unless dam_name.empty? || dam_name == nil || dam_name == "---"
-      dam = Horse.find_by name: record["dam"]
-      if dam
-        horse.dam = dam
-      else
-        dam = Horse.new(name: record["dam"])
-        dam.save!
-        horse.dam = dam
-      end
-    end
+    horse.sire = get_parent(record["sire"])
+    horse.dam = get_parent(record["dam"])
 
     unless record["breeder"].empty? || record["breeder"] == nil || record["breeder"] == "---"
       horse.breeder = Breeder.fetch(record["breeder"])
@@ -96,6 +75,18 @@ class Horse < ActiveRecord::Base
       puts "Horse name #{ horse.name } save-to-database failed"
     end
 
+  end
+
+  def self.get_parent(parent_name)
+    parent = nil
+    unless parent_name.empty? || parent_name == nil || parent_name == "---"
+      parent = Horse.find_by name: parent_name
+      unless parent
+        parent = Horse.new(name: parent_name)
+        parent.save!
+      end
+    end
+    return parent
   end
 
   def self.import_image_from_remote(record)
