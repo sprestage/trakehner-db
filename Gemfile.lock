@@ -250,7 +250,7 @@ DEPENDENCIES
   bcrypt-ruby
   carrierwave
   carrierwave_direct
-  coffee-rails (~> 4.0.0)
+  coffee-rails
   devise
   faker
   figaro
@@ -276,7 +276,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails_12factor
   rmagick
-  sass-rails (~> 4.0.0)
+  sass-rails
   sdoc
   sidekiq
   simplecov
