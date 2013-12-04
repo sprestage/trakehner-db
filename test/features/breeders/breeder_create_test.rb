@@ -37,6 +37,23 @@ feature "Create breeder" do
     page.wont_have_content breeders(:tabarah).name
   end
 
+  scenario "admin successfully sees the New Breeder link" do
+    # Given a signed in admin
+    sign_in_admin
+    # When the breeder index is visited
+    visit breeders_path
+    # Then the create breeder link is present
+    page.text.must_include "New Breeder"
+  end
+
+  scenario "non-admin successfully fails to see the New Breeder link" do
+    # Given a not-signed-in site visitor
+        # do nothing
+    # When the breeder index is visited
+    visit breeders_path
+    # Then the create breeder link is absent
+    page.wont_have_content "New Breeder"
+  end
 end
 
 

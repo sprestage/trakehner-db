@@ -37,6 +37,23 @@ feature "Create horse" do
     page.wont_have_content horses(:horse04).name
   end
 
+  scenario "admin successfully sees the New Horse link" do
+    # Given a signed in admin
+    sign_in_admin
+    # When the horse index is visited
+    visit horses_path
+    # Then the new horse link is present
+    page.text.must_include "New Horse"
+  end
+
+  scenario "non-admin successfully fails to see the New Horse link" do
+    # Given a not-signed-in site visitor
+        # do nothing
+    # When the horse index is visited
+    visit horses_path
+    # Then the new horse link is absent
+    page.wont_have_content "New Horse"
+  end
 end
 
 

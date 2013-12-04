@@ -29,4 +29,24 @@ feature "deleting a horse" do
     page.wont_have_content horses(:polarpunkt).name
   end
 
+  scenario "admin successfully sees the Delete Horse link" do
+    # Given a signed in admin
+    sign_in_admin
+    # When the horse edit page is visited
+    visit horse_path(horses(:horse02))
+    click_on "Edit"
+    # Then the delete horse link is present
+    page.text.must_include "Delete Horse"
+  end
+
+  scenario "non-admin successfully fails to see the Delete Horse link" do
+    # Given a not-signed-in site visitor
+        # do nothing
+    # When the horse edit page is visited
+    visit horse_path(horses(:horse02))
+    # Then the edit horse link is absent,
+    #  which means we cannot get to the delete horse link
+    page.wont_have_content "Edit Horse"
+  end
+
 end

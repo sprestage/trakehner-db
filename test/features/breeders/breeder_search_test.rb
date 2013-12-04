@@ -56,6 +56,29 @@ feature "Search for breeders on the index page" do
     page.wont_have_content breeders(:blessed_fields).name
   end
 
+  scenario "Site visitor can successsfully search for some breeders by name" do
+    visit breeders_path
+    fill_in "search_name", with: "t"
+    click_on "Search Breeder By Name"
+
+    page.text.must_include breeders(:tabarah).name
+    page.text.must_include breeders(:breeder01).name
+    page.wont_have_content breeders(:meadowview).name
+    page.wont_have_content breeders(:blessed_fields).name
+  end
+
+  scenario "Logged in admin can also successsfully search for some breeders by name" do
+    sign_in_admin
+    visit breeders_path
+    fill_in "search_name", with: "t"
+    click_on "Search Breeder By Name"
+
+    page.text.must_include breeders(:tabarah).name
+    page.text.must_include breeders(:breeder01).name
+    page.wont_have_content breeders(:meadowview).name
+    page.wont_have_content breeders(:blessed_fields).name
+  end
+
   # scenario "Search for some breeders by address" do
   #   visit breeders_path
   #   fill_in "search_address", with: "v"

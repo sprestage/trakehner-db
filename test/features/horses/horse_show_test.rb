@@ -2,8 +2,19 @@ require "test_helper"
 
 feature "Show a single horse" do
 
-  scenario "successfully see Jakira and parts of her pedigree" do
-    sign_in
+  scenario "site visitor successfully sees Jakira and parts of her pedigree" do
+    visit horse_path(horses(:jakira))
+
+    page.text.must_include horses(:jakira).name.upcase
+    page.text.must_include horses(:ichiban).name
+    page.text.must_include horses(:arogno).name
+
+    page.wont_have_content horses(:abdullah).name.upcase
+    page.wont_have_content "Unknown"
+  end
+
+  scenario "logged in admin also successfully see Jakira and parts of her pedigree" do
+    sign_in_admin
     visit horse_path(horses(:jakira))
 
     page.text.must_include horses(:jakira).name.upcase

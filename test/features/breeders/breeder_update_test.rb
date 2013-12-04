@@ -46,4 +46,24 @@ feature "Update Breeder" do
     page.wont_have_content "Breeder was successfully created"
   end
 
+  scenario "admin successfully sees the Edit Breeder link" do
+    # Given a signed in admin
+    sign_in_admin
+    # When the breeder edit page is visited
+    visit breeder_path(breeders(:breeder02))
+    click_on "Edit"
+    # Then the edit breeder page comes up
+    page.text.must_include "Editing breeder"
+  end
+
+  scenario "non-admin successfully fails to see the Edit Breeder link" do
+    # Given a not-signed-in site visitor
+        # do nothing
+    # When the breeder edit page is visited
+    visit breeder_path(breeders(:breeder02))
+    # Then the edit breeder link is absent,
+    #  which means we cannot get to the delete breeder link
+    page.wont_have_content "Edit"
+  end
+
 end
