@@ -34,5 +34,28 @@ feature "Search for horses using the search bar" do
     page.wont_have_content horses(:siegel).name
   end
 
+  scenario "Site visitor can successfully search for some horses" do
+    visit root_path
+    fill_in "search", with: "J"
+    click_on "Search"
+
+    page.text.must_include horses(:jaegerin).name
+    page.text.must_include horses(:jamilah).name
+    page.wont_have_content horses(:marduc).name
+    page.wont_have_content horses(:siegel).name
+  end
+
+  scenario "Logged in admin can also successfully search for some horses" do
+    sign_in_admin
+    visit root_path
+    fill_in "search", with: "J"
+    click_on "Search"
+
+    page.text.must_include horses(:jaegerin).name
+    page.text.must_include horses(:jamilah).name
+    page.wont_have_content horses(:marduc).name
+    page.wont_have_content horses(:siegel).name
+  end
+
 end
 

@@ -4,5 +4,13 @@
 
 <%= render 'form' %>
 
+<div class="section-colored text-center">
+  <div class="breeder_edit_delete_breeder">
+    <% if policy(Breeder).destroy? %>
+      <%= link_to 'Delete Breeder', @breeder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </div>
+</div>
+
 <%= link_to 'Show', @breeder %> |
 <%= link_to 'Back', breeders_path %>

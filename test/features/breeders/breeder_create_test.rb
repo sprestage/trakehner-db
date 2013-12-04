@@ -3,7 +3,7 @@ require "test_helper"
 feature "Create breeder" do
   scenario "successfully create breeders" do
     # Given a completed new breeder form
-    sign_in
+    sign_in_admin
     visit new_breeder_path
     fill_in "Name", with: "Hopeful Farm"
     # When the form is submitted
@@ -15,7 +15,7 @@ feature "Create breeder" do
 
   scenario "fail to create breeder due to failed validation, name presence" do
     # Given a completed new breeder form
-    sign_in
+    sign_in_admin
     visit new_breeder_path
     # When the form is submitted
     click_on "Create Breeder"
@@ -26,7 +26,7 @@ feature "Create breeder" do
 
   scenario "fail to create breeder, failed validation, name uniqueness" do
     # Given a completed new breeder form
-    sign_in
+    sign_in_admin
     visit new_breeder_path
     fill_in "Name", with: breeders(:tabarah).name
     # When the form is submitted
@@ -37,6 +37,23 @@ feature "Create breeder" do
     page.wont_have_content breeders(:tabarah).name
   end
 
+  scenario "admin successfully sees the New Breeder link" do
+    # Given a signed in admin
+    sign_in_admin
+    # When the breeder index is visited
+    visit breeders_path
+    # Then the create breeder link is present
+    page.text.must_include "New Breeder"
+  end
+
+  scenario "non-admin successfully fails to see the New Breeder link" do
+    # Given a not-signed-in site visitor
+        # do nothing
+    # When the breeder index is visited
+    visit breeders_path
+    # Then the create breeder link is absent
+    page.wont_have_content "New Breeder"
+  end
 end
 
 

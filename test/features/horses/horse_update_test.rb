@@ -3,7 +3,7 @@ require "test_helper"
 feature "Update Horse" do
   scenario "successfully update horse" do
     # Given an existing horse
-    sign_in
+    sign_in_admin
     visit horse_path(horses(:horse02))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -18,7 +18,7 @@ feature "Update Horse" do
 
   scenario "fail to update horse, validation errror, name presence" do
     # Given an existing horse
-    sign_in
+    sign_in_admin
     visit horse_path(horses(:horse02))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -35,7 +35,7 @@ feature "Update Horse" do
 
   scenario "fail to update horse, failed validation, name uniqueness" do
     # Given an existing horse
-    sign_in
+    sign_in_admin
     visit horse_path(horses(:horse02))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -48,6 +48,27 @@ feature "Update Horse" do
     page.wont_have_content "Horse was successfully updated"
     # and stilll on edit page instead of show page
     page.text.must_include "Editing horse"
+  end
+
+  scenario "admin successfully sees the Edit Horse link" do
+    # Given a signed in admin
+    sign_in_admin
+    # When the horse edit page is visited
+    visit horse_path(horses(:horse02))
+    click_on "Edit"
+    # Then the delete horse link is present
+    page.text.must_include "Editing horse"
+  end
+
+  scenario "non-admin successfully fails to see the Edit Horse link" do
+    # Given a not-signed-in site visitor
+        # do nothing
+    # When the horse edit page is visited
+    visit horse_path(horses(:horse02))
+    # Then the edit horse link is absent,
+    #  which means we cannot get to the delete horse link
+    page.wont_have_content "Edit Horse"
+
   end
 
 end

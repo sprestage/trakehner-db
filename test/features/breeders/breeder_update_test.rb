@@ -3,7 +3,7 @@ require "test_helper"
 feature "Update Breeder" do
   scenario "successfully update breeder" do
     # Given an existing breeder
-    sign_in
+    sign_in_admin
     visit breeder_path(breeders(:breeder01))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -18,7 +18,7 @@ feature "Update Breeder" do
 
   scenario "fail to update breeder, validation errror, name presence" do
     # Given an existing breeder
-    sign_in
+    sign_in_admin
     visit breeder_path(breeders(:breeder02))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -33,7 +33,7 @@ feature "Update Breeder" do
 
   scenario "fail to update breeder, failed validation, name uniqueness" do
     # Given an existing breeder
-    sign_in
+    sign_in_admin
     visit breeder_path(breeders(:breeder02))
     page.text.must_include 'Edit'
     click_on 'Edit'
@@ -44,6 +44,26 @@ feature "Update Breeder" do
     page.text.must_include "Name has already been taken"
     # and no updated breeder or success message
     page.wont_have_content "Breeder was successfully created"
+  end
+
+  scenario "admin successfully sees the Edit Breeder link" do
+    # Given a signed in admin
+    sign_in_admin
+    # When the breeder edit page is visited
+    visit breeder_path(breeders(:breeder02))
+    click_on "Edit"
+    # Then the edit breeder page comes up
+    page.text.must_include "Editing breeder"
+  end
+
+  scenario "non-admin successfully fails to see the Edit Breeder link" do
+    # Given a not-signed-in site visitor
+        # do nothing
+    # When the breeder edit page is visited
+    visit breeder_path(breeders(:breeder02))
+    # Then the edit breeder link is absent,
+    #  which means we cannot get to the delete breeder link
+    page.wont_have_content "Edit"
   end
 
 end

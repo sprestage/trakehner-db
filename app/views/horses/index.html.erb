@@ -16,7 +16,14 @@
 
 <br>
 
-<%= link_to 'New Horse', new_horse_path %><br />
+<div class="nav">
+  <div id="horse_index_new_horse">
+    <% if policy(Horse).create? %>
+      <%= link_to 'New Horse', new_horse_path %><br />
+    <% end %>
+  </div>
+</div>
+
 <%= paginate @horses %>
 <br>
 <%= link_to 'Home', root_path %>

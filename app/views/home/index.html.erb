@@ -12,8 +12,7 @@
             <% end %>
 
             <% if !current_user %>
-              <%= link_to "Sign In", new_user_session_path %> or
-              <%= link_to "Sign Up", new_user_registration_path %>
+              <%= link_to "Sign In", new_user_session_path %>
             <% end %>
 
           </div>
@@ -32,6 +31,8 @@
 
   <p>Dorin being ridden by Emma Dye.</p>
 
+  <!-- TODO: Replace this picture of Dorin and Emma with a rotating
+              carousel of current active stallion images. -->
   <figure>
     <img src="https://s3-us-west-2.amazonaws.com/unofficialtrakehnerdb/horses/showDorinCanter.jpg" alt="Dorin at canter at show" width="504" height="360">
     <figcaption {font-size:10px;}>Fig1. - Photo by Carolynn Bunch Photography.</figcaption>

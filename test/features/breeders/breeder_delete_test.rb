@@ -3,23 +3,43 @@ require "test_helper"
 feature "deleting a breeder" do
   scenario "successfully delete breeders" do
     # Given a breeder
-    sign_in
+    sign_in_admin
     visit breeders_path
-    fill_in "search_name", with: "Tabarah"
-    click_on "Search Breeder By Name"
+    page.text.must_include breeders(:tabarah).name
+    page.text.must_include breeders(:breeder02).name
 
-    page.text.must_include "Tabarah"
     # When I submit the form
-    page.find(:xpath, '//*[@id="242306113"]').click_on "Delete Breeder"
+    visit breeder_path(breeders(:breeder02))
+    click_on "Edit"
+    page.text.must_include "Editing breeder"
+    click_on "Delete Breeder"
     # Then I should receive a warning
     page.has_content?('Are you sure')
 
-    visit breeders_path
-    fill_in "search_name", with: "Tabarah"
-    click_on "Search Breeder By Name"
-
     # And the breeder is no longer present
-    page.wont_have_content "Tabarah"
+    visit breeders_path
+    page.text.must_include breeders(:tabarah).name
+    page.wont_have_content breeders(:breeder02).name
+  end
+
+  scenario "admin successfully sees the Delete Breeder link" do
+    # Given a signed in admin
+    sign_in_admin
+    # When the breeder edit page is visited
+    visit breeder_path(breeders(:breeder02))
+    click_on "Edit"
+    # Then the delete breeder link is present
+    page.text.must_include "Delete Breeder"
+  end
+
+  scenario "non-admin successfully fails to see the Delete Breeder link" do
+    # Given a not-signed-in site visitor
+        # do nothing
+    # When the breeder edit page is visited
+    visit breeder_path(breeders(:breeder02))
+    # Then the edit breeder link is absent,
+    #  which means we cannot get to the delete breeder link
+    page.wont_have_content "Edit Breeder"
   end
 
 end
