@@ -124,3 +124,8 @@ Presentation Bragging Points
     [x] case-insensitive and substring searching
     [x] pedigree & progeny
     [x] list all of a breeder's horses
+    [x] link to breeder from show horse page
+    [x] link to horses from breeder's page
+    [x] about, with pro links
+    [x] contact page
+    
