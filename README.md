@@ -71,7 +71,7 @@ Five roles:
             the time comes)
     admin - me and Nathaniel
             can see all the things
-</pre>            
+</pre>
 
 
 To Do List (completed items)
@@ -106,14 +106,14 @@ Presentation Bragging Points
     [x] AWS S3 hosting of all horse images.
     [x] Image upload by user (stores on AWS).
     [x] Using PostgreSQL
-    
+
 ###Look and Feel
     [x] Twitter Bootstrap.
-    
+
 ###Testing
     [x] Testing with minitest
     [x] Code coverage checking with SimpleCov is at 85%.
-    
+
 ###Features
     [x] Scrape existing pedigree data from ATA (American Trakehner) website.
     [x] Sorting by horse and breeder names.
@@ -122,11 +122,11 @@ Presentation Bragging Points
     [x] search by image present
     [x] code climate
     [x] case-insensitive and substring searching
-    [x] pedigree & progeny
+    [x] pedigree and progeny
     [x] list all of a breeder's horses
     [x] link to breeder from show horse page
     [x] link to horses from breeder's page
     [x] about, with pro links
     [x] contact page
     [x] policies so only admin can create, edit, destroy
-    
+
