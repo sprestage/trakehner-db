@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sprestage/trakehner-db.png?branch=master)](https://travis-ci.org/sprestage/trakehner-db)[![Code Climate](https://codeclimate.com/github/sprestage/trakehner-db.png)](https://codeclimate.com/github/sprestage/trakehner-db)[![Dependency Status](https://gemnasium.com/sprestage/trakehner-db.png)](https://gemnasium.com/sprestage/trakehner-db)[![endorse](https://api.coderwall.com/sprestage/endorsecount.png)](https://coderwall.com/sprestage)
+[![Build Status](https://travis-ci.org/sprestage/trakehner-db.png?branch=master)](https://travis-ci.org/sprestage/trakehner-db)[![Code Climate](https://codeclimate.com/github/sprestage/trakehner-db.png)](https://codeclimate.com/github/sprestage/trakehner-db)[![Dependency Status](https://gemnasium.com/sprestage/trakehner-db.png)](https://gemnasium.com/sprestage/trakehner-db)[![endorse](https://api.coderwall.com/sprestage/endorsecount.png)](https://coderwall.com/sprestage)[![Coverage Status](https://coveralls.io/repos/sprestage/trakehner-db/badge.png)](https://coveralls.io/r/sprestage/trakehner-db)
 
 The Unofficial Trakehner Database
 =======
