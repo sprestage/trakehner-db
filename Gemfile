@@ -8,6 +8,9 @@ gem 'pg'
 gem 'devise'
 gem 'omniauth'
 
+# Use coveralls to display code coverage percentage badge on readme
+gem 'coveralls', require: false
+
 # Use Pundit for authorization (policies and roles)
 gem 'pundit'
 
