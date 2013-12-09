@@ -1,23 +1,26 @@
 TrakehnerDb::Application.routes.draw do
 
-  resources :breeders
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
-  devise_for :users
+    resources :breeders
 
-  devise_scope :user do
-    get "signout", :to => "devise/sessions#destroy"
-  end
+    devise_for :users
 
-
-  resources :horses do
-    member do
-      get 'progeny'
+    devise_scope :user do
+      get "signout", :to => "devise/sessions#destroy"
     end
+
+    resources :horses do
+      member do
+        get 'progeny'
+      end
+    end
+
+    # get "home/index"
+    root :to => 'home#index'
+
+    get ':action' => 'static#:action'
+
   end
-
-  # get "home/index"
-  root :to => 'home#index'
-
-  get ':action' => 'static#:action'
 
 end

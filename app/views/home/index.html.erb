@@ -7,7 +7,7 @@
         <div id="user_header">
           <div class="nav">
             <% if current_user %>
-              Logged in as <%= current_user.email %>
+              <%= t 'shared.logged_in_as' %>: <%= current_user.email %>
               <%= link_to "Sign Out", signout_path %>
             <% end %>
 

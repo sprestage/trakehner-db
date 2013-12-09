@@ -25,11 +25,11 @@
           <td><%= link_to horse.name, horse %></td>
           <td>
             <% if horse.sex == "S" %>
-              <%= t "horses_index.stallion" %>
+              <%= t "gender.stallion" %>
             <% elsif horse.sex == "M" %>
-              <%= t "horses_index.mare" %>
+              <%= t "gender.mare" %>
             <% elsif horse.sex == "G" %>
-              <%= t "horses_index.gelding" %>
+              <%= t "gender.gelding" %>
             <% else %>
               <%= horse.sex %>
             <% end %>
