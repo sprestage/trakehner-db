@@ -32,12 +32,12 @@ en:
     sign_out: "Sign Out"
 
   gender:
-    stallion: "Hengst"
-    mare: "Stute"
-    gelding: "Wallach"
-    colt: "Fohlen"
-    filly: "Stutfohlen"
-    foal: "Fohlen"
+    stallion: "Stallion"
+    mare: "Mare"
+    gelding: "Gelding"
+    colt: "Colt"
+    filly: "Filly"
+    foal: "Foal"
 
   horses_index:
     trakehner_name: "Trakehner Name"
