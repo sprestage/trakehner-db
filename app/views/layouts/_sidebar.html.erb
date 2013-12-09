@@ -4,13 +4,15 @@
           <div>
             <%= render 'layouts/horse_search' %>
           </div>
+
           <li class="sidebar-brand"><a href="/">Trakehner DB</a></li>
-          <li><a href="/horses"><%= t "sidebar.horses" %></a></li>
-          <li><a href="/breeders"><%= t "sidebar.breeders" %></a></li>
-          <li><a href="/about"><%= t "sidebar.about" %></a></li>
-          <li><a href="/contact"><%= t "sidebar.contact" %></a></li>
+          <li><%= link_to t("sidebar.horses"), horses_path %></a></li>
+          <li><%= link_to t("sidebar.breeders"), breeders_path %></a></li>
+          <li><%= link_to t("sidebar.about"), "/about" %></a></li>
+          <li><%= link_to t("sidebar.contact"), "/contact" %></a></li>
+
           <% if !current_user %>
-            <li><a href="/users/sign_in"><%= t "sidebar.log_in" %></a></li>
+            <li><%= link_to t("sidebar.log_in"), user_session_path %></a></li>
           <% end %>
           <% if current_user %>
             <li><%= link_to t('sidebar.sign_out'), destroy_user_session_path, method: :delete %></li>

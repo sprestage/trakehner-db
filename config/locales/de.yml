@@ -38,6 +38,8 @@ de:
 
   pedigree:
     show_pedigree: "Stammbaum Zeigen"
+    show_progeny: "<unfilled German translation>"
+    no_known_progeny: "<unfilled German translation>"
 
   date:
     abbr_day_names:
