@@ -26,7 +26,8 @@ feature "Update Horse" do
     # When I click edit and submit changed data
     click_on 'Update Horse'
     # Then I should see failure message
-    page.text.must_include "Name can't be blank"
+    page.text.must_include "Please review the problems below"
+    page.text.must_include "can't be blank"
     # and no success message
     page.wont_have_content "Horse was successfully updated"
     # and stilll on edit page instead of show page
@@ -43,7 +44,8 @@ feature "Update Horse" do
     # When the form is submitted
     click_on "Update Horse"
     # Then I should see failure message
-    page.text.must_include "Name has already been taken"
+    page.text.must_include "Please review the problems below"
+    page.text.must_include "has already been taken"
     # and no success message
     page.wont_have_content "Horse was successfully updated"
     # and stilll on edit page instead of show page

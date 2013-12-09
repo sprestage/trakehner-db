@@ -20,7 +20,8 @@ feature "Create horse" do
     # When the form is submitted
     click_on "Create Horse"
     # Then a new horse should be created and displayed
-    page.text.must_include "Name can't be blank"
+    page.text.must_include "Please review the problems below"
+    page.text.must_include "can't be blank"
     page.wont_have_content "Horse was successfully created"
   end
 
@@ -32,7 +33,8 @@ feature "Create horse" do
     # When the form is submitted
     click_on "Create Horse"
     # Then a new horse should be created and displayed
-    page.text.must_include "Name has already been taken"
+    page.text.must_include "Please review the problems below"
+    page.text.must_include "has already been taken"
     page.wont_have_content "Horse was successfully created"
     page.wont_have_content horses(:horse04).name
   end
