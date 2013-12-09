@@ -1,60 +1,12 @@
-<%= form_for(@horse) do |f| %>
-  <% if @horse.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@horse.errors.count, "error") %> prohibited this horse from being saved:</h2>
-
-      <ul>
-      <% @horse.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <br>
-
-  <div class="field">
-    <%= f.label :registration_number %><br>
-    <%= f.text_field :registration_number %>
-  </div>
-  <br>
-
-  <div class="field">
-    <%= f.label :birth_year %><br>
-    <%= f.text_field :birth_year %>
-  </div>
-  <br>
-
-  <div class="field">
-    <%= f.label :color %><br>
-    <%= f.text_field :color %>
-  </div>
-  <br>
-
-  <div class="field">
-    <%= f.label :sex %><br>
-    <%= f.text_field :sex %>
-  </div>
-  <br>
-
-  <div class="field">
-    <%= f.label :breeder_id %><br>
-    <%= f.select("breeder_id", Breeder.all.collect {|b| [ b.name, b.id ] }, {include_blank: '-- Select Breeder If Present --'}) %>
-  </div>
-  <br>
-
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div>
-  <br>
-  <br>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@horse) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, label: "Trakehner Name" %><br>
+  <%= f.input :registration_number %><br>
+  <%= f.input :birth_year, collection: 1925..2025 %><br>
+  <%= f.input :color %><br>
+  <%= f.input :sex, label: "Gender", collection: ["Mare", "Stallion", "Gelding"], as: :radio_buttons %><br>
+  <%= f.association :breeder %><br><br>
+  <%= f.input :image %><br><br>
+  <%= f.error :base %>
+  <%= f.button :submit %><br><br>
 <% end %>

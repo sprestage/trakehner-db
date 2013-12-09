@@ -64,6 +64,8 @@ gem 'postmark'
 # characters, per https://github.com/fog/fog/pull/2320
 gem "unf"
 
+gem "simple_form"
+
 group :production do
   gem 'rails_12factor'
   gem 'newrelic_rpm'
