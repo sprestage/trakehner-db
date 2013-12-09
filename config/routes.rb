@@ -1,6 +1,6 @@
 TrakehnerDb::Application.routes.draw do
 
-  scope "(:locale)", locale: /en|de/, defaults: { locale: 'en' } do
+  scope "(:locale)", locale: /en|de/ do
 
     resources :breeders
 
