@@ -4,7 +4,7 @@ feature "Update Breeder" do
   scenario "successfully update breeder" do
     # Given an existing breeder
     sign_in_admin
-    visit breeder_path(breeders(:breeder01))
+    visit breeder_path(breeders(:breeder01).id)
     page.text.must_include 'Edit'
     click_on 'Edit'
     fill_in 'Name', with: "Fourth Breeder"
@@ -19,7 +19,7 @@ feature "Update Breeder" do
   scenario "fail to update breeder, validation errror, name presence" do
     # Given an existing breeder
     sign_in_admin
-    visit breeder_path(breeders(:breeder02))
+    visit breeder_path(breeders(:breeder02).id)
     page.text.must_include 'Edit'
     click_on 'Edit'
     fill_in 'Name', with: ""
@@ -34,7 +34,7 @@ feature "Update Breeder" do
   scenario "fail to update breeder, failed validation, name uniqueness" do
     # Given an existing breeder
     sign_in_admin
-    visit breeder_path(breeders(:breeder02))
+    visit breeder_path(breeders(:breeder02).id)
     page.text.must_include 'Edit'
     click_on 'Edit'
     fill_in "Name", with: breeders(:breeder03).name
@@ -50,7 +50,7 @@ feature "Update Breeder" do
     # Given a signed in admin
     sign_in_admin
     # When the breeder edit page is visited
-    visit breeder_path(breeders(:breeder02))
+    visit breeder_path(breeders(:breeder02).id)
     click_on "Edit"
     # Then the edit breeder page comes up
     page.text.must_include "Editing breeder"
@@ -60,7 +60,7 @@ feature "Update Breeder" do
     # Given a not-signed-in site visitor
         # do nothing
     # When the breeder edit page is visited
-    visit breeder_path(breeders(:breeder02))
+    visit breeder_path(breeders(:breeder02).id)
     # Then the edit breeder link is absent,
     #  which means we cannot get to the delete breeder link
     page.wont_have_content "Edit"

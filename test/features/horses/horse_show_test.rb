@@ -3,7 +3,7 @@ require "test_helper"
 feature "Show a single horse" do
 
   scenario "site visitor successfully sees Jakira and parts of her pedigree" do
-    visit horse_path(horses(:jakira))
+    visit horse_path(horses(:jakira).id)
 
     page.text.must_include horses(:jakira).name.upcase
     page.text.must_include horses(:ichiban).name
@@ -15,7 +15,7 @@ feature "Show a single horse" do
 
   scenario "logged in admin also successfully see Jakira and parts of her pedigree" do
     sign_in_admin
-    visit horse_path(horses(:jakira))
+    visit horse_path(horses(:jakira).id)
 
     page.text.must_include horses(:jakira).name.upcase
     page.text.must_include horses(:ichiban).name
@@ -27,7 +27,7 @@ feature "Show a single horse" do
 
   scenario "successfully see Abdullah and parts of his pedigree" do
     sign_in
-    visit horse_path(horses(:abdullah))
+    visit horse_path(horses(:abdullah).id)
 
     page.text.must_include horses(:abdullah).name.upcase
     page.text.must_include horses(:donauwind).name
@@ -44,7 +44,7 @@ feature "Show a single horse" do
   # horse named in the link
   scenario "Horses in pedigree have correct link in their href" do
     sign_in
-    visit horse_path(horses(:polarpunkt))
+    visit horse_path(horses(:polarpunkt).id)
 
     click_on horses(:arogno).name
 
