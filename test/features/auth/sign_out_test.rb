@@ -1,3 +1,5 @@
+# ruby -Itest test/features/auth/sign_out_test.rb
+
 require "test_helper"
 
 feature "As a visitor, I want to sign out when I'm done." do
@@ -12,7 +14,7 @@ feature "As a visitor, I want to sign out when I'm done." do
     page.wont_have_content "Invalid email or password"
     page.wont_have_content "Sign In"
     # When I click log out.
-    click_on 'Sign Out'
+    page.find(:xpath, '//*[@id="user_header"]').click_on("Sign Out")
     # Then I should see the logged out message
     page.text.must_include "Sign In"
     page.wont_have_content "Sign Out"

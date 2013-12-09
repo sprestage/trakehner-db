@@ -100,6 +100,7 @@ class Horse < ActiveRecord::Base
   end
 
   def self.fetch(name)
+
     unless name.empty? || name == nil || name == "---"
       horse = Horse.find_by name: name
       unless horse

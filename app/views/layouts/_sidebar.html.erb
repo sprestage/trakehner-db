@@ -5,15 +5,15 @@
             <%= render 'layouts/horse_search' %>
           </div>
           <li class="sidebar-brand"><a href="/">Trakehner DB</a></li>
-          <li><a href="/horses">Horses</a></li>
-          <li><a href="/breeders">Breeders</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/horses"><%= t "sidebar.horses" %></a></li>
+          <li><a href="/breeders"><%= t "sidebar.breeders" %></a></li>
+          <li><a href="/about"><%= t "sidebar.about" %></a></li>
+          <li><a href="/contact"><%= t "sidebar.contact" %></a></li>
           <% if !current_user %>
-            <li><a href="/users/sign_in">Log In</a></li>
+            <li><a href="/users/sign_in"><%= t "sidebar.log_in" %></a></li>
           <% end %>
           <% if current_user %>
-            <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to t('sidebar.sign_out'), destroy_user_session_path, method: :delete %></li>
           <% end %>
         </ul>
       </div>

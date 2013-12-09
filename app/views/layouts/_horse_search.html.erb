@@ -2,11 +2,11 @@
 <%= form_tag horses_path, method: :get do %>
 
   <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", :name => nil %>
+  <%= submit_tag t("sidebar.search"), :name => nil %>
   <br />
   <div class="has_image_checkbox" >
   <%= check_box_tag :has_image, params[:has_image] %>
-  <%= label_tag :has_image, "Has image" %>
+  <%= label_tag :has_image, t("sidebar.has_image") %>
   </div>
 
 <% end %>

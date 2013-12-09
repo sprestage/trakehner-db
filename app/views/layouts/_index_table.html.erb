@@ -4,12 +4,12 @@
     <thead>
       <tr>
         <th class="text-center"></th>
-        <th class="text-center">Trakehner Name</th>
-        <th>Sex</th>
+        <th class="text-center"><%= t 'horses_index.trakehner_name' %></th>
+        <th><%= t 'horses_index.sex' %></th>
         <th>YOB</th>
-        <th class="text-center">Sire</th>
-        <th class="text-center">Dam</th>
-        <th>Color</th>
+        <th class="text-center"><%= t 'horses_index.sire' %></th>
+        <th class="text-center"><%= t 'horses_index.dam' %></th>
+        <th><%= t 'horses_index.color' %></th>
         <!-- TODO: When we finally get Height implemented, put it here -->
       </tr>
     </thead>
@@ -25,11 +25,11 @@
           <td><%= link_to horse.name, horse %></td>
           <td>
             <% if horse.sex == "S" %>
-              <%= "Stallion" %>
+              <%= t "horses_index.stallion" %>
             <% elsif horse.sex == "M" %>
-              <%= "Mare" %>
+              <%= t "horses_index.mare" %>
             <% elsif horse.sex == "G" %>
-              <%= "Gelding" %>
+              <%= t "horses_index.gelding" %>
             <% else %>
               <%= horse.sex %>
             <% end %>

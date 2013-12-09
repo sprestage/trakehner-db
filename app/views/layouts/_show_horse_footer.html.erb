@@ -1,7 +1,7 @@
 
 <div class="section-colored text-center">
   <% if policy(Breeder).update? %>
-    <%= link_to 'Edit', edit_horse_path(@horse), id: "edit_horse_link" %> |
+    <%= link_to t('shared.edit'), edit_horse_path(@horse), id: "edit_horse_link" %> |
   <% end %>
-  <%= link_to 'Back', horses_path %>
+  <%= link_to t('shared.back'), horses_path %>
 </div>

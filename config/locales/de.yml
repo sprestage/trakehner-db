@@ -1,0 +1,40 @@
+de:
+  sidebar:
+    has_image: "hat Bild"
+    search: "Suche"
+    horse: "Pferd"
+    horses: "Pferde"
+    breeders: "Züchter"
+    about: "Über"
+    contact: "Kontact"
+    log_in: "Einloggen"
+    sign_out: "Sich Austragen"
+
+  gender:
+    stallion: "Hengst"
+    mare: "Stute"
+    gelding: "Wallach"
+    colt: "Fohlen"
+    filly: "Stutfohlen"
+    foal: "Fohlen"
+
+  horses_index:
+    trakehner_name: "Trakehner Name"
+    trakehner_horses: "Trakehner Pferde"
+    sex: "Geschlecht"
+    sire: "Vater"
+    dam: "Muttertier"
+    color: "Farbe"
+    unknown: "Unbekannt"
+    performance_records_available: "Performance-Aufzeichnungen"
+
+  shared:
+    unofficial_trakehner_database: "Der Inoffiziell Trakehner Datenbank"
+    copyright: "Urheberrecht"
+    logged_in_as: "Angemeldet Als"
+    and: 'und'
+    edit: 'Bearbeiten'
+    back: 'Zurück'
+
+  pedigree:
+    show_pedigree: "Stammbaum zeigen"

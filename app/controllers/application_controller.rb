@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   include Pundit
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter :set_locale
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
@@ -13,6 +14,14 @@ class ApplicationController < ActionController::Base
   def user_not_authorized
     flash[:error] = "You are not authorized to perform this action."
     redirect_to request.headers["Referer"] || root_path
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] if params[:locale].present?
+  end
+
+  def default_url_options(options = {})
+    {locale: I18n.locale}
   end
 
   protected
