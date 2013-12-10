@@ -30,15 +30,14 @@ feature "Show a single horse" do
   scenario "logged in non-admin successfully see Joriah and parts of her pedigree" do
     sign_in
     visit horses_path
-    page.click_on("Joriah")
+    page.click_on("Jakira")
 
-    page.text.must_include horses(:joriah).name.upcase
+    page.text.must_include horses(:jakira).name.upcase
     page.text.must_include horses(:ichiban).name
-    page.text.must_include horses(:jaegerin).name
     page.text.must_include horses(:arogno).name
 
-    page.wont_have_content horses(:abiza).name
-    page.wont_have_content horses(:marduc).name
+    page.wont_have_content horses(:abdullah).name.upcase
+    page.wont_have_content "Unknown"
   end
 
   # Regression test: for a brief moment, the links in a horse's pedigree
