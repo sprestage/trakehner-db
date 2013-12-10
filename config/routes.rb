@@ -2,13 +2,10 @@ TrakehnerDb::Application.routes.draw do
 
   scope "(:locale)", locale: /en|de/ do
 
+    get '/contact' => 'static#contact'
+    get '/about' => 'static#about'
+
     resources :breeders
-
-    devise_for :users
-
-    devise_scope :user do
-      get "signout", :to => "devise/sessions#destroy"
-    end
 
     resources :horses do
       member do
@@ -16,10 +13,14 @@ TrakehnerDb::Application.routes.draw do
       end
     end
 
+    devise_for :users
+
+    devise_scope :user do
+      get "signout", :to => "devise/sessions#destroy"
+    end
+
     # get "home/index"
     root :to => 'home#index'
-
-    get ':action' => 'static#:action'
 
   end
 
