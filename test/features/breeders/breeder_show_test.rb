@@ -3,6 +3,7 @@ require "test_helper"
 feature "Show a single breeder" do
 
   scenario "site visitor successfully sees Tabarah Ranch and parts of the address" do
+    binding.pry
     visit breeder_path(breeders(:tabarah).id)
 
     page.text.must_include breeders(:tabarah).name
