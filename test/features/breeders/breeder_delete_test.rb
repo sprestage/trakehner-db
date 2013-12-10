@@ -9,7 +9,8 @@ feature "deleting a breeder" do
     page.text.must_include breeders(:breeder02).name
 
     # When I submit the form
-    visit breeder_path(breeders(:breeder02))
+    visit breeders_path
+    page.click_on("Second Breeder")
     click_on "Edit"
     page.text.must_include "Editing breeder"
     click_on "Delete Breeder"
@@ -26,7 +27,8 @@ feature "deleting a breeder" do
     # Given a signed in admin
     sign_in_admin
     # When the breeder edit page is visited
-    visit breeder_path(breeders(:breeder02).id)
+    visit breeders_path
+    page.click_on("Second Breeder")
     click_on "Edit"
     # Then the delete breeder link is present
     page.text.must_include "Delete Breeder"
@@ -36,7 +38,8 @@ feature "deleting a breeder" do
     # Given a not-signed-in site visitor
         # do nothing
     # When the breeder edit page is visited
-    visit breeder_path(breeders(:breeder02).id)
+    visit breeders_path
+    page.click_on("Second Breeder")
     # Then the edit breeder link is absent,
     #  which means we cannot get to the delete breeder link
     page.wont_have_content "Edit Breeder"

@@ -3,7 +3,8 @@ require "test_helper"
 feature "Show a single horse" do
 
   scenario "site visitor successfully sees Jakira and parts of her pedigree" do
-    visit horse_path(horses(:jakira).id)
+    visit horses_path
+    page.click_on("Jakira")
 
     page.text.must_include horses(:jakira).name.upcase
     page.text.must_include horses(:ichiban).name
@@ -15,7 +16,8 @@ feature "Show a single horse" do
 
   scenario "logged in admin also successfully see Jakira and parts of her pedigree" do
     sign_in_admin
-    visit horse_path(horses(:jakira).id)
+    visit horses_path
+    page.click_on("Jakira")
 
     page.text.must_include horses(:jakira).name.upcase
     page.text.must_include horses(:ichiban).name
@@ -25,16 +27,17 @@ feature "Show a single horse" do
     page.wont_have_content "Unknown"
   end
 
-  scenario "successfully see Abdullah and parts of his pedigree" do
+  scenario "logged in non-admin successfully see Joriah and parts of her pedigree" do
     sign_in
-    visit horse_path(horses(:abdullah).id)
+    visit horses_path
+    page.click_on("Joriah")
 
-    page.text.must_include horses(:abdullah).name.upcase
-    page.text.must_include horses(:donauwind).name
-    page.text.must_include horses(:abiza).name
-    page.text.must_include "Unknown"
+    page.text.must_include horses(:joriah).name.upcase
+    page.text.must_include horses(:ichiban).name
+    page.text.must_include horses(:jaegerin).name
+    page.text.must_include horses(:arogno).name
 
-    page.wont_have_content horses(:thundersflame).name
+    page.wont_have_content horses(:abiza).name
     page.wont_have_content horses(:marduc).name
   end
 
@@ -44,7 +47,8 @@ feature "Show a single horse" do
   # horse named in the link
   scenario "Horses in pedigree have correct link in their href" do
     sign_in
-    visit horse_path(horses(:polarpunkt).id)
+    visit horses_path
+    page.click_on("Polarpunkt")
 
     click_on horses(:arogno).name
 

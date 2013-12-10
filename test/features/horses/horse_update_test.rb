@@ -4,14 +4,15 @@ feature "Update Horse" do
   scenario "successfully update horse" do
     # Given an existing horse
     sign_in_admin
-    visit horse_path(horses(:horse02).id)
+    visit horses_path
+    page.click_on("First horse")
     page.text.must_include 'Edit'
     click_on 'Edit'
-    fill_in 'Name', with: "Second Horse"
+    fill_in 'Name', with: "First horse"
     # When I click edit and submit changed data
     click_on 'Update Horse'
     # Then I should see the updated horse
-    page.text.must_include "Second Horse".upcase
+    page.text.must_include "First horse".upcase
     # And a success message
     page.text.must_include 'Horse was successfully updated'
   end
@@ -19,7 +20,8 @@ feature "Update Horse" do
   scenario "fail to update horse, validation errror, name presence" do
     # Given an existing horse
     sign_in_admin
-    visit horse_path(horses(:horse02).id)
+    visit horses_path
+    page.click_on("First horse")
     page.text.must_include 'Edit'
     click_on 'Edit'
     fill_in 'Name', with: ""
@@ -37,7 +39,8 @@ feature "Update Horse" do
   scenario "fail to update horse, failed validation, name uniqueness" do
     # Given an existing horse
     sign_in_admin
-    visit horse_path(horses(:horse02).id)
+    visit horses_path
+    page.click_on("First horse")
     page.text.must_include 'Edit'
     click_on 'Edit'
     fill_in "Name", with: horses(:horse04).name
@@ -56,7 +59,8 @@ feature "Update Horse" do
     # Given a signed in admin
     sign_in_admin
     # When the horse edit page is visited
-    visit horse_path(horses(:horse02).id)
+    visit horses_path
+    page.click_on("First horse")
     click_on "Edit"
     # Then the delete horse link is present
     page.text.must_include "Editing horse"
@@ -66,7 +70,8 @@ feature "Update Horse" do
     # Given a not-signed-in site visitor
         # do nothing
     # When the horse edit page is visited
-    visit horse_path(horses(:horse02).id)
+    visit horses_path
+    page.click_on("First horse")
     # Then the edit horse link is absent,
     #  which means we cannot get to the delete horse link
     page.wont_have_content "Edit Horse"

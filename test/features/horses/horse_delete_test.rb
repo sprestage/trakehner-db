@@ -10,7 +10,8 @@ feature "deleting a horse" do
     page.text.must_include horses(:jakira).name
     page.text.must_include horses(:polarpunkt).name
 
-    visit horse_path(horses(:polarpunkt).id)
+    visit horses_path
+    page.click_on("Polarpunkt")
     page.text.must_include "Polarpunkt"
     click_on "Edit"
     page.text.must_include "Editing horse"
@@ -33,7 +34,8 @@ feature "deleting a horse" do
     # Given a signed in admin
     sign_in_admin
     # When the horse edit page is visited
-    visit horse_path(horses(:horse02).id)
+    visit horses_path
+    page.click_on("First horse")
     click_on "Edit"
     # Then the delete horse link is present
     page.text.must_include "Delete Horse"
@@ -43,7 +45,8 @@ feature "deleting a horse" do
     # Given a not-signed-in site visitor
         # do nothing
     # When the horse edit page is visited
-    visit horse_path(horses(:horse02).id)
+    visit horses_path
+    page.click_on("First horse")
     # Then the edit horse link is absent,
     #  which means we cannot get to the delete horse link
     page.wont_have_content "Edit Horse"
