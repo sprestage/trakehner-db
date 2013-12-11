@@ -103,7 +103,7 @@ end
 gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
