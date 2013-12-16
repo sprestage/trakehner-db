@@ -15,14 +15,6 @@ class Breeder < ActiveRecord::Base
     end
   end
 
-  def self.search_address(search_address)
-    if search_address
-      Breeder.all.where(['address ILIKE ?', "%#{ search_address }%"])
-    else
-      Breeder.all
-    end
-  end
-
   def self.fetch(name)
     unless name.empty? || name == nil || name == "---"
       breeder = Breeder.find_by name: name
