@@ -1,9 +1,21 @@
 require "test_helper"
 
 feature "Create horse" do
-  scenario "successfully create horses" do
+  scenario "admin successfully creates horse" do
     # Given a completed new horse form
     sign_in_admin
+    visit new_horse_path
+    fill_in "Name", with: "Jupiter"
+    # When the form is submitted
+    click_on "Create Horse"
+    # Then a new horse should be created and displayed
+    page.text.must_include "Horse was successfully created"
+    page.text.must_include "Jupiter".upcase
+  end
+
+  scenario "ata successfully creates horse" do
+    # Given a completed new horse form
+    sign_in_ata
     visit new_horse_path
     fill_in "Name", with: "Jupiter"
     # When the form is submitted
