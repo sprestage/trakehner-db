@@ -1,9 +1,25 @@
 require "test_helper"
 
 feature "Update Breeder" do
-  scenario "successfully update breeder" do
+  scenario "admin successfully updates breeder" do
     # Given an existing breeder
     sign_in_admin
+    visit breeders_path
+    page.click_on("First Breeder")
+    page.text.must_include 'Edit'
+    click_on 'Edit'
+    fill_in 'Name', with: "Fourth Breeder"
+    # When I click edit and submit changed data
+    click_on 'Update Breeder'
+    # Then I should see the updated breeder
+    page.text.must_include "Fourth Breeder"
+    # And a success message
+    page.text.must_include 'Breeder was successfully updated'
+  end
+
+  scenario "ata successfully updates breeder" do
+    # Given an existing breeder
+    sign_in_ata
     visit breeders_path
     page.click_on("First Breeder")
     page.text.must_include 'Edit'
