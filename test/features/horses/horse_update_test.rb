@@ -1,9 +1,25 @@
 require "test_helper"
 
 feature "Update Horse" do
-  scenario "successfully update horse" do
+  scenario "admin successfully updates horse" do
     # Given an existing horse
     sign_in_admin
+    visit horses_path
+    page.click_on("First horse")
+    page.text.must_include 'Edit'
+    click_on 'Edit'
+    fill_in 'Name', with: "First horse"
+    # When I click edit and submit changed data
+    click_on 'Update Horse'
+    # Then I should see the updated horse
+    page.text.must_include "First horse".upcase
+    # And a success message
+    page.text.must_include 'Horse was successfully updated'
+  end
+
+  scenario "ata successfully updates horse" do
+    # Given an existing horse
+    sign_in_ata
     visit horses_path
     page.click_on("First horse")
     page.text.must_include 'Edit'
