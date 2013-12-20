@@ -77,16 +77,16 @@ GEM
       warden (~> 1.2.3)
     docile (1.1.1)
     erubis (2.7.0)
-    excon (0.28.0)
+    excon (0.31.0)
     execjs (2.0.2)
     faker (1.2.0)
       i18n (~> 0.5)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
-    fog (1.18.0)
+    fog (1.19.0)
       builder
-      excon (~> 0.28.0)
+      excon (~> 0.31.0)
       formatador (~> 0.2.0)
       mime-types
       multi_json (~> 1.0)
@@ -147,7 +147,7 @@ GEM
       hashie (>= 1.2, < 3)
       rack
     orm_adapter (0.5.0)
-    pg (0.17.0)
+    pg (0.17.1)
     polyglot (0.3.3)
     postmark (1.0.1)
       json
@@ -241,12 +241,12 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.0.0)
+    turbolinks (2.1.0)
       coffee-rails
     turn (0.9.6)
       ansi
     tzinfo (0.3.38)
-    uglifier (2.3.3)
+    uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unf (0.1.3)
