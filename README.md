@@ -9,7 +9,7 @@ Collaborators:  Susan Prestage, Nathaniel Barnes
 
 Project Idea
 =======
-To implement a website for the Trakehner horse enthusiast, with emphasis for the Trakehner breeders.
+To implement a website for the Trakehner horse enthusiast, with emphasis for Trakehner breeders.
 
 
 Motivation
