@@ -8,8 +8,8 @@
     <li class="sidebar-brand"><a href="/">Trakehner DB</a></li>
     <li><%= link_to t("sidebar.horses"), horses_path %></a></li>
     <li><%= link_to t("sidebar.breeders"), breeders_path %></a></li>
-    <li><%= link_to t("sidebar.about"), "/about" %></a></li>
-    <li><%= link_to t("sidebar.contact"), "/contact" %></a></li>
+    <li><%= link_to t("sidebar.about"), about_path %></a></li>
+    <li><%= link_to t("sidebar.contact"), contact_path %></a></li>
 
     <% if !current_user %>
       <li><%= link_to t("sidebar.log_in"), user_session_path %></a></li>
