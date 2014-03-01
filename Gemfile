@@ -51,7 +51,7 @@ gem "carrierwave_direct"
 gem "sidekiq"
 
 # Image manipulation (resizing)
-gem "rmagick"
+gem "rmagick", :require => false
 
 # Cloud and Amazon S3 access
 gem "fog"
