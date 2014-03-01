@@ -34,6 +34,19 @@ feature "Search for horses using the search bar" do
     page.wont_have_content horses(:siegel).name
   end
 
+  ### TODO: Need to get this working successfully.  The search
+  ### doesn't seem to change when Has image is clicked.
+  # scenario "Search for horses with images" do
+  #   visit root_path
+  #   check "Has image"
+  #   click_on "Search"
+
+  #   page.text.must_include horses(:abdullah).name
+  #   page.text.must_include horses(:herrzauber).name
+  #   page.text.must_include "NONO"
+  #   page.wont_have_content horses(:jakira).name
+  # end
+
   scenario "Site visitor can successfully search for some horses" do
     visit root_path
     fill_in "search", with: "J"

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sprestage/trakehner-db.png?branch=master)](https://travis-ci.org/sprestage/trakehner-db)[![Code Climate](https://codeclimate.com/github/sprestage/trakehner-db.png)](https://codeclimate.com/github/sprestage/trakehner-db)[![Dependency Status](https://gemnasium.com/sprestage/trakehner-db.png)](https://gemnasium.com/sprestage/trakehner-db)[![Coverage Status](https://coveralls.io/repos/sprestage/trakehner-db/badge.png)](https://coveralls.io/r/sprestage/trakehner-db)[![Security Status](http://rails-brakeman.com/sprestage/trakehner-db.png)](http://rails-brakeman.com/sprestage/trakehner-db)[![endorse](https://api.coderwall.com/sprestage/endorsecount.png)](https://coderwall.com/sprestage)
+[![Build Status](https://travis-ci.org/sprestage/trakehner-db.png?branch=master)](https://travis-ci.org/sprestage/trakehner-db) [![Code Climate](https://codeclimate.com/github/sprestage/trakehner-db.png)](https://codeclimate.com/github/sprestage/trakehner-db) [![Dependency Status](https://gemnasium.com/sprestage/trakehner-db.png)](https://gemnasium.com/sprestage/trakehner-db) [![Coverage Status](https://coveralls.io/repos/sprestage/trakehner-db/badge.png)](https://coveralls.io/r/sprestage/trakehner-db) [![Security Status](http://rails-brakeman.com/sprestage/trakehner-db.png)](http://rails-brakeman.com/sprestage/trakehner-db) [![endorse](https://api.coderwall.com/sprestage/endorsecount.png)](https://coderwall.com/sprestage)
 
 The Unofficial Trakehner Database
 =======
@@ -9,7 +9,7 @@ Collaborators:  Susan Prestage, Nathaniel Barnes
 
 Project Idea
 =======
-To implement a website for the Trakehner horse enthusiast, with emphasis for the Trakehner breeders.
+To implement a website for the Trakehner horse enthusiast, with emphasis for Trakehner breeders.
 
 
 Motivation

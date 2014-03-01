@@ -55,4 +55,13 @@ feature "Show a single horse" do
     page.wont_have_content horses(:polarpunkt).name.upcase
   end
 
+  scenario "A horses's progeny are successfully displayed" do
+    # Given a horse has progeny
+    visit horse_path(I18n.default_locale, horses(:jaegerin))
+    # When visit the progeny path
+    page.click_on("Show progeny")
+    # Then that horse's progeny are displayed
+    page.text.must_include horses(:joriah).name
+  end
+
 end

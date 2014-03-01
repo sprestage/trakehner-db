@@ -2,7 +2,6 @@ joriah:
   name: Joriah
   sire: ichiban
   dam: jaegerin
-  picture:
   breeder: tabarah
 
 jakira:
@@ -16,7 +15,6 @@ jaedorin:
   name: Jädorin
   sire: herrzauber
   dam: jaegerin
-  picture:
   breeder: tabarah
 
 herrzauber:
@@ -24,6 +22,7 @@ herrzauber:
   sire: marduc
   dam: herzminze
   breeder: meadowview
+  image: herzzauber.jpg
 
 marduc:
   name: Marduc
@@ -51,7 +50,6 @@ jaegerin:
   name: Jägerin
   sire: nemo
   dam: jamilah
-  picture:
   breeder: tabarah
 
 ichiban:
@@ -126,6 +124,7 @@ abdullah:
   sire: donauwind
   dam: abiza
   color: Gray
+  image: abdullah.jpg
 
 donauwind:
   name: Donauwind *E*

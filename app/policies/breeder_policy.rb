@@ -11,7 +11,7 @@ class BreederPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin? if user.present?
+    user.ata? || user.admin? if user.present?
   end
 
   def update?

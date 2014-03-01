@@ -12,11 +12,4 @@ class User < ActiveRecord::Base
     role == 'ata'
   end
 
-  def breeder?
-    role == 'breeder'
-  end
-
-  def owner?
-    role == 'owner'
-  end
 end
