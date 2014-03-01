@@ -1,21 +1,21 @@
-      <!-- Sidebar -->
-      <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-          <div>
-            <%= render 'layouts/horse_search' %>
-          </div>
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <div>
+      <%= render 'layouts/horse_search' %>
+    </div>
 
-          <li class="sidebar-brand"><a href="/">Trakehner DB</a></li>
-          <li><%= link_to t("sidebar.horses"), horses_path %></a></li>
-          <li><%= link_to t("sidebar.breeders"), breeders_path %></a></li>
-          <li><%= link_to t("sidebar.about"), "/about" %></a></li>
-          <li><%= link_to t("sidebar.contact"), "/contact" %></a></li>
+    <li class="sidebar-brand"><a href="/">Trakehner DB</a></li>
+    <li><%= link_to t("sidebar.horses"), horses_path %></a></li>
+    <li><%= link_to t("sidebar.breeders"), breeders_path %></a></li>
+    <li><%= link_to t("sidebar.about"), "/about" %></a></li>
+    <li><%= link_to t("sidebar.contact"), "/contact" %></a></li>
 
-          <% if !current_user %>
-            <li><%= link_to t("sidebar.log_in"), user_session_path %></a></li>
-          <% end %>
-          <% if current_user %>
-            <li><%= link_to t('sidebar.sign_out'), destroy_user_session_path, method: :delete %></li>
-          <% end %>
-        </ul>
-      </div>
+    <% if !current_user %>
+      <li><%= link_to t("sidebar.log_in"), user_session_path %></a></li>
+    <% end %>
+    <% if current_user %>
+      <li><%= link_to t('sidebar.sign_out'), destroy_user_session_path, method: :delete %></li>
+    <% end %>
+  </ul>
+</div>
