@@ -2,14 +2,18 @@ language: ruby
 rvm:
 - 2.0.0
 env:
-- DB=postgres
+  matrix:
+  - DB=postgres
+  global:
+  - secure: nVSPHEdbh6qggmjNoagcpRi4sz6DZxrCVDHdrgc1WFLr5BcPKp1XwFgpMOdk184+d28CZLN8Nl3QGU16zUAwnSgYEK8Enzwj5rkhoMlxlaY1/lnC9yuwrk9fU/AX3qcF3XfkJTcHVK6q/i24O5kQhhZjBL/WEZBR1nLUMYqJgfw=
+  - secure: gvatEx4Eh+2hOA06/1Hx6fknEFJB7NEhlTKz/+AIa0iQ1oFQua5Zsphv6hEI5oaoTn6cJ7igLDYvg3peBdktIhjpYh4G1iN33AfrLJR0tG56nXHrX9YB/VQhctDUCk0XA/+EcVIys24rPcu5NWqfTbswyUFxsMRFMO2qQO7Y7iw=
 before_script:
 - psql -c 'create database trakehner_test;' -U postgres
 script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
 - bundle exec rake
-bundler_args: --binstubs=./bundler_stubs
+bundler_args: "--binstubs=./bundler_stubs"
 deploy:
   provider: heroku
   api_key:
@@ -17,4 +21,4 @@ deploy:
   app: trakehner-db
   on:
     repo: sprestage/trakehner-db
-  run:
+  run: 
