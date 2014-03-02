@@ -1,18 +1,14 @@
 require "test_helper"
 
-feature "As a visitor, I want to sign up as a new user so I can create and edit content." do
-  scenario "new account is successfully created from new_user_registration_path" do
-    # Given a completed new user form
-    visit new_user_registration_path
-    # When I submit the form with valid data
-    fill_in 'Email', with: 'user@example.com'
-    fill_in 'Password', with: '12341234'
-    fill_in 'Password confirmation', with: '12341234'
-    click_on 'Sign up'
-    # Then I should see the new user created success message
-    page.must_have_content "Logged in as"
-    page.must_have_content "Sign Out"
-    page.wont_have_content "prohibited this user from being saved"
+feature "As a visitor, I shouldn't be offered the chance to create a new user account myself" do
+
+  scenario "visitor can't see new user creation link in sign-in page" do
+    visit new_user_session_path
     page.wont_have_content "Sign up"
   end
+
+  scenario "visitor can't visit create new user page via direct URL" do
+    # How would we test this?  The route doesn't exist.
+  end
+
 end
