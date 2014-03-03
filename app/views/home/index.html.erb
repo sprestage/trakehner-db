@@ -31,7 +31,7 @@
 
 
   <figure>
-    <%= image_tag @horse.image_url(:pedigree).to_s %>
+    <%= image_tag(@horse.image_url(:pedigree).to_s, :class => "horse_image" ) %>
   </figure>
   <h3><%= link_to @horse.name, @horse %></h3>
 
