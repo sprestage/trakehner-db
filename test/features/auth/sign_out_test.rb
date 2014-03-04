@@ -14,7 +14,7 @@ feature "As a visitor, I want to sign out when I'm done." do
     page.wont_have_content "Invalid email or password"
     page.wont_have_content "Sign In"
     # When I click log out.
-    page.find(:xpath, '//*[@id="user_header"]').click_on("Sign Out")
+    page.find(:xpath, '//*[@id="sign_in_out_div"]').click_on("Sign Out")
     # Then I should see the logged out message
     page.text.must_include "Sign In"
     page.wont_have_content "Sign Out"

@@ -1,27 +1,16 @@
 <title><%= t "shared.unofficial_trakehner_database" %></title>
 
 <div class="section-colored text-center">
-  <div class="container">
-    <div class="row">
-      <div class"col-lg-12">
-        <div id="user_header">
-          <div class="nav">
-            <% if current_user %>
-              <%= t 'shared.logged_in_as' %>: <%= current_user.email %>
-              <%= link_to "Sign Out", signout_path %>
-            <% end %>
+  <div id='sign_in_out_div'>
+    <% if current_user %>
+      <%= t 'shared.logged_in_as' %>: <%= current_user.email %>
+      <%= link_to "Sign Out", signout_path %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path %>
+    <% end %>
+  </div>
 
-            <% if !current_user %>
-              <%= link_to "Sign In", new_user_session_path %>
-            <% end %>
-
-          </div>
-        </div>
-      </div><!-- /.col -->
-    </div><!-- /.row  -->
-  </div><!-- /.container -->
-
-  <h1><%= t "shared.unofficial_trakehner_database" %></h1></p>
+  <h1><%= t "shared.unofficial_trakehner_database" %></h1>
 
   <br><br><br><br>
 
