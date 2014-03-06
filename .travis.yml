@@ -13,7 +13,7 @@ script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
 - bundle exec rake
-bundler_args: "--binstubs=./bundler_stubs"
+bundler_args: --binstubs=./bundler_stubs
 deploy:
   provider: heroku
   api_key:
@@ -22,3 +22,5 @@ deploy:
   on:
     repo: sprestage/trakehner-db
   run: 
+  aws_secret_access_key:
+    secure: OLCfvFsqUu17moV6r7oQmp4/WR6x4v8N09IBKmD/mImBGkzpJbajhrUVfNNQJmefAV81ajwC226qvpJRaGgp4dMKAnNsXp/XJjHQzTSC5v8VToBsYlE6CGQjT307mCMqCaSieoqrxKfbK2eCS1O3rc5oDQ1+QDAi0OH75A5QP4c=
