@@ -28,11 +28,13 @@
 
   <p id="notice"><%= notice %></p>
 
-  <% if @horse.image_url %>
-    <%= image_tag @horse.image_url(:pedigree).to_s, :class => "horse_image" %>
-  <% else %>
-    <%= render 'layouts/no_picture_for_horse_image' %>
-  <% end %>
+  <figure>
+    <% if @horse.image_url %>
+      <%= image_tag @horse.image_url(:pedigree).to_s, :class => "horse_image" %>
+    <% else %>
+      <%= render 'layouts/no_picture_for_horse_image' %>
+    <% end %>
+  </figure>
 </div>
 
 <style>

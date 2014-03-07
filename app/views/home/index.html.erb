@@ -1,9 +1,10 @@
 <title><%= t "shared.unofficial_trakehner_database" %></title>
 
 <div class="section-colored text-center">
+
   <div id='sign_in_out_div'>
     <% if current_user %>
-      <%= t 'shared.logged_in_as' %>: <%= current_user.email %>
+      <%= t 'shared.logged_in_as' %> <%= current_user.email %>
       <%= link_to "Sign Out", signout_path %>
     <% else %>
       <%= link_to "Sign In", new_user_session_path %>
@@ -12,16 +13,18 @@
 
   <h1><%= t "shared.unofficial_trakehner_database" %></h1>
 
-  <br><br><br><br>
+  <br/>
+  <br/>
 
   <style>
   figcaption {font-size:10px;}
   </style>
 
-
-  <figure>
-    <%= image_tag(@horse.image_url(:pedigree).to_s, :class => "horse_image" ) %>
-  </figure>
+  <div class='horse_image_container'>
+    <figure>
+      <%= image_tag(@horse.image_url(:pedigree).to_s, :class => "horse_image" ) %>
+    </figure>
+  </div>
   <h3><%= link_to @horse.name, @horse %></h3>
 
 </div>

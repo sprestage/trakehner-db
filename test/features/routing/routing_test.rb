@@ -3,7 +3,7 @@
 require "test_helper"
 
 feature "Goes where I want" do
-  scenario "no routing goes to ... .hwere?" do
+  scenario "no routing goes to .... where?" do
     true
   end
 

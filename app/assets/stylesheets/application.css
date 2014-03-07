@@ -67,9 +67,11 @@
   margin-right: 2%;
 }
 
+.horse_image_container {
+}
+
 img.horse_image {
-  width: 95%;
-  height: 95%;
+  max-width: 95%;
 }
 
 .ata_logo_image {
