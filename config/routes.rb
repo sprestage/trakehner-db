@@ -25,6 +25,7 @@ TrakehnerDb::Application.routes.draw do
 
     # get "home/index"
     root :to => 'home#index'
+    get '/:locale' => 'home#index'
 
   end
 
