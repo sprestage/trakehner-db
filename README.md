@@ -131,4 +131,3 @@ Presentation Bragging Points
     [x] policies so only admin can create, edit, destroy
     [x] implemented simple_form on edit/new horse pages
     [x] i18n support for translations!!!  Yeay!!!
-

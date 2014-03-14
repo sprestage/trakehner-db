@@ -1,8 +1,8 @@
-<title><%= @horse.name %></title>
+<title>Editing <%= @horse.name %></title>
 
 <div class="section-colored text-center">
   <div id="horse_edit_header">
-    <h1>Editing horse</h1>
+    <h1>Editing <%= @horse.name %></h1>
   </div>
 </div>
 
@@ -18,7 +18,6 @@
 
 <div class="section-colored text-center">
   <div id="horse_edit_footer">
-    <%= link_to 'Show', @horse %> |
-    <%= link_to 'Back', horses_path %>
+    <%= link_to 'Back', @horse %>
   </div>
 </div>

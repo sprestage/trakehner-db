@@ -4,6 +4,9 @@ class Horse < ActiveRecord::Base
   has_many :offspring, class_name: "Horse", foreign_key: :sire_id,
                                             foreign_key: :dam_id
 
+  has_many :photos, dependent: :destroy
+  accepts_nested_attributes_for :photos, :reject_if => :all_blank, :allow_destroy => true
+
   belongs_to :sire, class_name: "Horse", foreign_key: :sire_id
   belongs_to :dam, class_name: "Horse", foreign_key: :dam_id
   belongs_to :breeder
@@ -100,7 +103,6 @@ class Horse < ActiveRecord::Base
   end
 
   def self.fetch(name)
-
     unless name.empty? || name == nil || name == "---"
       horse = Horse.find_by name: name
       unless horse

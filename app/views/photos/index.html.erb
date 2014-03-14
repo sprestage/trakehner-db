@@ -1,0 +1,26 @@
+<title>Photo Index</title>
+
+<div class='clear_div'>
+  <%= link_to "New Photo", new_photo_path %>
+</div>
+
+<br/>
+
+<div id='photo_index_container'>
+  <% @photos.each do |photo| %>
+
+    <div class='photo_container'>
+      <%= image_tag photo.image_url(:thumbnail).to_s, class: 'photo_index_image' %>
+      <br/>
+      <%= photo.name %>
+      <br/>
+      Photo by: <%= photo.attribution %>
+      <br/>
+      <%= link_to "Show Photo", photo %> |
+      <%= link_to "Edit Photo", edit_photo_path(photo) %> |
+      <%= link_to 'Delete Photo', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+
+  <% end %>
+
+</div>

@@ -30,6 +30,7 @@ class HorsesController < ApplicationController
 
   # GET /horses/1/edit
   def edit
+    puts @horse
   end
 
   # POST /horses
@@ -74,6 +75,11 @@ class HorsesController < ApplicationController
     end
   end
 
+  def add_photo
+    @photo = Photo.build
+    render
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_horse
@@ -82,6 +88,6 @@ class HorsesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def horse_params
-      params.require(:horse).permit(:name, :registration_number, :birth_year, :color, :sex, :breeder_id, :image)
+      params.require(:horse).permit(:name, :registration_number, :birth_year, :color, :sex, :breeder_id, :image, photo: [:name, :attribution, :image, :horse_id])
     end
 end

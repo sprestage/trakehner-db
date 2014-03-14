@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+  <%= image_tag @photo.image_url(:pedigree).to_s %>
+  <h3><%= @photo.name %></h3>
+  Photo by: <%= @photo.attribution %>
+</div>
+
+<br/>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

@@ -7,6 +7,33 @@
   <%= f.input :sex, label: "Gender", collection: ["Mare", "Stallion", "Gelding"], as: :radio_buttons %><br>
   <%= f.association :breeder %><br><br>
   <%= f.input :image %><br><br>
+
+  <b> Photos: </b>
+
+  <div id='photos'>
+
+    <% @horse.photos.each do |photo| %>
+      <div class='photo_container'>
+        <%= image_tag photo.image_url(:thumbnail).to_s, class: '.photo' %>
+        <br/>
+        Name: <%= photo.name %>
+        <br/>
+        Attribution: <%= photo.attribution %>
+        <br/>
+        <%= link_to "Delete Photo", horse_photo_path(@horse, photo), confirm: "Are you sure?", method: :delete %>
+      </div>
+    <% end %>
+
+
+  </div>
+
+  <div class='clear_div'>
+    <%= link_to "Add New Photo", new_horse_photo_path(@horse) %> </br>
+  </div>
+  <b> End Photos: <b>
+  <br/>
+  <br/>
+
   <%= f.error :base %>
   <%= f.button :submit %><br><br>
 <% end %>

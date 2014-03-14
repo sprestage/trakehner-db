@@ -1,0 +1,10 @@
+<%= simple_form_for [@horse, @photo] do |f| %>
+  <%= f.error_notification %>
+  <h2>Photo for: <%= link_to "#{ @horse.name }", @horse %></h2>
+  <%= f.input :name, label: "Photo Name" %><br>
+  <%= f.input :attribution, label: "Attribution" %><br>
+
+  <%= f.file_field :image %><br><br>
+
+  <%= f.button :submit %><br><br>
+<% end %>

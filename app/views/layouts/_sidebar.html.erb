@@ -2,10 +2,10 @@
 <div id="sidebar-wrapper">
   <ul class="sidebar-nav">
 
-      <%= render 'layouts/horse_search' %>
+    <%= render 'layouts/horse_search' %>
 
     <div style='clear: both'>
-      <li class="h4"><a href="/">Trakehner DB</a></li>
+      <li class="h4"><a><%= link_to "Trakehner DB", root_path %></a></li>
       <li><%= link_to t("sidebar.horses"), horses_path %></a></li>
       <li><%= link_to t("sidebar.breeders"), breeders_path %></a></li>
       <li><%= link_to t("sidebar.about"), about_path %></a></li>

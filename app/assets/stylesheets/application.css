@@ -14,6 +14,10 @@
  *= require_tree .
  */
 
+#template_container {
+  display: none;
+}
+
 @viewport{
   zoom: 1.0;
   width: extend-to-zoom;
@@ -76,4 +80,11 @@ img.horse_image {
 
 .ata_logo_image {
   width: 50%;
+}
+
+.clear_div {
+  clear: both;
+  height: 0;
+  line-height: 0;
+  display: block;
 }

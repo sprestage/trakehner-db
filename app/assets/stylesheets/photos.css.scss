@@ -1,0 +1,38 @@
+// Place all the styles related to the Photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.photo_container {
+  margin:5px;
+  padding:5px;
+  border:1px solid #0000ff;
+  height:auto;
+  width:auto;
+  float:left;
+  text-align:center;
+}
+
+.photo_index_image {
+  display:inline;
+  margin:5px;
+  border:1px solid #ffffff;
+  height:auto;
+  width:auto;
+  max-width:220px;
+  width: 100%
+}
+
+.photo_description {
+  text-align:center;
+  font-weight:normal;
+  width:100%;
+}
+
+.photo_index_image {
+  display:inline;
+  margin:5px;
+  border:1px solid #ffffff;
+  height:auto;
+  width:auto;
+  width: 100%
+}

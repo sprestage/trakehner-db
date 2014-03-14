@@ -8,6 +8,7 @@ TrakehnerDb::Application.routes.draw do
     resources :breeders
 
     resources :horses do
+      resources :photos, only: [:edit, :create, :new, :update, :destroy]
       member do
         get 'progeny'
       end
