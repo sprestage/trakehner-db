@@ -18,11 +18,12 @@ module TrakehnerDb
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
 
     # Disable database initialization for Heroku deploy
     config.assets.initialize_on_precompile = false
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
+    config.i18n.default_locale = :en
   end
 end

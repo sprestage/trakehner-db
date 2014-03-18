@@ -28,6 +28,9 @@ de:
     unknown: "Unbekannt"
     performance_records_available: "Performance-Aufzeichnungen"
 
+  breeders_index:
+    trakehner_breeder: "Trakehner Züchter"
+
   shared:
     unofficial_trakehner_database: "Der Inoffiziell Trakehner Datenbank"
     copyright: "Urheberrecht"
@@ -40,6 +43,10 @@ de:
     show_pedigree: "Stammbaum Zeigen"
     show_progeny: "<unfilled German translation>"
     no_known_progeny: "<unfilled German translation>"
+
+  static_pages:
+    contact_us: 'Kontaktieren Sie Uns'
+    about_us: 'Über uns'
 
   date:
     abbr_day_names:

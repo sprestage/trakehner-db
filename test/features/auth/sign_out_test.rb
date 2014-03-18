@@ -8,7 +8,7 @@ feature "As a visitor, I want to sign out when I'm done." do
     visit new_user_session_path
     fill_in 'Email', with: users(:user_one).email
     fill_in 'Password', with: 'password'
-    click_on 'Sign in'
+    find('#log_in_confirm_button').click_on 'Log In'
     page.must_have_content "Logged in as"
     page.must_have_content "Sign Out"
     page.wont_have_content "Invalid email or password"

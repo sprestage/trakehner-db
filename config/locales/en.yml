@@ -49,6 +49,9 @@ en:
     unknown: "Unknown"
     performance_records_available: "Performance records available"
 
+  breeders_index:
+    trakehner_breeder: "Trakehner Breeder"
+
   shared:
     unofficial_trakehner_database: "The Unofficial Trakehner Database"
     copyright: "Copyright"
@@ -61,3 +64,7 @@ en:
     show_pedigree: "Show Pedigree"
     show_progeny: "Show Progeny"
     no_known_progeny: "No known progeny"
+
+  static_pages:
+    contact_us: 'Contact Us'
+    about_us: 'About Us'
