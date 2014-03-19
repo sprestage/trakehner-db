@@ -1,0 +1,21 @@
+
+<div class="trakehner_horse_name">
+  <tr><td>
+    <table width='100%'>
+      <tr>
+        <td width='35%' align="center">
+          <%= render 'layouts/trakehner_logo' %>
+        </td>
+        <td vertical-align="top" width='30%' align="center">
+          <br>
+          <h3 id="name"><%= @horse.name.upcase %></h3>
+          <b><p><%= @horse.registration_number %></p></b>
+          <br>
+        </td>
+        <td width='35%' align="center">
+          <%= render 'shared/trakehner_logo' %>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+</div>

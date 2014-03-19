@@ -1,4 +1,4 @@
-require "test_helper"
+  require "test_helper"
 
 feature "Show a single horse" do
 

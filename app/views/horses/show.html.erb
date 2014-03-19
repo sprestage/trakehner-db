@@ -1,8 +1,15 @@
+<title><%= @horse.name %></title>
 
-<%= render 'layouts/show_horse_header' %>
+<div class="section-colored text-center">
+  <p id="notice"><%= notice %></p>
+  <%= render 'horses/horse_name' %>
+  <%= render 'horses/horse_image' %>
+</div>
 
-<br>
+<%= render 'horses/vital_stats' %>
+
 <p class="pedigree_progeny_link"><%= link_to 'Show progeny', progeny_horse_path(@horse) %></p>
+
 <%= render 'layouts/pedigree' %>
 <br>
 

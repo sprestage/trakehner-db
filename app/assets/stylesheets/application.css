@@ -77,3 +77,8 @@ img.horse_image {
 .ata_logo_image {
   width: 50%;
 }
+
+.horse_vital_stats td.thick {
+  font-weight:bold;
+}
+

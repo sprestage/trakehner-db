@@ -1,10 +1,17 @@
-<%= render 'layouts/show_horse_header' %>
+<title><%= @horse.name %></title>
 
-<br>
+<div class="section-colored text-center">
+  <p id="notice"><%= notice %></p>
+  <%= render 'horses/horse_name' %>
+  <%= render 'horses/horse_image' %>
+</div>
+
+<%= render 'horses/vital_stats' %>
+
 <p class="pedigree_progeny_link"><%= link_to 'Show pedigree', horse_path(@horse) %></p>
 
 <% if @progeny.any? %>
-  <%= render 'layouts/index_table', {:horses => @progeny} %>
+  <%= render 'horses/horses_index_table', {:horses => @progeny} %>
 <% else %>
   <p class="text-center"><strong>No Known Progeny</strong></p?
 <% end %>
@@ -12,5 +19,3 @@
 <br>
 <br />
 <%= render 'layouts/show_horse_footer' %>
-
-</div>

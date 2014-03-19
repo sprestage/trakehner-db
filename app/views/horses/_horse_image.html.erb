@@ -1,0 +1,8 @@
+
+<figure class='horse_image'>
+  <% if @horse.image_url %>
+    <%= image_tag @horse.image_url(:pedigree).to_s%>
+  <% else %>
+    <%= render 'layouts/no_picture_for_horse_image' %>
+  <% end %>
+</figure>

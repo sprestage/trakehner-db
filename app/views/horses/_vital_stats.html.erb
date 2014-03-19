@@ -1,48 +1,10 @@
-<title><%= @horse.name %></title>
 
 <% dod = "" %>
 <% mature_height = "" %>
 <% mare_family = "" %>
 
-<div class="section-colored text-center">
-  <div class="trakehnerHorseName">
-    <tr><td>
-      <table width='100%'>
-        <tr>
-          <td width='35%' align="center">
-            <%= render 'layouts/trakehner_logo' %>
-          </td>
-          <td vertical-align="top" width='30%' align="center">
-            <br>
-            <h3 id="name"><%= @horse.name.upcase %></h3>
-            <b><p><%= @horse.registration_number %></p></b>
-            <br>
-          </td>
-          <td width='35%' align="center">
-            <%= render 'layouts/trakehner_logo' %>
-          </td>
-        </tr>
-      </table>
-    </td></tr>
-  </div>
-
-  <p id="notice"><%= notice %></p>
-
-  <figure>
-    <% if @horse.image_url %>
-      <%= image_tag @horse.image_url(:pedigree).to_s, :class => "horse_image" %>
-    <% else %>
-      <%= render 'layouts/no_picture_for_horse_image' %>
-    <% end %>
-  </figure>
-</div>
-
-<style>
-  td.thick {font-weight:bold;}
-</style>
-
-<div class="section-colored text-center">
-  <div class="trakehnerHorseData">
+<div class="section-colored text-center horse_vital_stats">
+  <div>
     <table cellpadding="2" width="100%">
       <tbody>
         <tr>
@@ -104,8 +66,3 @@
     </table>
   </div>
 </div>
-
-<!-- TODO: make this a link to the performance link -->
-<% if @horse.performance_records_available == "yes" %>
-  <%= t "horses_index.performance_records_available" %>
-<% end %>
