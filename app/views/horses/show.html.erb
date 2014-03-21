@@ -1,16 +1,1 @@
-<title><%= @horse.name %></title>
-
-<div class="section-colored text-center">
-  <p id="notice"><%= notice %></p>
-  <%= render 'horses/horse_name' %>
-  <%= render 'horses/horse_image' %>
-</div>
-
-<%= render 'horses/vital_stats' %>
-
-<p class="pedigree_progeny_link"><%= link_to 'Show progeny', progeny_horse_path(@horse) %></p>
-
-<%= render 'horses/pedigree' %>
-<br>
-
-<%= render 'horses/show_horse_footer' %>
+<%= render :partial => 'pedigree_block', :layout => 'horse_show' %>

@@ -1,33 +1,28 @@
 <title><%= t "shared.unofficial_trakehner_database" %></title>
 
-<div class="section-colored text-center">
+<div id='sign_in_out_div'>
+  <% if current_user %>
+    <%= t 'shared.logged_in_as' %> <%= current_user.email %>
+    <%= link_to "Sign Out", signout_path %>
+  <% else %>
+    <%= link_to "Sign In", new_user_session_path %>
+  <% end %>
+</div>
 
-  <div id='sign_in_out_div'>
-    <% if current_user %>
-      <%= t 'shared.logged_in_as' %> <%= current_user.email %>
-      <%= link_to "Sign Out", signout_path %>
-    <% else %>
-      <%= link_to "Sign In", new_user_session_path %>
-    <% end %>
-  </div>
+<%= render 'shared/website_title' %>
 
-  <%= render 'shared/website_title' %>
+<br/>
 
-  <br/>
-  <br/>
-
-  <style>
-  figcaption {font-size:10px;}
-  </style>
-
+<div class='center'>
   <div class='horse_image_container'>
     <figure>
       <%= image_tag(@horse.image_url(:pedigree).to_s, :class => "horse_image" ) %>
     </figure>
   </div>
-  <h3><%= link_to @horse.name, @horse %></h3>
-
+  <h3><%= link_to @horse.name, @horse%></h3>
 </div>
+
+<!-- Google Analytics snippet -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -36,5 +31,5 @@
 
   ga('create', 'UA-46268095-1', 'unofficialtrakehnerdatabase.com');
   ga('send', 'pageview');
-
 </script>
+<!-- END Google Analytics snippet -->

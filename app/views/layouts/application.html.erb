@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,45 +10,13 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-
   </head>
 
   <body>
-    <div id="wrapper">
-
-      <!-- Topbar -->
-      <%= render 'layouts/sidebar' %>
-
-      <!-- Page content -->
-      <div id="page-content-wrapper">
-
-        <!-- Keep all page content within the page-content inset div! -->
-        <div class="page-content inset">
-          <%= render 'layouts/language_selector' %>
-
-          <div class="container">
-            <div class="row">
-              <div class"col-lg-12">
-                <%= yield %>
-                <hr>
-              </div><!-- /.col -->
-            </div><!-- /.row  -->
-          </div><!-- /.container -->
-
-          <!-- render 'layouts/unknown' -->
-
-          <%= render 'layouts/footer' %>
-
-          <!-- Put this into a custom JavaScript file to make things more organized -->
-          <script>
-          $("#menu-toggle").click(function(e) {
-              e.preventDefault();
-              $("#wrapper").toggleClass("active");
-          });
-          </script>
-
-        </div> <!-- /.page content inset -->
-      </div> <!-- /.page content wrapper -->
-    </div> <!-- /.wrapper -->
+    <%= render 'shared/navbar' %>
+    <%= render 'layouts/language_selector' %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
+
 </html>

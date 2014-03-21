@@ -1,0 +1,10 @@
+
+<p class="pedigree_progeny_link"><%= link_to 'Show pedigree', horse_path(@horse) %></p>
+
+<% if @progeny.any? %>
+  <%= render 'horses/horses_index_table', {:horses => @progeny} %>
+<% else %>
+  <p class="text-center"><strong>No Known Progeny</strong></p?
+<% end %>
+
+<br/>

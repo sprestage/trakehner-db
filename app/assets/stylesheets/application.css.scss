@@ -9,8 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap
- *= require simple-sidebar
  *= require_tree .
  */
 
@@ -19,30 +17,28 @@
   width: extend-to-zoom;
 }
 
-.male {
-  background-color: #CCCCCC;
-  color: #000000;
-  font-family: Arial;
-  font-family: 14pt;
-  text-align: center;
-  vertical-align: middle;
-  border-collapse: collapse;
-  border: 1px solid #000000;
+body {
+  font-family: Verdana;
+  font-size: 1em;
+  margin: 0;
 }
 
-.female {
-  background-color: #FFFFFF;
-  color: #000000;
-  font-family: Arial;
-  font-family: 14pt;
-  text-align: center;
-  vertical-align: middle;
-  border-collapse: collapse;
-  border: 1px solid #000000;
+body a {
+  &:link {
+    text-decoration: none;
+    color: #428bca;
+  }
+  &:visited {
+    color: #428bca;
+  }
+  &:hover {
+    text-decoration: underline;
+    color: #2a6496;
+  }
 }
 
-.pedigree_name {
-  font-size: 350%;
+.center {
+  text-align: center;
 }
 
 #horse_search_bar {

@@ -1,0 +1,13 @@
+<title><%= @horse.name %></title>
+
+<div class="section-colored text-center center">
+  <p id="notice"><%= notice %></p>
+  <%= render 'horses/horse_name' %>
+  <%= render 'horses/horse_image' %>
+</div>
+
+<%= render 'horses/vital_stats' %>
+
+<%= yield %>
+
+<%= render 'horses/show_horse_footer' %>
