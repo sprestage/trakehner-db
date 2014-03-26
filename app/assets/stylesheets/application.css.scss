@@ -41,33 +41,20 @@ body a {
   text-align: center;
 }
 
-#horse_search_bar {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-}
-
-.has_image_checkbox {
-  float: right;
-  margin-right: 6%;
-  font-size: 150%;
-  color: gray;
-}
-
 .pedigree_progeny_link {
   text-align: center
 }
 
 .language_selector {
   float: right;
-  margin-right: 2%;
+  margin: 0.5em;
+  margin-right: 1em;
+  overflow: hidden;
 }
 
-.horse_image_container {
-}
-
-img.horse_image {
-  max-width: 95%;
+.horse_image {
+  max-width: 100%;
+  margin: 0 auto
 }
 
 .ata_logo_image {
@@ -78,3 +65,9 @@ img.horse_image {
   font-weight:bold;
 }
 
+.clear_div {
+  height: 0;
+  line-height: 0;
+  display: block;
+  clear: both
+}

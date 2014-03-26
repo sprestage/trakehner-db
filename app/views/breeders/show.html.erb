@@ -1,9 +1,7 @@
 <title><%= @breeder.name %></title>
 
-<div class="section-colored text-center">
-  <div id="show_breeder_header">
-    <h2><%= t 'breeders_index.trakehner_breeder' %></h2></p><br>
-  </div>
+<div id="show_breeder_header">
+  <h2><%= t 'breeders_index.trakehner_breeder' %></h2></p><br>
 </div>
 
 <p id="notice"><%= notice %></p>
@@ -12,20 +10,16 @@
   td.thick {font-weight:bold;}
 </style>
 
-<div class="section-colored text-center">
-  <div class="trakehnerBreederData">
-    <table cellpadding="2" width="100%">
-      <tbody>
-        <tr>
-          <td class="thick"><%= @breeder.name %></td>
-        </tr>
-        <tr>
-          <td class="thick"><%= @breeder.address %></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<table cellpadding="2" width="100%">
+  <tbody>
+    <tr>
+      <td class="thick"><%= @breeder.name %></td>
+    </tr>
+    <tr>
+      <td class="thick"><%= @breeder.address %></td>
+    </tr>
+  </tbody>
+</table>
 
 <br />
 <br />
@@ -37,11 +31,7 @@
 <br />
 <br />
 
-<div class="section-colored text-center">
-  <div class="trakehnerBreederFooter">
-    <% if policy(Breeder).update? %>
-      <%= link_to 'Edit', edit_breeder_path(@breeder), id: "edit_breeder_link" %> |
-    <% end %>
-    <%= link_to 'Back', breeders_path %>
-  </div>
-</div>
+<% if policy(Breeder).update? %>
+  <%= link_to 'Edit', edit_breeder_path(@breeder), id: "edit_breeder_link" %> |
+<% end %>
+<%= link_to 'Back', breeders_path %>

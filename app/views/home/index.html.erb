@@ -1,6 +1,8 @@
 <title><%= t "shared.unofficial_trakehner_database" %></title>
 
-<div id='sign_in_out_div'>
+<%= render 'shared/website_title' %>
+
+<div id='sign_in_out_div' class='center responsive_text'>
   <% if current_user %>
     <%= t 'shared.logged_in_as' %> <%= current_user.email %>
     <%= link_to "Sign Out", signout_path %>
@@ -8,8 +10,6 @@
     <%= link_to "Sign In", new_user_session_path %>
   <% end %>
 </div>
-
-<%= render 'shared/website_title' %>
 
 <br/>
 

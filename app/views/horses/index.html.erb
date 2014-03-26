@@ -1,10 +1,7 @@
-<title><%= t "horses_index.trakehner_horses" %></title>
+<title><%= t "shared.unofficial_trakehner_database" %></title>
 
-<div class="section-colored text-center">
-  <div id="horse_index_header">
-    <%= render 'shared/website_title' %><br/>
-    <h2><%= t "horses_index.trakehner_horses" %></h2></p>
-  </div>
+<div id="horse_index_header">
+  <h2 class='center'><%= t "horses_index.trakehner_horses" %></h2></p>
 </div>
 
 <%= render 'horses_index_table', {:horses => @horses} %>

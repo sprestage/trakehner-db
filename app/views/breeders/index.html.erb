@@ -1,13 +1,13 @@
 <title>Trakehner Breeders</title>
 
-<div class="section-colored text-center">
+<div>
   <div id="breeder_index_header">
     <%= render 'shared/website_title' %><br>
     <h2><%= t 'breeders_index.trakehner_breeder' %></h2>
   </div>
 </div>
 
-<div class="section-colored text-center">
+<div>
   <div id="breeder_index_search">
     <br><br>
     <%= render 'layouts/breeder_search' %>
@@ -36,7 +36,7 @@
 
 <br>
 
-<div class="section-colored text-center">
+<div>
   <div class="breeder_index_new_breeder">
     <% if policy(Breeder).create? %>
       <%= link_to 'New Breeder', new_breeder_path %>
