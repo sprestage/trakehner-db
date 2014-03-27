@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-feature "As a visitor, I want to sign out when I'm done." do
+feature "As a logged in user, I want to be able to log out" do
   scenario "signed in user is successfully signed out" do
     # Given a user is logged in
     visit new_user_session_path
@@ -15,8 +15,7 @@ feature "As a visitor, I want to sign out when I'm done." do
     page.wont_have_content "Sign In"
     # When I click log out.
     page.find(:xpath, '//*[@id="sign_in_out_div"]').click_on("Sign Out")
-    # Then I should see the logged out message
-    page.text.must_include "Sign In"
+    page.wont_have_content "Logged in as"
     page.wont_have_content "Sign Out"
   end
 
