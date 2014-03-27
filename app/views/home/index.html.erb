@@ -6,8 +6,6 @@
   <% if current_user %>
     <%= t 'shared.logged_in_as' %> <%= current_user.email %>
     <%= link_to "Sign Out", signout_path %>
-  <% else %>
-    <%= link_to "Sign In", new_user_session_path %>
   <% end %>
 </div>
 
