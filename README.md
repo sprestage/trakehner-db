@@ -32,7 +32,8 @@ This site is my solution to those problems.
 Technical Details
 =======
 
-Updated to use Rails 4.0.7 and Ruby 2.1.4.
+Now updating to Rails 4.1.9...  (8/21/15)
+Updated to use Rails 4.1.7 and Ruby 2.1.4.
 
 
 Deployment
