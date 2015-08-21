@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 # Specify ruby version for Heroku deploy
-ruby '2.0.0'
+ruby '2.1.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.5'
+gem 'rails', '4.1.7'
 gem 'pg'
 gem 'devise'
 gem 'omniauth'
@@ -75,13 +75,13 @@ group :development, :test do
 # More minitest
   gem 'minitest'
   gem 'minitest-focus'
-  gem 'minitest-colorize'
+  gem 'minitest-reporters'
 # Capybara
   gem 'minitest-rails-capybara'
   gem 'launchy'
 # pry inline debugger
   gem 'pry-rails'
-  gem 'pry-debugger'
+  gem 'pry-byebug'
   gem 'pry-doc'
 # Faker for generating /test/fixture/foo.yml data
   gem 'faker'
@@ -90,7 +90,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'turn'
   gem 'simplecov', :require => false, :group => :test
 end
 
@@ -100,7 +99,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 
 # Use unicorn as the app server
 gem 'unicorn'
