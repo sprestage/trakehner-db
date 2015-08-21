@@ -61,8 +61,18 @@ class Horse < ActiveRecord::Base
 
     horse.breeder = Breeder.fetch(record["breeder"])
 
-
-    horse.performance_records_available = record["performance_records_available"]
+    ###
+    # The schema shows .performance_records_available to be a boolean.  However, it isn't
+    #   being treated like a boolean.  Forcing boolean behavior for now, but this should
+    #   be looked into.  -sprestage 8/21/15
+    ###
+    # horse.performance_records_available = record["performance_records_available"]
+    ###
+    if record["performance_records_available"] == ""
+      horse.performance_records_available = false
+    else
+      horse.performance_records_available = true
+    end
 
     if horse.save
       # Do nothing if the save is successful.

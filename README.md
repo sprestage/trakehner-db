@@ -32,8 +32,7 @@ This site is my solution to those problems.
 Technical Details
 =======
 
-Now updating to Rails 4.1.9...  (8/21/15)
-Updated to use Rails 4.1.7 and Ruby 2.1.4.
+Updated to use Rails 4.2 and Ruby 2.1.4.
 
 
 Deployment
@@ -72,8 +71,9 @@ Testing
 
 To run the tests, type the following at the command line:
 ~~~~
-  $ rake test:all
+  $ rake test
 ~~~~
+Note: <code>rake test:all</code> was deprecated as of rails 4.2.
 
 To run a single test file, do this:
 ~~~~
