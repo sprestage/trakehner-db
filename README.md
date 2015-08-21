@@ -65,9 +65,9 @@ Five roles:
             can see all the things
 </pre>
 
----
+
 Testing
----
+=======
 
 To run the tests, type the following at the command line:
 ~~~~
