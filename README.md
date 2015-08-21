@@ -32,21 +32,13 @@ This site is my solution to those problems.
 Technical Details
 =======
 
-Uses Rails 4.0.2 and Ruby 2.0.0p353.
+Updated to use Rails 4.0.7 and Ruby 2.1.4.
 
 
 Deployment
 =======
 This project has been deployed to Heroku and can be found here: http://sprestage-trakehner-db.herokuapp.com.
-Heroku also points to the custom domain http://www.unofficialtrakehnerdatabase.com which is now live!
-
-Plan for the next couple of days (10/30/13)
-=======
->
-    [ ] Write up the various use cases
-    [ ] Add use cases into sprint.ly
-    [ ] Implement OmniAuth
-
+Heroku also points to the custom domain http://www.unofficialtrakehnerdatabase.com.
 
 Policy and roles plan
 =======
@@ -72,6 +64,36 @@ Five roles:
     admin - me and Nathaniel
             can see all the things
 </pre>
+
+---
+Testing
+---
+
+To run the tests, type the following at the command line:
+~~~~
+  $ rake test:all
+~~~~
+
+To run a single test file, do this:
+~~~~
+  $ rake test test/features/admin/admin_test.rb
+~~~~
+
+If you get a message like this:
+~~~~
+  rake aborted!
+  PG::ConnectionBad: could not connect to server: Connection refused
+      Is the server running on host "localhost" (::1) and accepting
+      TCP/IP connections on port 5432?
+~~~~
+your postgresql is probably not running.  This can be checked using:
+~~~~
+  $ pg_ctl -D /usr/local/var/postgres status
+~~~~
+To start postgresql, use a command like this:
+~~~~
+  $ pg_ctl -D /usr/local/var/postgres -l ~/postgres-server.log start
+~~~~
 
 
 To Do List (completed items)
