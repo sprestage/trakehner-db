@@ -14,10 +14,14 @@
 <div class='center'>
   <div class='horse_image_container'>
     <figure>
-      <%= image_tag(@horse.image_url(:pedigree).to_s, :class => "horse_image" ) %>
+      <% unless @horse == nil %>
+        <%= image_tag(@horse.image_url(:pedigree).to_s, :class => "horse_image" ) %>
+      <% end %>
     </figure>
   </div>
-  <h3><%= link_to @horse.name, @horse%></h3>
+  <% unless @horse == nil %>
+    <h3><%= link_to @horse.name, @horse%></h3>
+  <% end %>
 </div>
 
 <!-- Google Analytics snippet -->

@@ -97,6 +97,20 @@ To start postgresql, use a command like this:
 ~~~~
 
 
+Common runtime errors seen
+=======
+This one is caused by having no horses in the database.
+~~~~
+  Showing /Users/susan/Documents/myProjects/codefellows/trakehner-db/app/views/home/index.html.erb where line #17 raised:
+
+  undefined method `image_url' for nil:NilClass
+~~~~
+Fix by running
+~~~~
+  $ rake db:seed
+~~~~
+
+
 To Do List (completed items)
 =======
     [x] Implement horses
