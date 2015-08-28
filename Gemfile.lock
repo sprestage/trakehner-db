@@ -44,7 +44,7 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
-    capybara (2.4.4)
+    capybara (2.5.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
@@ -123,7 +123,7 @@ GEM
     fog-atmos (0.1.0)
       fog-core
       fog-xml
-    fog-aws (0.7.4)
+    fog-aws (0.7.6)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
@@ -139,7 +139,7 @@ GEM
       mime-types
       net-scp (~> 1.1)
       net-ssh (>= 2.1.3)
-    fog-dynect (0.0.1)
+    fog-dynect (0.0.2)
       fog-core
       fog-json
       fog-xml
@@ -325,7 +325,7 @@ GEM
       netrc (~> 0.7)
     rmagick (2.15.4)
     ruby-progressbar (1.7.5)
-    sass (3.4.16)
+    sass (3.4.18)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
@@ -368,7 +368,7 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.7.1)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unf (0.1.4)
@@ -425,7 +425,7 @@ DEPENDENCIES
   simple_form
   simplecov
   turbolinks
-  uglifier
+  uglifier (= 2.7.2)
   unf
   unicorn
 

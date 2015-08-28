@@ -21,7 +21,7 @@ gem 'kaminari'
 gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
+gem 'uglifier', '2.7.2'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
