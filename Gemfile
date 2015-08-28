@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2'
+gem 'rails', '4.2.4'
 gem 'pg'
 gem 'devise'
 gem 'omniauth'
@@ -21,7 +21,7 @@ gem 'kaminari'
 gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.7.2'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
