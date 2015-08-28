@@ -24,5 +24,5 @@ task :update_stallion_thumbnails => :environment do
 end
 
 task :create_admin => :environment do
-  user = User.create! :email => 'admin@unofficialtrakehnerdatabase.com', :password => 'BseeingU2', :password_confirmation => 'BseeingU2', :role => 'admin'
+  user = User.create! :email => 'admin@unofficialtrakehnerdatabase.com', :password => ENV['ADMIN_PASSWORD'], :password_confirmation => ENV['ADMIN_PASSWORD'], :role => 'admin'
 end
