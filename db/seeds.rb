@@ -23,4 +23,4 @@ records.each do |r|
   Horse.import_image_from_remote(r)
 end
 
-user = User.create! :email => 'admin@unofficialtrakehnerdatabase.com', :password => 'BseeingU2', :password_confirmation => 'BseeingU2', :role => 'admin'
+user = User.create! :email => 'admin@unofficialtrakehnerdatabase.com', :password => ENV['ADMIN_PASSWORD'], :password_confirmation => ENV['ADMIN_PASSWORD'], :role => 'admin'
