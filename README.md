@@ -42,7 +42,7 @@ Updated to use Rails 4.2 and Ruby 2.1.4.
 
 Deployment
 =======
-This project has been deployed to Heroku and can be found here: http://sprestage-trakehner-db.herokuapp.com.
+This project has been deployed to Heroku and can be found here: http://trakehner-db.herokuapp.com.
 Heroku also points to the custom domain http://www.unofficialtrakehnerdatabase.com.
 
 Policy and roles plan
