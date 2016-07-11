@@ -24,7 +24,7 @@ very tedious.  Almost none of the historical Trakehners have pages,
 so most of the horses in a given pedigree have no links to further
 information, just a name.  As a horse breeder, I want to easily look
 up pertinent data (pedigree, performance records, photos, inspection
-results, etc) for every ancestor and every decendant of any given
+results, etc) for every ancestor and every descendant of any given
 Trakehner horse.  I want this accessible on the web.  I want it fast
 and easy.  I want it available for everyone to read.  I want only the
 owner of a horse to be able to change/enter data.  It should not be
@@ -173,4 +173,3 @@ Presentation Bragging Points
     [x] policies so only admin can create, edit, destroy
     [x] implemented simple_form on edit/new horse pages
     [x] i18n support for translations!!!  Yeay!!!
-
