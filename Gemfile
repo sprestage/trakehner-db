@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 # Specify ruby version for Heroku deploy
-ruby '2.1.4'
+ruby '2.2.10'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.11.3'
 gem 'pg'
 gem 'devise'
 gem 'omniauth'
